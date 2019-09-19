@@ -1,0 +1,503 @@
+body{
+    
+    margin: 0;
+    padding: 0;
+    font-family: "Cuprum", Arial, Cuprum-Regular /*sans-serif*/;/*стили для базового шрифта, который встречается чаще всего в макете.*/
+    font-size: 14px;/*встречается чаще всего в макете, потом его будем переопределять*/
+    line-height: 24px;
+    font-weight: 700;
+    color: #000000; /*цвет текста*/
+   /* text-transform: uppercase; /*буквы текста большие*/
+    background-color: #ffffff;
+}
+
+
+ /*стили для index.html*/
+a {
+    text-decoration: none; /*у  всех ссылок в проекте   убираем нижнее подчеркивание, котрое ставит браузер по умолчанию*/
+}
+
+
+.first_head{
+    background-color: #293449;
+}
+
+
+.for_first_menu_elements{ /*самое верхнее меню*/
+    color:#ffffff;
+    list-style: none;
+    
+    
+}
+
+.for_item{
+    font-size: 17px;
+    line-height: 18px;
+    font-weight: normal;
+}
+
+.for_item:hover,
+.for_item:focus
+{
+    background-color: #212a3a;
+}
+
+
+.for_item:active{
+    background-color: #161d29;
+}
+
+
+.second_head{ /*блок с голубым фоном*/
+    background-color: #f4f7f9;
+    
+}
+
+
+.info_about_shop{
+    font-size: 16px;
+    line-height: 23px;
+    color: #ee3643;
+    font-style: italic; 
+
+}
+
+
+.phone{
+    font-size: 21px;
+    line-height: 21px;
+    color: #ee3643;
+}
+
+
+.addresss{
+    color: #32425c;
+    
+}
+
+
+.button{ /*общий стиль для всех кнопок, потом для конкретных кнопок будем переопределять*/
+    font: inherit; /*унаследуем все свойства шрифов от родителя*/
+    color: #ffffff;
+    text-align: center; /*текст распложим по центру*/
+    vertical-align: middle; /*вертикальное выравнивание текста*/
+    font-size: 14px;
+    line-height: 8px;
+    background-color: #ee3643;
+    border: none; /*границ нет*/
+    text-transform: uppercase; /*тексn большими буквами**/
+    
+}
+
+
+.button:hover,
+.button:focus{
+    background-color: #ca2c37;
+}
+
+
+.button:active{
+    background-color: #ba2732;
+}
+
+
+/* стили для БЛОК НАВИГАЦИЯ*/
+.site-navigation { /* для главного меню*/
+  font-size: 17px;
+  line-height: 17px;
+  color: #ffffff;
+  box-shadow:  0px -5px 0 0 #293449;  /*что-то тени все равно нет. разобраться  с этим*/  
+  background-color: #293449;/* фонове изображение */
+  
+}
+
+
+
+.site-navigation ul{ /*убираем маркеры  у главного меню*/
+    list-style: none;  
+}
+
+
+.site-navigation a{
+    color: #ffffff;
+}
+
+
+.site-navigation a:hover,/*при наведении */
+.site-navigation a:focus
+{
+    background-color:  #293449;
+}
+
+
+
+.make-order-button{/*Кнопка верху страницы Оформить заказ*/
+    text-transform: none; /*переопрдеелили*/
+    background-color: #63a63e;
+    
+}
+
+
+
+.make-order-button:hover,
+.make-order-button:focus{
+    background-color:#518534;
+}
+
+
+.make-order-button:active{/*при нажатии*/
+    background-color:#63a63e;
+}
+
+
+.button_login{/*кнопка Войти*/
+    background-color:#ffffff;
+    color: #000000;
+    text-transform: none; /*переопрдеелили*/
+    font-size: 21px;
+    line-height: 21px;
+}
+
+
+.button_registration{/*кнопка Регитрация*/
+    background-color:#ffffff;
+    color: #000000;
+    text-transform: none; /*переопрдеелили*/
+    font-size: 21px;
+    line-height: 21px;
+}  
+
+
+.button_login:hover, 
+.button_login:focus,
+.button_registration:hover,
+.button_registration:focus
+{
+    background-color:#ffffff;
+    color: #ee3643;
+}
+
+
+.button_login:active,
+.button_registration:active
+{
+    color:rgba(0, 0, 0, 0.3);
+}
+
+
+
+.site-navigation a:active{/*при клике*/
+    background-color: #1d2739;
+}
+
+
+.index-columns{ /*блок с текстом на белом фоне*/
+    background-color: #ffffff;/*фоновый цвет*/
+    color: #000000;
+}
+
+
+.index-columns h2{
+    font-size: 30px;
+    line-height: 30px;
+}
+
+
+.index-columns p{
+     font: inherit; /*наследуем от родителя*/
+     line-height: 24px;
+}
+
+
+.text{
+    font: inherit;/*наследуем от родителя*/
+    font-size: 13px;
+    
+    font-family: PTSans;
+    
+}
+
+
+.site-navigation,
+.user-navigation { 
+  list-style: none; /*маркеры у спиcка меню убираем, так как их ставит сам браузер по умолчанию, задаем самому спсику ul*/
+}
+
+
+.site-navigation a,
+.user-navigation a{ /*цвет ссылок в верхнем меню белый*/
+    color: #ffffff;
+}
+
+
+.site-navigation a:hover, /*при наведении на элемент меню*/
+.site-navigation a:focus,
+.user-navigation a:hover,
+.user-navigation a:focus {
+  background-color: #242424; /*фоновый цвет менятся*/
+}
+
+
+.for_footer_part_one{/*первая часть подвала*/
+    background-color: #32425c;
+    color: #f1f5f7;
+    font-size: 18px;
+    line-height: 24px;
+    
+}
+  
+
+.footer_first_menu{
+    list-style: none;
+}
+
+
+.footer_first_menu a{ 
+    color: #f1f5f7;
+    
+}
+
+
+.footer_first_menu a:hover,
+.footer_first_menu a:focus{
+    text-decoration: underline;
+}
+
+
+.footer_first_menu a:active{
+    text-decoration: none;
+    color: rgba(241, 245, 247, 0.5);
+}
+
+
+.footer_second_menu{
+    list-style: none;
+}
+
+
+.footer_second_menu a{
+    color: #ffd180;
+}
+    
+
+.footer_second_menu a:hover,
+.footer_second_menu a:focus{
+    text-decoration: underline;
+}
+
+
+.footer_second_menu a:active{
+    text-decoration: none;
+    color: rgba(255, 209, 128, 0.5);
+}
+
+
+.for_footer_part_two{/*вторая часть подвала*/
+    background-color:#293449;
+    color: #ffffff;
+    
+    font-size: 16px;
+    line-height: 18px;
+}
+
+
+.list_socials{
+    list-style: none;
+}
+
+
+.feedback{
+    color: #ffd180;/*переопределили*/
+}
+
+
+.for_link{
+    color: #ffd180;/*переопределили*/
+}
+
+
+.feedback:active,
+.for_link:active{
+    color:#ee3643;
+}
+
+
+
+
+/***********************************************************************/
+
+/*стили для catalog.html*/
+
+.inner-page{/*общий стили*/
+    text-transform: uppercase;
+    /*color: #000000;*/
+    font-family:  PTSans-Regular;/*что-то непонятный какой-то шрифт, взяла из зеплина*/
+}
+
+
+.name{
+    font-size: 21px;
+    line-height: 21px;
+    color: #000000;
+}
+
+
+
+.name:active{
+   color: rgba(0, 0, 0, 0.3);
+}
+
+
+
+.small_link{
+    text-decoration: underline;
+    color: #32425c;
+    font-size: 16px;
+    line-height: 18px;
+}
+    
+
+.small_link:hover,
+.small_link:focus{
+    color: #ee3643;
+}
+
+.small_link:active{
+    color:  rgba(50, 66, 92, 0.3);
+}
+
+
+
+.breadcrumbs{ /*хлебные крошки*/
+
+    list-style: none; /*убираем маркеры у ссылок, котрый ставит браузер по умолчанию*/
+}
+
+
+.breadcrumbs a{
+    font-size: 13px;
+    line-height: 18px;
+    color: #000000;
+}
+
+
+.breadcrumbs a:hover,
+.breadcrumbs a:focus{
+    /*при навдеение на ссылку и если она в фокусе(наведение курсора)*/
+    text-decoration: underline; /*она подчеркисвается*/
+
+}
+
+
+.page-title{
+    font-size: 30px;
+    line-height: 30px;
+    color: #32425c;
+    background-color: #f2f6f8;
+    
+}
+
+
+.filter fieldset{ /*форма*/
+
+    border: none; /*убираем  обводку у fieldset()*/
+}
+
+
+.filter legend{
+
+    font-size: 17px;
+    line-height: 30px;
+
+}
+
+
+.filter ul{
+
+    list-style: none;/*убираем маркеты у списка кторый ставит браузер по умолчанию*/
+    line-height: 18px; /*высота строки*/
+}
+
+
+.filter-input:hover + label,
+.filter-input:hover + label { /*labe котрый СРАЗУ ижет поле .filter-input*/
+    color:#b5b5b5;
+
+}
+
+.filter-input:disabled{ /*для задизейбленного поля*/
+    color: rgba(0, 0, 0, 0.4);
+    
+}
+
+.filter label{
+    font-size:15px ;
+    line-height: 20px;
+    font-family: PTSans-Regular;
+}
+
+
+.catalog-list{ /*меню карточек товаров*/
+    list-style: none;/*убираем маркры у пунктов(карточек товара) меню котрый ставит сам браузер*/
+
+}
+
+
+.catalog-item{ /*задаем картчоке товара*/
+    background-color: #ffffff;  /*фоновый цвет */
+     border: solid 1px #e5e5e5;
+}
+
+
+.catalog-item:hover{ /*при наведении на карточку*/
+    box-shadow: 0px 10px 25px 0 rgba(41, 52, 73, 0.5);
+
+}
+
+
+.catalog-item a{ /*цвет текста ссылки на картчоке товара*/
+    color: #000000;
+}
+
+
+.catalog-item h3{ /*заголовки в картчоках*/
+
+    font-size: 18px;
+    line-height: 20px;
+    text-transform: none;
+}
+
+
+
+.catalog-item-price { /*стиль дял цены товара*/
+
+    font-size: 17px;
+    line-height: 18px;
+    text-align: center;/*выранвиенива тектс апо центру*/
+    
+}
+
+
+.catalog-item-price a{/*почему-то не все кнопки окрасились в красный*/
+    background-color: #ee3643;
+    color: #ffffff; 
+}
+
+
+.buy_button{ /*Кнопка Купить*/
+    color: #ffffff; /*почему текст на кнопке все равно черный, не белый?*/
+    background-color: #63a63e;
+    box-shadow: inset 0px -3px 0 0 #367315;
+    
+    
+}
+
+
+.bookmark_botton{ /*Кнопка В закладки*/
+    background-color: #ffffff;
+    border: solid 3px #63a63e;
+    color: #32425c;/*почему текст на кнопке все еще черный?*/
+    
+}
+
+
