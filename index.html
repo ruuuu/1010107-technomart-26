@@ -10,40 +10,41 @@
   <body>
 
     <header>
-      <div class="first_head">
-        <ul class="for_first_menu_elements">
-            <li>
-              <a><!--контейнер для логотипа -->
-                <img src="img/logo-tectnomart.svg" width="17" height="17" alt="Логотип Техномарт">
-              </a>
-            </li>
-            <li class="for_item">
-                <img src="https://via.placeholder.com" width="17" height="17" alt="иконка поиска">
-                <button type="button">Поиск: </button>
-            </li>
-            <li class="for_item">
-                <img src="https://via.placeholder.com" width="17" height="17" alt="иконка закладки">
-                Закладки:0
-            </li>
-            <li class="for_item">
-                <img src="https://via.placeholder.com" width="17" height="17" alt="иконка корзины">
-                Корзина:0
-            </li>
-            <li>
-                <button class="button make-order-button" type="button"><!--кнопка -->
+
+      <div class="first_head"><!-- первая часть шапки-->
+        <div class="container"><!-- центровшик и флекс контейнер-->
+          <section class="section_one"><!-- входит Лого и поиск, флексс элемент-->
+            <a href="index.html"><!--контейнер для логотипа -->
+              <img src="img/logo-tectnomart.svg" width="17" height="17" alt="Логотип Техномарт">
+            </a>
+            <div class="seach"><!--Поиск -->
+              Поиск
+            </div>
+          </section>
+            
+          <section class="section_two"><!-- входят Закладки  Корзина, Офрмить заказ,  флекс сэлемент, сам является флекс контейнером-->
+              <div class="bookmark">Закладки:0</div>
+              <div class="trash">Корзина:0</div>
+              <button class="button make-order-button" type="button"><!--кнопка -->
                     Оформить заказ
-                </button>
-            </li>
-        </ul>
-      </div>
-        
-      <div class="second_head">
-        <section>
+              </button>
+          </section>
+        </div><!--центровщик -->
+      </div><!-- первая часть шапки-->
+
+     
+      <div class="second_head"><!--вторая часть шапки /*блок с голубым фоном*/-->
+        <div class="container"><!-- центровшик и флекс контейнер--> 
+          <div class="content_of_second_head"> <!-- флекс элемент, котрый сам является флекс контейнром-->
+             <section> 
                 <p class="info_about_shop">
                   Интернет-магазин<br>
                   строительных материалов<br>
                   и инструментов для ремонта
-                </p>
+                </p>       
+             </section>
+                
+             <section>
                 <p class="phone">
                   <img src="https://via.placeholder.com/150x100" width="19" height="19" alt="иконка трубки">
                   +7(812)555-05-55
@@ -51,30 +52,33 @@
                 <p class="addresss">
                   г. Санкт-Петербург, ул. Б. Конешенная, д. 19/8
                 </p>
-         </section>
+             </section>
 
-         <section>
+             <section><!--кнопки Войти и Регитрация  -->
                 <a class="button button_login" href="login.html">Войти</a><!-- страницы login.html нет-->
                 <a class="button button_registration" href="">Регистрация</a>
-         </section>
-
-         <nav class="site-navigation">
-               <ul><!-- меню-->
+            </section>
+          </div>      
+          <nav class="site-navigation"><!-- главное меню, флекс элемент, котрый сам является флекс контенером-->
+                <ul><!-- меню-->
                   <li><a href="index.html">Главная</a></li>
                   <li><a href="">Компания</a></li>
                   <li><a href="catalog.html">Каталог</a></li>
                   <li><a href="">Новости</a></li>
                   <li><a href="">Спецпредложения</a></li>
                   <li><a href="">Доставка</a></li>
-                  <li><a href="">Контакты</a></li>
-               </ul>
-        </nav>
-    </div>      
+                  <li><a href="">Контакты</a></li>       
+                </ul>
+          </nav>
+        </div> <!-- центровшик-->
+      </div><!--вторая часть шапки--> 
+
   </header>
 
   <main><!--основное содержимое-->
-        
-      <div class="index-columns">
+
+      <div class="index-columns"><!-- объединяем два раздела Компания техномарт и Контакты-->
+          <div class="container"><!-- центровшик и флекс контейнер--> 
             <section>
                 <h2>Компания "Техномарт"</h2>
                 <p class="text">
@@ -89,10 +93,10 @@
                   - ЖелДорЭкспедиция
                 </p>
                 <a  class="button" href="">Подробнее о компании</a><!-- ссылка в виде кнопок-->
-            </section>
+          </section>
 
-            <section>
-               <h2>Контакты</h2>
+          <section>
+              <h2>Контакты</h2>
                <p class="text">
                    Вы можете забрать товар сами<br>
                    заехав в наш офис:
@@ -100,89 +104,66 @@
                <a href="img/map.jpg"><!-- при нажатии на превью, откроется большая крата -->
                     <img src="img/map_preview.jpg" width="300" height="158" alt="карта">
                </a>
-               <a  class="button" href="">Заблудились?Напишите нам!</a> <!-- ссылка в виде кнопки-->
-            </section>
+              <p><a  class="button" href="">Заблудились?Напишите нам!</a> </p><!-- ссылка в виде кнопки-->
+         </section>
       </div>
-    </main>
-
+   </main>
+      
    <footer><!-- ПОДВАЛ-->
-        <div class="for_footer_part_one">    
-            <section>
-              <nav>
-                <a><!--контейнер для логотипа -->
-                    <img src="img/logo-tectnomart.svg" width="17" height="17" alt="Логотип Техномарт">
-                </a>
-                <ul class="footer_first_menu"><!-- меню-->
-                   <li><a href="">Компания</a></li>
-                   <li><a href="">Новости</a></li>
-                   <li><a href="catalog.html">Каталог</a></li>
-                   <li><a href="">Спецпредложения</a></li>
-                   <li><a href="">Доставка</a></li>
-                   <li><a href="">Контакты</a></li>
-                </ul>
-             </nav>
-            </section>
+       <div class="for_footer_part_one"><!--первая часть подвала -->
+             <div class="container"><!--блок центровщик и флекс контейнер -->
+                <nav> <!--флекс элемент, котрый сам является флекс контейнером --->
+                    <a><!--контейнер для логотипа -->
+                        <img src="img/logo-tectnomart.svg" width="17" height="17" alt="Логотип Техномарт">
+                    </a>
+                    <ul class="footer_first_menu"><!-- меню, флекс-элемент, котрый сам флекс- контейнер-->
+                       <li><a href="">Компания</a></li>
+                       <li><a href="">Новости</a></li>
+                       <li><a href="catalog.html">Каталог</a></li>
+                       <li><a href="">Спецпредложения</a></li>
+                       <li><a href="">Доставка</a></li>
+                       <li><a href="">Контакты</a></li>
+                    </ul>
+                </nav>
+                
+                <section><!-- флекс элемент, котрый сам является флекс конетйнером-->
+                    <p><!--флекс-элемент-->
+                        г.Санкт-Петербург, ул. Б.Конюшенная, д. 19/8<br>
+                        +7(812)555-05-55
+                    </p>
+                    <ul class="footer_second_menu"><!-- меню, флекс-элемент-->
+                        <li><a href="">Материалы</a></li>
+                        <li><a href="">Инструменты</a></li>
+                        <li><a href="">Техника</a></li>
+                        <li><a href="">Спецпредложения</a></li>
+                    </ul>
+                </section>
+              </div> <!-- блок-центровщик-->
+            </div><!--первая часть подвала -->
 
-            <p>
-                г.Санкт-Петербург, ул. Б.Конюшенная, д. 19/8<br>
-                +7(812)555-05-55
-            </p>
+            <div class="for_footer_part_two"><!--вторая часть подвала -->
+                  <div class="container"><!-- центровщк и флекс контейнер-->
+                      <p>
+                        @2010-2019Компания "Техномарт"<br>
+                        Все права защищены
+                      </p>
+                      <ul class="list_socials"> 
+                          <li><a href="">Вконтакте </a></li>
+                          <li><a href="">Фейсбук </a></li>
+                          <li><a href="">Инстаграм </a></li>
+                      </ul>
+                      <p>
+                          Обратная связь:<br>
+                          <span class="feedback">mail@htmlacademy.ru</span>
+                      </p>
+                      <p>
+                        Разработано-<br>
+                        <a class="for_link" href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a>
+                      </p>
+                    
+                 </div><!-- блок-центровщик-->
+            </div><!--вторая часть подвала -->
+        </footer>
 
-            <ul class="footer_second_menu"><!-- меню-->
-                <li><a href="">Материалы</a></li>
-                <li><a href="">Инструменты</a></li>
-                <li><a href="">Техника</a></li>
-                <li><a href="">Спецпредложения</a></li>
-
-            </ul>
-        </div>  
-        <div class="for_footer_part_two">
-            <section>
-              <p>
-                @2010-2019Компания "Техномарт"<br>
-                Все права защищены
-              </p>
-              <ul class="list_socials"> <!-- неупорядоченный список-->
-                 <li><a href="">Вконтакте </a></li>
-                 <li><a href="">Фейсбук </a></li>
-                 <li><a href="">Инстаграм </a></li>
-              </ul>
-              <p>
-                 Обратная связь:<br>
-                  <span class="feedback">mail@htmlacademy.ru</span>
-              </p>
-              <p>
-                Разработано-<br>
-                <a class="for_link" href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a>
-              </p>
-            </section>
-       </div>
-  </footer>
-      
-  <section><!-- Модальное окно Личный кабинет-->
-         <h2 class="visually-hidden">Личный кабинет</h2><!--потом уберем этот заголовок -->
-         <form sction="https://echo.htmlacademy.ru" method="post">
-             <p> 
-                 <label for="user-name">Ваше имя: </label>
-                 <input  id="user-name"  type="text" name="login"  value="" placeholder="Имя Фамилия"> 
-             </p>  
-             <p> 
-                 <label for="user-mail">Ваш e-mail: </label>
-                 <input  id="user-mail"  type="text" name="mail" value="" placeholder="email@example.com"> 
-             </p>   
-             <p>
-                 <label for="user-text">Текст письма: </label>
-                 <textarea id="user-text" placeholder="В свободной форме" cols="100" rows="10" value="">
-                 </textarea>
-             </p>
-             <button type="submit"> <!-- кнопка отправки данных формы-->
-                 Отправить
-             </button>
-        </form>
-        <button type="button">Закрыть </button><!-- верхняя кнпока Крестик, чобы закрыть модальное окно-->
-  </section>
-      
-      
-      
-  </body>
+    </body>
 </html>

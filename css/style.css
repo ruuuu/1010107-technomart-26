@@ -1,92 +1,54 @@
 body{
-    
+
     margin: 0;
     padding: 0;
-    font-family: "Cuprum", Arial, Cuprum-Regular /*sans-serif*/;/*стили для базового шрифта, который встречается чаще всего в макете.*/
+    
+    font-style: normal;
+    font-weight: normal;
     font-size: 14px;/*встречается чаще всего в макете, потом его будем переопределять*/
     line-height: 24px;
     font-weight: 700;
+    font-family: "Cuprum", Arial,sans-serif; /*Cuprum-Regular;/*sans-serif*//*стили для базового шрифта, который встречается чаще всего в макете.*/
     color: #000000; /*цвет текста*/
    /* text-transform: uppercase; /*буквы текста большие*/
-    background-color: #ffffff;
+    background-color: #ffffff; /*цвет фона*/
+    font-stretch: normal;
+    letter-spacing: normal;
 }
 
 
- /*стили для index.html*/
+.inner-page{/*общие стили для catalog.html*/
+    font: inherit; /*унаследуем от родителя body*/
+    color: #000000;
+    font-family: "PTSans";/*на внутренней станице др шрифт, преопределили*/
+    text-transform: uppercase; /*буквы текста большие*/
+}
+
+ 
+
+                /*стили для index.html*/
+            /*Г Л О Б А Л Ь Н Ы Е  С Т И Л И*/
 a {
     text-decoration: none; /*у  всех ссылок в проекте   убираем нижнее подчеркивание, котрое ставит браузер по умолчанию*/
 }
 
 
-.first_head{
-    background-color: #293449;
-}
-
-
-.for_first_menu_elements{ /*самое верхнее меню*/
-    color:#ffffff;
-    list-style: none;
-    
-    
-}
-
-.for_item{
-    font-size: 17px;
-    line-height: 18px;
-    font-weight: normal;
-}
-
-.for_item:hover,
-.for_item:focus
-{
-    background-color: #212a3a;
-}
-
-
-.for_item:active{
-    background-color: #161d29;
-}
-
-
-.second_head{ /*блок с голубым фоном*/
-    background-color: #f4f7f9;
-    
-}
-
-
-.info_about_shop{
-    font-size: 16px;
-    line-height: 23px;
-    color: #ee3643;
-    font-style: italic; 
-
-}
-
-
-.phone{
-    font-size: 21px;
-    line-height: 21px;
-    color: #ee3643;
-}
-
-
-.addresss{
-    color: #32425c;
-    
-}
-
-
 .button{ /*общий стиль для всех кнопок, потом для конкретных кнопок будем переопределять*/
-    font: inherit; /*унаследуем все свойства шрифов от родителя*/
+    font: inherit; /*унаследуем все свойства шрифтов от родителя*/
+    line-height: 18px; /*переопределили*/
     color: #ffffff;
     text-align: center; /*текст распложим по центру*/
     vertical-align: middle; /*вертикальное выравнивание текста*/
-    font-size: 14px;
-    line-height: 8px;
+
+    
     background-color: #ee3643;
     border: none; /*границ нет*/
-    text-transform: uppercase; /*тексn большими буквами**/
-    
+    text-transform: uppercase; /*текст большими буквами**/
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+
+    letter-spacing: normal;
 }
 
 
@@ -101,20 +63,133 @@ a {
 }
 
 
-/* стили для БЛОК НАВИГАЦИЯ*/
-.site-navigation { /* для главного меню*/
-  font-size: 17px;
-  line-height: 17px;
-  color: #ffffff;
-  box-shadow:  0px -5px 0 0 #293449;  /*что-то тени все равно нет. разобраться  с этим*/  
-  background-color: #293449;/* фонове изображение */
+
+.container{ /* обертка-центровщик для main, footer */
+    
+    width: 940px;
+    margin: 0 auto; /*отцентрирваоли блок*/
+    padding: 0 10px;
+    
+}
+
+.main-header{
+    
+    margin-bottom: 25px; /* отсутп после шапки до хлебных крошек*/
+}
   
+
+
+            /*С Т И Л И   Д Л Я  Ш А П К И*/
+.first_head{
+    color: white;
+    background-color: #293449;/**темносиний фоновый цвет*/
+    font-size: 17px;
+    line-height: 18px;
+}
+
+
+.first_head .container{ /*флекс контейнер*/
+  display: flex;
+  justify-content: space-between;
+  height: 42px;  
+  align-items: center; /*выравнивание элементов вдоль по оси*/
 }
 
 
 
-.site-navigation ul{ /*убираем маркеры  у главного меню*/
-    list-style: none;  
+
+.section_one{/*флекс элемент корый сам является флекс контенйером*/
+    width: 280px; /*флекс элементу задаем размер, тогда повится расстяние между элементами*/
+    display: flex;
+    justify-content: space-around;
+    /*margin-right: 20px;*/
+    
+}
+
+
+
+
+.section_two{/*флекс элементу задаем размер , флекс элемент корый сам является флекс контенйером*/
+    width: 480px;/*тогда появится расстяние между элементами*/
+    display: flex;
+    justify-content: space-around;
+}
+
+
+
+
+
+.second_head { /*флекс контейнер  /*блок с голубым фоном*/*/
+    display: flex;
+    flex-direction: column; /* главная ось направленв сверху  вниз*/
+    justify-content: space-around;/*расстояние между флекс элементом и границей контейнера есть*/
+    background-color: #f4f7f9;
+    height: 278px; /*а может и не надо так делать??*/
+}
+
+
+   
+
+
+
+.content_of_second_head{/*флекс элемент котрый сам является флекс  контейнером*/
+    display: flex;
+    justify-content: space-between;/*расстояние между флекс элементом и границей коненера нет*/
+    align-items: center; /*выравнивание элементов вдоль поперечной оси*/
+}
+
+
+.content_of_second_head section:nth-child(1){ /*флекс элементу*/
+    margin-left: 60px;
+    
+}
+
+
+.info_about_shop{
+    font-size: 16px;
+    line-height: 23px;
+    color: #ee3643;
+    font-style: italic;
+
+}
+
+
+.phone{
+    font-size: 21px;
+    line-height: 21px;
+    color: #ee3643;
+}
+
+
+.addresss{
+    color: #32425c;
+
+}
+
+
+
+
+
+                    /* С Т И Л И  Д Л Я  Б Л О К   Н А В И Г А Ц И Я*/
+
+.site-navigation { /* для главного меню*/
+  font-size: 17px;
+  line-height: 17px;
+  color: #ffffff;
+  box-shadow:  0px -5px 0 0 #293449;  
+  background-color: #293449;/* фоновое изображение */
+
+}
+
+
+
+.site-navigation ul{  /*флекс элемент, котрый сам является флекс контенером*/
+    display: flex;
+    
+    justify-content: space-around;/*расстояние между флес элементом и границей кон-ра есть*/
+    align-items: center; /*выравнивание элементов вдоль попереченой оси*/
+    list-style: none; /*убираем маркеры  */
+    
 }
 
 
@@ -130,11 +205,15 @@ a {
 }
 
 
+.site-navigation a:active{ /*при нажатии на пункт главного  меню*/
+    color: rgba(255, 255, 255, 0.5);
+}
 
-.make-order-button{/*Кнопка верху страницы Оформить заказ*/
-    text-transform: none; /*переопрдеелили*/
+
+.make-order-button{/*Кнопка вверху страницы Оформить заказ*/
+    text-transform: none; /*переопределили*/
     background-color: #63a63e;
-    
+
 }
 
 
@@ -153,7 +232,7 @@ a {
 .button_login{/*кнопка Войти*/
     background-color:#ffffff;
     color: #000000;
-    text-transform: none; /*переопрдеелили*/
+    text-transform: none; /*переопределили*/
     font-size: 21px;
     line-height: 21px;
 }
@@ -162,13 +241,13 @@ a {
 .button_registration{/*кнопка Регитрация*/
     background-color:#ffffff;
     color: #000000;
-    text-transform: none; /*переопрдеелили*/
+    text-transform: none; /*переопределили*/
     font-size: 21px;
     line-height: 21px;
-}  
+}
 
 
-.button_login:hover, 
+.button_login:hover,
 .button_login:focus,
 .button_registration:hover,
 .button_registration:focus
@@ -197,6 +276,12 @@ a {
 }
 
 
+.index-columns .container{
+    display: flex;
+    justify-content: space-between;/*расстояние между флекс элементом и границей коненера нет*/
+    align-items: center; /*выравнивание элементов вдоль попреерченой оси*/
+}
+
 .index-columns h2{
     font-size: 30px;
     line-height: 30px;
@@ -212,14 +297,14 @@ a {
 .text{
     font: inherit;/*наследуем от родителя*/
     font-size: 13px;
-    
+
     font-family: PTSans;
-    
+
 }
 
 
 .site-navigation,
-.user-navigation { 
+.user-navigation {
   list-style: none; /*маркеры у спиcка меню убираем, так как их ставит сам браузер по умолчанию, задаем самому спсику ul*/
 }
 
@@ -238,23 +323,67 @@ a {
 }
 
 
+            
+
+            /*С Т И Л И  Д Л Я  П О Д В А Л А*/
+.main-footer {
+  
+  margin-top: 65px;/*отступ верхний у подвала*/
+
+  
+}
+
+
 .for_footer_part_one{/*первая часть подвала*/
     background-color: #32425c;
     color: #f1f5f7;
     font-size: 18px;
     line-height: 24px;
+
+}
+
+.for_footer_part_one .container{ /*флекс контейнер*/
+    display: flex;
+    flex-direction: column; /*главная ось  идет сверху вниз*/
+    justify-content: center;/*расположение элементов вдоль главной оси*/
+
+}
+
+
+.for_footer_part_one .container nav{/*флекс элемент котрый сам является  контенйером*/
+    display: flex;
+    justify-content: space-between;/*расстояние между флекс элементом и границей коненера нет*/
+    align-items: center; /*выравнивание элементов вдоль попреерченой оси*/
+}
+
+
+
+.for_footer_part_one nav ul{/*флекс элемент котрый сам является  конетнйером*/
+    width: 600px; /*флексэлементу задаем размер, иначе элементы слипнутся*/
+    display: flex;
+    justify-content: space-around;/*расстояние между флекс элементом и границей коненера*/
+    padding-left: 0;
+    padding-right: 0;
     
 }
-  
+
+
+/*ПОЧЕМУ ПОСЛЕДНИЙ ПУНКТ НЕ ПРИЖАЛСЯ К ПРАВОМУ КРАЮ??*/
+.for_footer_part_one  section{/*флекс элемент, котрый сам является флекс контейнером*/
+    display: flex;
+    justify-content: space-between;/*расстояние между флекс элементом и границей контейнера нет*/
+    align-items: center; /*выравнивание элементов вдоль поперечной*/
+    
+}
 
 .footer_first_menu{
     list-style: none;
 }
 
 
-.footer_first_menu a{ 
+.footer_first_menu a{
     color: #f1f5f7;
-    
+
 }
 
 
@@ -270,15 +399,20 @@ a {
 }
 
 
-.footer_second_menu{
-    list-style: none;
+
+.footer_second_menu{/*флекс-элемент*/
+    width: 1200px;
+    display: flex;
+    justify-content: space-around;
+    list-style: none; /*убираем маркеры корты сатвит браузер по умолчанию*/
 }
+
 
 
 .footer_second_menu a{
     color: #ffd180;
 }
-    
+
 
 .footer_second_menu a:hover,
 .footer_second_menu a:focus{
@@ -295,11 +429,26 @@ a {
 .for_footer_part_two{/*вторая часть подвала*/
     background-color:#293449;
     color: #ffffff;
-    
+
     font-size: 16px;
     line-height: 18px;
 }
 
+.for_footer_part_two .container{ /*флекс контйнеер*/
+    display: flex;
+    align-items: center; /*выравниевание элементов вдоль поперечнойной оси*/
+}
+
+
+
+.container p:nth-child(1){
+    margin-right: 140px;
+}
+
+
+.container p:nth-child(3){
+    margin-left: auto;
+}
 
 .list_socials{
     list-style: none;
@@ -326,17 +475,10 @@ a {
 
 /***********************************************************************/
 
-/*стили для catalog.html*/
+                    /*С Т И Л И  Д Л Я catalog.html*/
 
-.inner-page{/*общий стили*/
-    text-transform: uppercase;
-    /*color: #000000;*/
-    font-family:  PTSans-Regular;/*что-то непонятный какой-то шрифт, взяла из зеплина*/
-}
-
-
-.name{
-    font-size: 21px;
+.name{ /*в шапке*/
+    font-size: 21px;/*переопредлили*/
     line-height: 21px;
     color: #000000;
 }
@@ -349,104 +491,161 @@ a {
 
 
 
-.small_link{
+.small_link{ /*Мои заказы и Личный кабинет в header*/
     text-decoration: underline;
     color: #32425c;
-    font-size: 16px;
-    line-height: 18px;
+    font-size: 16px; /*переопределили*/
+
 }
-    
+
 
 .small_link:hover,
 .small_link:focus{
     color: #ee3643;
 }
 
+
 .small_link:active{
     color:  rgba(50, 66, 92, 0.3);
 }
 
 
-
 .breadcrumbs{ /*хлебные крошки*/
-
+    font-size: 13px; /*переопределили от body*/
+    padding: 0;
+    margin: 0;
+    margin-bottom: 20px; /*отступ после крошек*/
     list-style: none; /*убираем маркеры у ссылок, котрый ставит браузер по умолчанию*/
 }
 
 
 .breadcrumbs a{
-    font-size: 13px;
-    line-height: 18px;
+
     color: #000000;
 }
 
 
 .breadcrumbs a:hover,
 .breadcrumbs a:focus{
-    /*при навдеение на ссылку и если она в фокусе(наведение курсора)*/
-    text-decoration: underline; /*она подчеркисвается*/
+    /*при наведении на ссылку и если она в фокусе(наведение курсора)*/
+    text-decoration: underline; /*она подчеркивается*/
 
 }
 
 
-.page-title{
-    font-size: 30px;
-    line-height: 30px;
+.page-title{ /*для h1*/
+    
+    font-size: 30px; /*перепределили*/
+    line-height: 30px;/*перепределили*/
     color: #32425c;
     background-color: #f2f6f8;
-    
+    font-family: "Cuprum"; /*перепределили*/
 }
 
 
-.filter fieldset{ /*форма*/
+.catalog-columns {/*флекс контейнр(объединяет фильтры и каталаг)*/
+  
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+
+.filters{
+    
+    width: 200px;
+    
+}
+    
+
+.filter fieldset{ /*форма группы полей*/
 
     border: none; /*убираем  обводку у fieldset()*/
 }
 
 
 .filter legend{
-
-    font-size: 17px;
-    line-height: 30px;
+    letter-spacing: 0.17px;
+    font-size: 17px;/*перепределили от inner-page*/
+    line-height: 30px; /*перепределили*/
 
 }
 
 
 .filter ul{
+    padding: 0;
+    list-style: none;/*убираем маркеры у списка кторый ставит браузер по умолчанию*/
 
-    list-style: none;/*убираем маркеты у списка кторый ставит браузер по умолчанию*/
-    line-height: 18px; /*высота строки*/
 }
 
 
 .filter-input:hover + label,
-.filter-input:hover + label { /*labe котрый СРАЗУ ижет поле .filter-input*/
+.filter-input:hover + label { /*label котрый СРАЗУ идет после .filter-input*/
     color:#b5b5b5;
 
 }
 
+
 .filter-input:disabled{ /*для задизейбленного поля*/
     color: rgba(0, 0, 0, 0.4);
+
+}
+
+
+.filter label{
+    font-size: 15px ;/*переопределили*/
+    line-height: 20px;/*переопределили*/
+    font-family: "PTSans";
+}
+
+
+.button_show{ /*кнпока Показать  в фильтрах*/
+  background-color: white;
+  color: black;
+  border: solid 1px #e5e5e5;
+  font: inherit; /*унаследуем от родителя .inner-page*/
+  font-size: 13px;
+    line-height: 18px;
+    font-family: "PTSans";
+}
+
+.catalog{
+   
+    width: 710px;
     
 }
 
-.filter label{
-    font-size:15px ;
-    line-height: 20px;
-    font-family: PTSans-Regular;
+
+.catalog-list{ /* флекс элемент, котрый сам флекс контейнер, меню карточек товаров*/
+    
+    display: flex;
+    justify-content: space-between;/*равномерное распредление элементов вдоль гланвой оси*/
+    flex-wrap: wrap; /*перенос есть*/
+    padding: 0; /*убираем стили по умолчанию*/
+    margin: 0;/*убиарем стили по умолчанию*/
+    list-style: none;/*убираем маркеры у пунктов(карточек товара) меню котрый ставит сам браузер*/
+
 }
 
 
-.catalog-list{ /*меню карточек товаров*/
-    list-style: none;/*убираем маркры у пунктов(карточек товара) меню котрый ставит сам браузер*/
-
-}
-
-
-.catalog-item{ /*задаем картчоке товара*/
+.catalog-item{ /*  флекс элемент, задаем карточке товара*/
+    width: 220px;
+    margin-bottom: 20px; /*чтобы карточки твара не слипались*/
+    margin-right: 20px;
+    
+    margin-bottom: 25px;/*чтобы пагинация не прилипала  к каталогу*/
     background-color: #ffffff;  /*фоновый цвет */
-     border: solid 1px #e5e5e5;
+    border: solid 1px #e5e5e5;
+    /*text-align: center;*/ /*потом добавим может быть*/
 }
+
+
+
+.catalog-item:nth-child(3n){
+    margin-right:0; /*у последней картчоки убираем отсптуп справа*/
+}
+
 
 
 .catalog-item:hover{ /*при наведении на карточку*/
@@ -455,49 +654,122 @@ a {
 }
 
 
-.catalog-item a{ /*цвет текста ссылки на картчоке товара*/
+.catalog-item { /*цвет текста ссылки на картчоке товара*/
     color: #000000;
 }
 
 
-.catalog-item h3{ /*заголовки в картчоках*/
+.pagination-list { /*Пагинация*/
+    
+  padding: 0; /*сбрасываем стили по умолчанию*/
+  margin: 0;
 
+  list-style: none;
+
+  
+}
+
+
+.catalog-item h3{ /*заголовки в картчоках*/
+    font: inherit;
+    color: #000000;
     font-size: 18px;
     line-height: 20px;
     text-transform: none;
+    font-family: "PTSans";
 }
+
+
 
 
 
 .catalog-item-price { /*стиль дял цены товара*/
 
     font-size: 17px;
-    line-height: 18px;
-    text-align: center;/*выранвиенива тектс апо центру*/
-    
+
+    text-align: center; /*выравнивание текста по центру, ПОЧЕМУ НЕ ПЕРЕОПРЕДЕЛЯЕТСЯ ПОТОМКАМи .price_grey и .item-button, центриурется только у 5-гои последнего элемента??? */
+
 }
 
 
-.catalog-item-price a{/*почему-то не все кнопки окрасились в красный*/
+.price_grey { /*переопрелеояем стили*/
+    font: inherit;
+    color: #999999;
+    font-size: 17px;
+    text-align: center;
+}
+
+
+
+
+/*.catalog-item-price ~ .item-button*/
+.item-button{/*кнопка с ценой на картчоке товара*/
+    font: inherit;
+    font-family: "PTSans";
     background-color: #ee3643;
-    color: #ffffff; 
+    color: #ffffff;  /*цвет текста на кнопках*/
+
 }
 
 
-.buy_button{ /*Кнопка Купить*/
-    color: #ffffff; /*почему текст на кнопке все равно черный, не белый?*/
+
+
+
+
+.buy_button{ /*  зеленая кнопка Купить*/
+    font-family: "Cuprum"; /*переопредеяляем*/
+    color: #ffffff; /*переопределили*/
     background-color: #63a63e;
     box-shadow: inset 0px -3px 0 0 #367315;
-    
-    
+    text-transform: uppercase;
+
 }
 
 
-.bookmark_botton{ /*Кнопка В закладки*/
+.buy_button:hover,
+.buy_button:focus{
+    background-color: #5fbb2d;
+    box-shadow: inset 0px -3px 0 0 #367315;
+
+}
+
+
+.buy_button:active{
+    background-color: #518534;
+
+}
+
+
+.bookmark_button{ /*Кнопка В закладки*/
+    font: inherit;
     background-color: #ffffff;
     border: solid 3px #63a63e;
-    color: #32425c;/*почему текст на кнопке все еще черный?*/
+    color: #32425c;/*переопределили*/
+    text-transform: uppercase;
+    font-family: "Cuprum"; /*переопредеяляем*/
     
 }
 
+
+.bookmark_button:hover,
+.bookmark_button:focus{
+    border: solid 3px #32425c;
+    color: #32425c;
+}
+
+
+.bookmark_button:active{
+    color: rgba(50, 66, 92, 0.3);
+    border: solid 3px rgba(50, 66, 92, 0.3);
+}
+
+
+.filters h2.visually-hidden{
+    display: none; /*не отобраажем*/
+}
+
+
+.catalog  h2.visually-hidden{
+     display: none; /*не отобраажем*/
+}
 
