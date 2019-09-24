@@ -17,9 +17,10 @@
             <a href="index.html"><!--контейнер для логотипа -->
               <img src="img/logo-tectnomart.svg" width="17" height="17" alt="Логотип Техномарт">
             </a>
-            <div class="seach"><!--Поиск -->
+           <!-- <div>
               Поиск
-            </div>
+            </div>-->
+            Поиск: <input type="text" class="seach">
           </section>
             
           <section class="section_two"><!-- входят Закладки  Корзина, Офрмить заказ,  флекс сэлемент, сам является флекс контейнером-->
@@ -76,8 +77,217 @@
   </header>
 
   <main><!--основное содержимое-->
+    <section> 
+      <section><!-- три блока: Материалы Инстурменты Техника-->
+         <ul> 
+             <li>
+                 <h3>Материалы</h3>
+                 <a href="">НА ЛЮБОЙ ВКУС</a> <!-- ссылка в виде кнопки-->
+             </li>
+             <li>
+                 <h3>Инструмент</h3>
+                 <a href="">НА ВСЕ СЛУЧАИ</a> 
+             </li>
+             <li>
+                 <h3>Техника</h3>
+                 <a href="">ДЛЯ СТРОЙКИ</a> 
+             </li>
+         </ul>
+      </section>
+        
+      <section><!-- три блока: Дрели Скидка Доставка-->
+          <ul>
+            <li>
+                <h3>Дрели</h3>
+                <a href="catalog.html">Открыть каталог</a>
+            </li>
+            <li>
+                <h3>Cкидка 50%</h3>
+                <a href="">на 350 товаров</a> 
+            </li>
+            <li>
+                <h3>Доставка</h3>
+                <a href="">бесплатно</a> 
+            </li>
+          </ul>
+      </section>
+    </section> 
+      
+    <section><!--флекс контейнер будет -->
+        <section> 
+            <section>
+                <h1> Популярные товары:</h1> 
+                <a href="catalog.html">Все популярные товары</a>
+            </section>
 
-      <div class="index-columns"><!-- объединяем два раздела Компания техномарт и Контакты-->
+            <section><!-- список карточек с товарами-->
+                <ul class="catalog-list"><!-- список карточек товаров-->
+                 <li class="catalog-item"><!-- карточка товара-->
+                   <a href=""><!--строчный -->
+                     <h3><!-- по нажатию на текст пеереходим на нужную страницу-->
+                         <span>Перфоратор BOSCH</span><!--строчный элемент -->
+                         <span>BFG 3000</span>
+
+                     </h3>
+                     <p>
+                         <img src="img/item.jpg" width="218" height="170"  alt="фото товара">
+                     </p>
+                   </a>
+                   <p class="catalog-item-price">
+                     <div class="price_grey"><del>22500 P.</del></div>
+                     <a class="item-button" href="">15500 Р.</a>
+                   </p>
+                </li>
+
+                <li class="catalog-item"><!-- карточка товара-->
+                  <a href="">
+                    <h3><!-- по нажатию на текст пеереходим на нужную страницу-->
+                        <span>Перфоратор BOSCH</span>
+                        <span>BFG 6000</span>
+                    </h3>
+                    <p>
+                        <img src="img/item.jpg" width="218" height="170" alt="фото товара">
+                    </p>
+                  </a>
+                  <p class="catalog-item-price">
+                    <div class="price_grey">30500 P.</div>
+                    <a class="item-button" href="">25500 Р.</a>
+                  </p>
+                 </li>
+
+                 <li class="catalog-item"><!-- карточка товара-->
+                   <a href=""><!--строчный -->
+                     <h3><!-- по нажатию на текст пеереходим на нужную страницу-->
+                         <span>Перфоратор BOSCH</span><!--строчный элемент -->
+                         <span>BFG 3000</span>
+
+                     </h3>
+                     <p>
+                         <img src="img/item.jpg" width="218" height="170"  alt="фото товара">
+                     </p>
+                   </a>
+                   <p class="catalog-item-price">
+                     <div class="price_grey"><del>22500 P.</del></div>
+                     <a class="item-button" href="">15500 Р.</a>
+                   </p>
+                </li>
+
+                 <li class="catalog-item"> <!-- карточка товара-->
+                   <a href="">
+                     <h3><!-- по нажатию на текст пеереходим на нужную страницу-->
+                        <span>Перфоратор BOSCH</span>
+                        <span>BFG 3000</span>
+                     </h3>
+                     <p>
+                        <img src="img/item.jpg" width="218" height="170" alt="фото товара">
+                     </p>
+                    </a>
+                    <p class="catalog-item-price">
+                        <div class="price_grey">22500 P.</div>
+                        <a class="item-button" href="">15500 Р.</a>
+                    </p>
+                 </li>
+            </section>
+        </section>
+
+        <section>
+            <section>
+                <h1> Популярные производители:</h1> 
+                <a href="catalog.html">Все производители</a>
+            </section>
+
+            <section>
+               <ul>
+                   <li>
+                       <a href="">
+                          <p>
+                            <img src="img/" width="218" height="170" alt="фото bosch">
+                          </p>
+                       </a>
+                   </li>
+                   
+                   <li>
+                       <a href="">
+                          <p>
+                            <img src="img/" width="218" height="170" alt="фото makita">
+                          </p>
+                       </a>
+                   </li>
+                   <li>
+                       <a href="">
+                          <p>
+                            <img src="img/" width="218" height="170" alt="фото Dewalt">
+                          </p>
+                       </a>
+                   </li>
+                   <li>
+                       <a href="">
+                          <p>
+                            <img src="img/" width="218" height="170" alt="фото Интерскол">
+                          </p>
+                       </a>
+                   </li>
+                   <li>
+                       <a href="">
+                          <p>
+                            <img src="img/" width="218" height="170" alt="фото hitachi">
+                          </p>
+                       </a>
+                   </li>
+                   <li>
+                       <a href="">
+                          <p>
+                            <img src="img/" width="218" height="170" alt="фото LG">
+                          </p>
+                       </a>
+                   </li>
+                   <li>
+                       <a href="">
+                          <p>
+                            <img src="img/" width="218" height="170" alt="фото AEG">
+                          </p>
+                       </a>
+                   </li>
+                   <li>
+                       <a href="">
+                          <p>
+                            <img src="img/" width="218" height="170" alt="фото Metabo">
+                          </p>
+                       </a>
+                   </li>
+               </ul>
+            </section>
+        </section>
+    </section>    
+      
+    <section>
+        <section>
+        <h1>Сервисы</h1>
+        Хороший интернет-магазин отличается от плохого не только ценами!
+        Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
+        </section>
+        
+        <section>
+            <section>
+                <ul>
+                    <li>Доставка</li>
+                    <li>Гарантия</li>
+                    <li>Кредит</li>
+                </ul>
+            </section>
+            <section>
+                <h1>Доставка</h1>
+                Мы с удовольствием доставим ваш товар прямо 
+                к вашему подъезду совершенно бесплатно!
+                Ведь мы неплохо заработаем, 
+                поднимая его на ваш этаж!
+            </section>
+        </section>
+    </section>
+      
+      
+
+    <div class="index-columns"><!-- объединяем два раздела Компания техномарт и Контакты-->
           <div class="container"><!-- центровшик и флекс контейнер--> 
             <section>
                 <h2>Компания "Техномарт"</h2>
