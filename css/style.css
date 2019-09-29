@@ -2,13 +2,13 @@ body{
 
     margin: 0;
     padding: 0;
-    
+
     font-style: normal;
     font-weight: normal;
     font-size: 14px;/*встречается чаще всего в макете, потом его будем переопределять*/
     line-height: 24px;
     font-weight: 700;
-    font-family: "Cuprum", Arial,sans-serif; /*Cuprum-Regular;/*sans-serif*//*стили для базового шрифта, который встречается чаще всего в макете.*/
+    font-family: "Cuprum", "Arial", sans-serif; /*Cuprum-Regular;/*sans-serif*//*стили для базового шрифта, который встречается чаще всего в макете.*/
     color: #000000; /*цвет текста*/
    /* text-transform: uppercase; /*буквы текста большие*/
     background-color: #ffffff; /*цвет фона*/
@@ -20,11 +20,12 @@ body{
 .inner-page{/*общие стили для catalog.html*/
     font: inherit; /*унаследуем от родителя body*/
     color: #000000;
-    font-family: "PTSans";/*на внутренней станице др шрифт, преопределили*/
+    font-family: "Open Sans", sans-serif;;/*на внутренней станице др шрифт, преопределили*/
     text-transform: uppercase; /*буквы текста большие*/
+    margin-top: -40px;
 }
 
- 
+
 
                 /*стили для index.html*/
             /*Г Л О Б А Л Ь Н Ы Е  С Т И Л И*/
@@ -40,7 +41,7 @@ a {
     text-align: center; /*текст распложим по центру*/
     vertical-align: middle; /*вертикальное выравнивание текста*/
 
-    
+
     background-color: #ee3643;
     border: none; /*границ нет*/
     text-transform: uppercase; /*текст большими буквами**/
@@ -63,20 +64,28 @@ a {
 }
 
 
+h2{
+    font-size: 30px;
+    line-height: 30px;
+    font-family: "Cuprum", sans-serif;
+    text-transform: uppercase;
+}
+
+
 
 .container{ /* обертка-центровщик для main, footer */
-    
+
     width: 940px;
     margin: 0 auto; /*отцентрирваоли блок*/
     padding: 0 10px;
-    
+
 }
 
 .main-header{
-    
+
     margin-bottom: 25px; /* отсутп после шапки до хлебных крошек*/
 }
-  
+
 
 
             /*С Т И Л И   Д Л Я  Ш А П К И*/
@@ -91,29 +100,127 @@ a {
 .first_head .container{ /*флекс контейнер*/
   display: flex;
   justify-content: space-between;
-  height: 42px;  
+  
   align-items: center; /*выравнивание элементов вдоль по оси*/
-}
-
-
-
-
-.section_one{/*флекс элемент корый сам является флекс контенйером*/
-    width: 280px; /*флекс элементу задаем размер, тогда повится расстяние между элементами*/
-    display: flex;
-    justify-content: space-around;
-    /*margin-right: 20px;*/
     
 }
 
 
 
 
-.section_two{/*флекс элементу задаем размер , флекс элемент корый сам является флекс контенйером*/
-    width: 480px;/*тогда появится расстяние между элементами*/
+.section_one{/*флекс элемент корый сам является флекс контенйером*/
+    width: 50px; /*флекс элементу задаем размер, тогда появится расстяние между элементами*/
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    align-items: center;
+    /*margin-right: 20px;*/
+    
 }
+
+
+.main-header-logo{ /*флекс элемент*/
+    width: 109px; /*разvеры иконки*/
+    height: 19px;
+    display: block;
+    padding: 13px 55px;
+    background-color: #ee3643;
+    line-height: 1;
+    margin-right: 25px;
+    box-shadow: inset 0px -5px 0 0 rgba(0, 0, 0, 0.24);
+}
+
+
+
+
+
+
+.search/*флекс элемент*/
+{
+    position: relative;/*родитель для иконки*/
+    max-width: 180px;
+    margin-left: 35px; /*место для иконки поиска*/
+   
+}
+
+
+.search::before { /* псевдоэлемент для иконки поиска*/
+  content: "";
+  position: absolute;
+    
+  top: 0px;
+  left: -33px;
+  width: 17px;/*размеры иконки*/
+  height: 17px;
+  background-image: url("../img/icon-search.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  opacity: 0.3;
+    
+}
+
+
+
+
+
+.section_two{/*флекс элементу задаем размер , флекс элемент корый сам является флекс контенйером*/
+    /*width: 480px;/*тогда появится расстяние между элементами*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /*выравнивание элементов вдоль по оси*/
+}
+
+
+.bookmark{ /*флекс элемент*/
+    
+    
+    position: relative;/*родитель для иконки*/
+    max-width: 95px;
+    padding-left: 50px; /*место для иконки заклдаки*/
+    margin-right: 20px;
+}
+
+
+.bookmark::before { /* псевдоэлемент для иконки закладки*/
+  content: "";
+  position: absolute;
+    
+  top: 0px;
+  left: 22px;
+  width: 14px;/*размеры иконки*/
+  height: 16px;
+  background-image: url("../img/icon-bookmark.svg");
+    
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  opacity: 0.3;
+    
+}
+
+
+.trash{/*флекс элемент*/
+    position: relative;/*родитель для иконки*/
+    max-width: 95px;
+    padding-left: 50px; /*место для иконки корзины*/
+    margin-right: 30px;
+}
+
+
+.trash::before { /* псевдоэлемент для иконки коризны*/
+  content: "";
+  position: absolute;
+    
+  top: 0px;
+  left: 22px;
+  width: 15px;/*размеры иконки*/
+  height: 15px;
+  background-image: url("../img/icon-cart.svg");
+    
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  opacity: 0.3;    
+}
+
 
 
 
@@ -122,27 +229,45 @@ a {
 .second_head { /*флекс контейнер  /*блок с голубым фоном*/*/
     display: flex;
     flex-direction: column; /* главная ось направленв сверху  вниз*/
-    justify-content: space-around;/*расстояние между флекс элементом и границей контейнера есть*/
+    justify-content: flex-start;/*расстояние между флекс элементом и границей контейнера есть*/
     background-color: #f4f7f9;
     height: 278px; /*а может и не надо так делать??*/
+    margin-bottom: 60px; /*чтобы блоки не  прилипали к шапке*/
+
 }
 
 
-   
+
 
 
 
 .content_of_second_head{/*флекс элемент котрый сам является флекс  контейнером*/
+    width: 940px;
     display: flex;
-    justify-content: space-between;/*расстояние между флекс элементом и границей коненера нет*/
+    
+    justify-content: space-around;/*расстояние между флекс элементом и границей коненера нет*/
     align-items: center; /*выравнивание элементов вдоль поперечной оси*/
-}
-
-
-.content_of_second_head section:nth-child(1){ /*флекс элементу*/
-    margin-left: 60px;
+    padding-top: 25px;
+    margin-bottom: 25px;
     
 }
+
+
+.content_of_second_head section:nth-child(1){ /*флекс элемент*/
+    width: 196px;
+    margin-left: 20px;
+
+}
+
+
+.content_of_second_head section:nth-child(2){/*флекс элемент*/
+    width:  270px;
+    
+    margin-left: 10px;
+}
+
+
+
 
 
 .info_about_shop{
@@ -155,46 +280,154 @@ a {
 
 
 .phone{
+    
+    position: relative;/*родитель для иконки трубки*/
+    padding-left: 70px; /*место для иконки трубки*/
     font-size: 21px;
     line-height: 21px;
     color: #ee3643;
+    border: 3px solid #ffffff;
+    
+    padding-top: 9px;
+    padding-bottom: 9px;
+    margin-bottom: 4px;
+    
 }
 
 
+
+.phone::before { /* псевдоэлемент для иконки трубки*/
+  content: "";
+  position: absolute;
+    
+  top: 10px;
+  left: 10px;
+  width: 19px;/*размеры иконки*/
+  height: 19px;
+  background-image: url("../img/icon-phone.svg");
+    
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  opacity: 0.3;    
+}
+
+
+
+
 .addresss{
+    margin-left: 5px;
+    
     color: #32425c;
 
 }
 
 
 
+.wrap-for-login-button{/*флекс элемент */
+    width: 280px;
+    /*border: 1px solid grey;*/
+    padding-top: 12px ;
+    padding-bottom: 12px;
+    margin-left: -20px;
+    margin-top:-20px;
+    
+}
 
+.for-login-icon{ /*  для иконки логина*/
+    position: relative;
+}
+
+
+.for-login-icon::before{ /*псевдоэлемент для иконки логина*/
+    content: "";
+    position: absolute;
+    width: 20px; /*рамзеры иконки*/
+    height: 17px;
+    
+    top: 15px;
+    left: 12px;
+    background-image: url("../img/icon-login.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    /*background-color: #ff0000;*/
+    
+}
+
+    
+.button_login{/*кнопка Войти */
+    
+    background-color:#ffffff;
+    padding-top: 12px ;
+    padding-bottom: 12px;
+    padding-left: 48px;
+    padding-right:27px;
+    
+    
+    color: #000000;
+    text-transform: none; /*переопределили*/
+    font-size: 21px;
+    line-height: 1;
+    /*border: 1px solid grey; /*потом уберем*/
+    margin-right: 4px; /*расстояние между кнопками*/
+    
+}
+
+
+.button_registration{/*кнопка Регистрация*/
+    background-color:#ffffff;
+    
+    
+    padding-top: 12px ;
+    padding-bottom: 12px;
+    padding-right: 22px;
+    padding-left: 25px;
+    color: #000000;
+    text-transform: none; /*переопределили*/
+    font-size: 21px;
+    line-height: 1;
+    /*border: 1px solid grey;/*потом уберем*/
+     
+}
+    
+    
+    
 
                     /* С Т И Л И  Д Л Я  Б Л О К   Н А В И Г А Ц И Я*/
 
 .site-navigation { /* для главного меню*/
+    
+  width:940px;
   font-size: 17px;
   line-height: 17px;
   color: #ffffff;
-  box-shadow:  0px -5px 0 0 #293449;  
+  box-shadow:  0px -5px 0 0 #293449;
   background-color: #293449;/* фоновое изображение */
-
+  box-shadow: inset 0px -5px 0 0 #32425c; 
+    
 }
 
 
 
 .site-navigation ul{  /*флекс элемент, котрый сам является флекс контенером*/
     display: flex;
-    
-    justify-content: space-around;/*расстояние между флес элементом и границей кон-ра есть*/
+    flex-wrap: wrap; /*перенос элементов*/
+    justify-content: space-between;
     align-items: center; /*выравнивание элементов вдоль попереченой оси*/
-    list-style: none; /*убираем маркеры  */
-    
+    list-style: none; /*убираем маркеры*/
+    padding-left: 52px; /*отсупы от первого пункта меню до левой границы списка*/
+    padding-right: 55px;   /*отсупы от последнего пункта меню до правой границы списка*/
+}
+
+.site-navigation li{
+    padding-top: 22px;
+    padding-bottom: 26px;
 }
 
 
 .site-navigation a{
+    display: block;/*делаем ссылки блочными*/
     color: #ffffff;
+
 }
 
 
@@ -211,6 +444,12 @@ a {
 
 
 .make-order-button{/*Кнопка вверху страницы Оформить заказ*/
+    display: block;
+    padding-top: 12px ;
+    padding-bottom: 13px ;
+    padding-left: 20px ;
+    padding-right: 22px ;
+    line-height: 1;
     text-transform: none; /*переопределили*/
     background-color: #63a63e;
 
@@ -229,21 +468,10 @@ a {
 }
 
 
-.button_login{/*кнопка Войти*/
-    background-color:#ffffff;
-    color: #000000;
-    text-transform: none; /*переопределили*/
-    font-size: 21px;
-    line-height: 21px;
-}
 
 
-.button_registration{/*кнопка Регитрация*/
-    background-color:#ffffff;
-    color: #000000;
-    text-transform: none; /*переопределили*/
-    font-size: 21px;
-    line-height: 21px;
+.content_of_second_head section:last-child{
+    margin-right: -40px; /*чтобы выравнить кнопку Регитрация по правому краю*/
 }
 
 
@@ -269,40 +497,6 @@ a {
     background-color: #1d2739;
 }
 
-
-.index-columns{ /*блок с текстом на белом фоне*/
-    background-color: #ffffff;/*фоновый цвет*/
-    color: #000000;
-}
-
-
-.index-columns .container{
-    display: flex;
-    justify-content: space-between;/*расстояние между флекс элементом и границей коненера нет*/
-    align-items: center; /*выравнивание элементов вдоль попреерченой оси*/
-}
-
-.index-columns h2{
-    font-size: 30px;
-    line-height: 30px;
-}
-
-
-.index-columns p{
-     font: inherit; /*наследуем от родителя*/
-     line-height: 24px;
-}
-
-
-.text{
-    font: inherit;/*наследуем от родителя*/
-    font-size: 13px;
-
-    font-family: PTSans;
-
-}
-
-
 .site-navigation,
 .user-navigation {
   list-style: none; /*маркеры у спиcка меню убираем, так как их ставит сам браузер по умолчанию, задаем самому спсику ul*/
@@ -323,14 +517,430 @@ a {
 }
 
 
-            
+.cards{ /*флекс контейнер*/
+    display: flex;
+    justify-content: space-between;
+    margin: 0;/*сбрысываем стили по умолчанию*/
+    padding: 0;/*сбрысываем стили по умолчанию*/
+    list-style: none;/*убираему спсика маркеры, это свойство задаем спсику!!!*/
+}
+
+
+
+
+
+.three-cards{
+    margin-bottom: 40px;
+}
+
+
+
+.wrapper-cards{ /*флекс контейнер*/
+    display: flex;
+    justify-content: space-between;
+    margin: 0;/*сбрысываем стили по умолчанию*/
+    padding: 0;/*сбрысываем стили по умолчанию*/
+    list-style: none;/*убираему спсика маркеры, это свойство задаем спсику!!!*/
+
+}
+
+.for-big-image{
+    width: 620px;
+}
+
+.for-big-image a{
+    position:relative;
+}
+
+/*.for-big-image a::after{
+    content:"";
+    position: absolute;
+    top:0;
+    left:0;
+    
+}
+*/
+
+
+.for-big-image a{
+    margin-top: -30px;
+    z-index: 30px;
+}
+
+
+
+
+
+.block-item{/*карточка, флекс-элемент*/
+
+    width: 300px;
+    height: 103px;
+    margin-bottom: 20px; /*чтобы карточки твара не слипались*/
+    margin-right: 20px;
+
+}
+
+
+.block-item h3{
+    margin: 0; /*сбрасываем стили*/
+    margin-bottom: 23px;
+    color: white;
+    font-size: 24px;
+    line-height: 30px;
+}
+
+
+
+.for-label-button{
+    position: relative;
+    padding-left: 25px;
+    padding-top: 20px;
+
+    
+}
+
+
+
+.icon{
+    position: absolute;
+    top: 18px;
+    right: 40px;
+}
+
+
+.last-two-cards{
+    margin-right: 0;
+    width: 275px;
+
+}
+
+
+div .last-two-cards:nth-child(1){
+    background-color:  #8ed78f;
+}
+
+
+div .last-two-cards:nth-child(2){
+    background-color: #ffc047;
+}
+
+
+
+
+.block-item:nth-child(1){
+    background-color: #ffbf47;
+}
+
+
+.block-item:nth-child(2){
+    background-color: #3bbce3;
+}
+
+.block-item:nth-child(3){
+    background-color: #dc91d8;
+    margin-right: 0;
+}
+
+
+
+
+.block-item .button{/*кнопка на карточках(Материалы Инструмент Техника  Скидка50% Доставка)*/
+    padding-top: 12px;
+    padding-bottom: 14px;
+    padding-left:0;
+    padding-right:0;
+
+    margin-bottom: 7px;
+    padding: 10px 20px;
+
+
+    opacity: 0.1;
+    background-color: #000000;
+}
+
+
+    
+    
+.popular-tovar{ /*флекс контейнер*/
+   display: flex;
+   width: 940px;
+  
+   justify-content: flex-start;
+   align-items: center;
+   background-color: #f9f5f0;
+   
+    margin-bottom: 20px;
+    
+}
+
+
+.page-title{ /*флекс элемент*/
+    margin-left: 30px;
+    
+    
+    font-size: 30px; /*перепределили*/
+    line-height: 30px;/*перепределили*/
+    color: #32425c;
+    text-transform: uppercase; /*буквы текста большие*/
+    font-family: "Cuprum", sans-serif; /*перепределили*/
+    
+}
+
+
+.popular-tovar a{
+     margin-left: auto;
+     margin-right: 25px;
+}
+
+
+
+
+.popular-tovar-button{/*флекс элемент*/
+    display: block;
+    width: 253px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    line-height: 1;
+    border-radius: 3px;
+
+}
+
+
+
+
+
+
+
+.catalog-item-on-main-page:nth-child(4){
+    margin-right: 0; /*у последней картчоки убираем отсптуп справа*/
+}
+
+
+.catalog-perfomances{
+
+    width: 1020px; /* как-то подобрала 220*4= 880 + чуток */
+}
+
+
+.catalog-list-perfonamces{/* флекс контейнер*/
+    display: flex;
+    justify-content: flex-start;/*равномерное распредление элементов вдоль гланвой оси*/
+
+    flex-wrap: wrap; /*перенос есть*/
+    padding: 0; /*убираем стили по умолчанию*/
+    margin: 0;/*убиарем стили по умолчанию*/
+    list-style: none;/*убираем маркеры у пунктов(карточек товара) меню котрый ставит сам браузер*/
+
+}
+
+
+.catalog-item-perfomances{ /* флекс -элемент*/
+    display: flex;
+    width: 218px;
+    height: 125px;
+
+    margin-right: 20px;
+
+    margin-bottom: 20px;/*чтобы пагинация не прилипала  к каталогу*/
+
+    background-color: #ffffff;  /*фоновый цвет */
+    border: solid 1px #e5e5e5;
+
+}
+
+.catalog-item-perfomances a{ /*флекс элемент*/
+    margin: auto; /*чтобы изображение отцентрироавлоась*/
+}
+
+
+.catalog-item-perfomances:nth-child(4n){
+    margin-right:0;
+}
+
+
+.delivery-services-section{
+    height: 522px;
+    background-color:  #f4f7f9;
+}
+
+
+.about-cervices{
+    margin-bottom: 30px;
+}
+
+
+.services{
+    padding-top: 68px;
+
+}
+
+
+.text-about-services{
+    margin-bottom:70px;
+}
+
+
+.with-menu{/*родитель для иконки грузовика*/
+    margin:0;
+
+    position: relative;
+   /* border: 1px solid grey; */
+
+}
+
+
+.with-menu .block-for-menu{
+   display: inline-block; /*так элементы выстроятся в ряд*/
+}
+
+
+
+
+
+.menu{
+    list-style: none;
+    width: 240px;
+    padding: 0;
+    margin: 0;
+
+}
+
+
+.menu li {
+  margin-bottom: 0;
+}
+
+
+.menu li:nth-child(1){
+     background-color: white;
+}
+
+
+.menu a {
+    display: block;
+    padding: 20px 20px;
+    color:  white;
+    border: 1px solid  #293449;
+    margin-top: -1px;
+    font-size: 21px;
+    line-height: 30px;
+    background-color: #32425c;
+}
+
+
+.shadow{
+    margin:0;
+    box-shadow: 0px 1px 0 0 #293449, inset 0px 1px 0 0 #405069;
+}
+
+
+.about-delivery{
+    margin-left: 90px;
+}
+
+
+.for-delivery-image{
+    position: absolute;
+    top:10px;
+    right: 10px;
+    /*z-index: 0;*/
+
+}
+
+
+.index-columns { /*флекс контейнер*/
+    display: flex;
+    justify-content: space-between;/*расстояние между флекс элементом и границей коненера нет*/
+    
+    background-color: #ffffff;/*фоновый цвет*/
+    color: #000000;
+   /* border: 1px solid grey;*/
+}
+
+
+.company{ /*флекс элемент, котрый сам является флекс конейнером*/
+    width: 519px; /*ширина*/
+    display: flex;
+    flex-direction: column;/*глава очь идет сверху вниз*/
+    justify-content: flex-start;
+}
+
+
+.contacts{/*флекс элемент котрый сам является флекс конейнером*/
+    width: 300px;
+    display: flex;
+    flex-direction: column;/*глава очь идет сверху вниз*/
+    justify-content: flex-start;
+}
+
+
+.index-columns h2
+{
+    
+    margin-bottom: 30px;
+    margin-top: 80px;
+    
+}
+
+
+
+p.text{
+     font: inherit; /*наследуем от родителя*/
+     line-height: 24px;
+     margin:0;
+    
+    
+     font-size: 13px;
+     
+      font-family: "PT Sans", sans-serif;
+      margin-bottom: 30px;
+}
+
+
+.company  span{
+    font-family: "Cuprum", sans-serif;
+    color:black;
+    font-size: 18px;
+    line-height: 20px;
+    
+}
+
+
+red-defis{
+    color:#ee3643;
+    margin-right: 20px;
+}
+
+.more-details-button{
+    width: 140px;
+    padding: 12px 38px;
+    border-radius: 2px;
+    margin-bottom: 80px;
+}
+
+
+
+
+.write-us-button{
+    display: block;
+    
+    border-radius: 2px;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    margin-bottom: 80px;
+    margin-top: 19px;
+}
+
+
+
+
 
             /*С Т И Л И  Д Л Я  П О Д В А Л А*/
 .main-footer {
-  
+
   margin-top: 65px;/*отступ верхний у подвала*/
 
-  
+
 }
 
 
@@ -345,35 +955,48 @@ a {
 .for_footer_part_one .container{ /*флекс контейнер*/
     display: flex;
     flex-direction: column; /*главная ось  идет сверху вниз*/
-    justify-content: center;/*расположение элементов вдоль главной оси*/
+    justify-content: flex-start;/*расположение элементов вдоль главной оси*/
 
 }
 
 
-.for_footer_part_one .container nav{/*флекс элемент котрый сам является  контенйером*/
+.wrap-for-footer_first_menu  {/*флекс элемент котрый сам является  контенйером*/
     display: flex;
-    justify-content: space-between;/*расстояние между флекс элементом и границей коненера нет*/
-    align-items: center; /*выравнивание элементов вдоль попреерченой оси*/
+    justify-content: space-between;/*расстояние между флекс элементом и границей коненера */
+    margin-bottom: 20px; /*чтобы отлепить*/
 }
 
 
+.logo-for-footer{
+    padding-top:20px;
+    padding-bottom: 25px;
+}
 
-.for_footer_part_one nav ul{/*флекс элемент котрый сам является  конетнйером*/
-    width: 600px; /*флексэлементу задаем размер, иначе элементы слипнутся*/
+.for_footer_part_one  .footer_first_menu{/*флекс элемент котрый сам является  конетнйером*/
+    width: 720px; /*флексэлементу задаем размер*/
     display: flex;
-    justify-content: space-around;/*расстояние между флекс элементом и границей коненера*/
-    padding-left: 0;
-    padding-right: 0;
-    
+    justify-content: space-between;/*расстояние между флекс элементом и границей коненера*/
+    margin:0;
+    margin-top: 35px;
 }
 
 
-/*ПОЧЕМУ ПОСЛЕДНИЙ ПУНКТ НЕ ПРИЖАЛСЯ К ПРАВОМУ КРАЮ??*/
+
+
+
 .for_footer_part_one  section{/*флекс элемент, котрый сам является флекс контейнером*/
     display: flex;
-    justify-content: space-between;/*расстояние между флекс элементом и границей контейнера нет*/
+    justify-content:space-around;/*расстояние между флекс элементом и границей контейнера нет*/
     align-items: center; /*выравнивание элементов вдоль поперечной*/
-    
+    margin-bottom: 40px;
+
+}
+
+.about-address-footer{
+    width: 322px;
+    font-family: "Cuprum", sans-serif;
+    font-size: 18px;
+    line-height: 24px;
 }
 
 .footer_first_menu{
@@ -401,13 +1024,16 @@ a {
 
 
 .footer_second_menu{/*флекс-элемент*/
-    width: 1200px;
+    width: 720px;
     display: flex;
     justify-content: space-around;
     list-style: none; /*убираем маркеры корты сатвит браузер по умолчанию*/
+    margin-top: -30px;
 }
 
-
+.footer_second_menu:last-child{
+    padding-right: 0;
+}
 
 .footer_second_menu a{
     color: #ffd180;
@@ -434,24 +1060,55 @@ a {
     line-height: 18px;
 }
 
+
+
 .for_footer_part_two .container{ /*флекс контйнеер*/
     display: flex;
     align-items: center; /*выравниевание элементов вдоль поперечнойной оси*/
+    padding-top: 20px;
+    padding-bottom: 20px; ;
+        
 }
 
 
 
-.container p:nth-child(1){
+
+
+.for_footer_part_two .container p:nth-child(1){
     margin-right: 140px;
 }
 
 
-.container p:nth-child(3){
+.for_footer_part_two .container p:nth-child(3){
     margin-left: auto;
 }
 
+.for_footer_part_two .container p:nth-child(4){
+    margin-left: 50px; /**/
+}
+
+
+
+
 .list_socials{
+    display: flex;
+    width: 141px;
+
+    flex-wrap: wrap;
+    justify-content: space-between;
     list-style: none;
+}
+
+.social-button{ /*кнопк соц сети*/
+    display: flex; /*Чтобы выравнять иконки в кнопках делам каждую кнопку флес конте-ом*/
+
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+
+    background-color: #212a3a;
+    border-radius: 20px;
 }
 
 
@@ -477,10 +1134,71 @@ a {
 
                     /*С Т И Л И  Д Л Я catalog.html*/
 
+
+
+
+
+.wrap-for-logout-button{/**/
+    /*border: 1px solid grey;*/
+    width: 290px;
+    padding-top: 10px ;
+    padding-bottom: 10px;
+    background-color: white;
+    
+}
+
+
+.for-user-icon{
+    
+    position:relative;
+    
+}
+
+.for-user-icon::before{ /*псевдоэдемент для иконки юзера*/
+   content: "";
+   position: absolute;
+   width: 20px;
+   height: 18px;
+   top: -4px;    
+   left: 13px;    
+   background-image: url("../img/icon-user.svg");
+   background-repeat: no-repeat;
+   background-position: 0 0;
+   /*background-color: #ff0000;*/
+}
+
+
+
+.for-logout-icon{
+    position:relative;
+}
+
+
+.for-logout-icon::after{ /*псевдоэлемент для иконки выхода*/
+  content: "";
+  
+  position: absolute;
+  top: -3px;
+  left: 20px;
+  
+  width: 21px;
+  height: 17px;
+  background-image: url("../img/icon-logout.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  /*background-color: #ff0000;*/
+}
+
+
+
 .name{ /*в шапке*/
     font-size: 21px;/*переопредлили*/
     line-height: 21px;
     color: #000000;
+    font-family: "Cuprum", sans-serif;
+    padding-left: 45px; /*место для иконки человека*/
+    
+    
 }
 
 
@@ -510,13 +1228,99 @@ a {
 }
 
 
+
+
+.wrap-for-small-link{
+    width: 280px;
+    margin-left: 20px;
+    
+}
+
+.small_link_second{ /*для иконки маленькая синяя точка*/
+    position: relative;
+    padding-left: 30px;/*отсуп от ссылки  Личный кабинет*/
+}
+
+
+
+.small_link_second::before{ /*псевдоэлемент для иконки маленькая синяя точка*/
+    content: "";
+    position: absolute;
+    width: 4px;
+    height: 5px;
+    
+    top:5px;;
+    left:10px;
+    
+    background-color: #32425c;
+    border-radius: 5px;
+}
+
+
+
+
+
+
+
+
 .breadcrumbs{ /*хлебные крошки*/
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
     font-size: 13px; /*переопределили от body*/
     padding: 0;
     margin: 0;
     margin-bottom: 20px; /*отступ после крошек*/
     list-style: none; /*убираем маркеры у ссылок, котрый ставит браузер по умолчанию*/
 }
+
+
+.breadcrumbs li{
+  position: relative; /*родитель для иконки >*/
+
+  margin-right: 20px;
+  /*border: 1px solid black;*/
+  margin-left: 23px;
+}
+
+
+.breadcrumbs li:last-child { /*у  последнего элемента убираем правый оступ*/
+  margin-right: 0;
+}
+
+
+.breadcrumbs li::after { /*псевдоэлемент */
+  content: "";
+
+  position: absolute;
+
+  width: 8px; /*размеры самой иконки >*/
+  height: 12px;
+  top: 7px; /*на шару подобрала*/
+  right: -25px;/*на шару подобрала*/
+  background: url("../img/icon-right-small.svg") no-repeat;
+}
+
+
+.breadcrumbs-current::after { /*последий галочку в хлебных крошках не отображаем*/
+   display: none;
+}
+
+
+
+.before-catalog::before{/*псевдоэлемент домик*/
+  content: "";
+
+  position: absolute;
+  width: 14px; /*размеры самой иконки >*/
+  height: 12px;
+  top: 7px; /*на шару подобрала*/
+  right: 10px;/*на шару подобрала*/
+  background: url("../img/icon-home.svg") no-repeat;
+
+}
+
+
 
 
 .breadcrumbs a{
@@ -533,39 +1337,108 @@ a {
 }
 
 
-.page-title{ /*для h1*/
-    
-    font-size: 30px; /*перепределили*/
-    line-height: 30px;/*перепределили*/
-    color: #32425c;
-    background-color: #f2f6f8;
-    font-family: "Cuprum"; /*перепределили*/
+
+.change-fon{ /* блоу ПЕРФОРАТОРЫ*/
+     background-color: #f4f7f9;
 }
 
 
-.catalog-columns {/*флекс контейнр(объединяет фильтры и каталаг)*/
-  
+
+
+
+
+.block-for-filter-sortirovka{ /*флекс контенер*/
+    display: flex;
+
+    justify-content: space-between;/*равномерное распредление элементов вдоль гланвой оси*/
+
+    padding: 0; /*убираем стили по умолчанию*/
+    margin: 0;/*убиарем стили по умолчанию*/
+    list-style: none;/*убираем маркеры у пунктов(карточек товара) меню котрый ставит сам браузер*/
+    font-size:13px;
+    font-family: "PTSans", sans-serif;
+    line-height: 18px;
+
+    margin-bottom: 20px;
+
+}
+
+
+.filtes-small-block{/*флекс элемент*/
+    width: 170px;
+    background-color: #f7f3ec;
+    padding: 14px 18px;
+}
+
+
+
+.sortirovka-block{/*флекс элемент, котрый сам вялется флекс контейнером*/
+    width: 720px; /*675*/
+    
+    display: flex;
+    justify-content: space-around;/*неравномерное
+    распредление элементов вдоль гланвой оси*/
+    align-items: center;
+    flex-wrap: wrap; /*перенос есть*/
+    padding: 0; /*убираем стили по умолчанию*/
+    margin: 0;/*убиарем стили по умолчанию*/
+    list-style: none;/*убираем маркеры у пунктов(карточек товара) меню котрый ставит сам браузер*/
+
+    background-color: #f7f3ec;
+    /*padding: 14px 18px;*/
+
+}
+
+.sortirovka-block  div{ /*СОРТИРОВКА сдвигаем  влево*/
+    margin-left: -80px;
+}
+
+
+.sortirovka-block ul{ /*флекс элемент, котрый сам флекс контейнер*/
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap; /*перенос есть*/
+    list-style: none;
+    margin-right: 40px;
+    
+}
+
+
+
+
+
+.catalog-columns {/*флекс контейнр(объединяет фильтры и каталаг)*/
+
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 60px; /*отлепляем секцию О первораторах от Конетйнера с пагинацией*/
 }
 
 
 
 
 .filters{
-    
+
     width: 200px;
-    
+
 }
-    
+
 
 .filter fieldset{ /*форма группы полей*/
-
+    padding: 0;
+    margin: 0;
+    margin-bottom: 20px;
     border: none; /*убираем  обводку у fieldset()*/
 }
 
+.filter fieldset:first-child {
+  margin-bottom: 35px;
+}
 
 .filter legend{
+    margin-left: 0;
+    padding-left:0;
+    margin-bottom: 14px;
     letter-spacing: 0.17px;
     font-size: 17px;/*перепределили от inner-page*/
     line-height: 30px; /*перепределили*/
@@ -575,8 +1448,35 @@ a {
 
 .filter ul{
     padding: 0;
+    margin: 0;
     list-style: none;/*убираем маркеры у списка кторый ставит браузер по умолчанию*/
 
+}
+
+
+.filter-option{
+    margin-bottom: 14px;
+    padding-left: 45px; /* освобождаем место для иконки чекбоксов*/
+}
+
+
+.filter-option label {
+  position: relative; /*это родитель для  иконки чекбокса, потом будем сдвигать чекбокс относительно границ родителя*/
+  display: block;
+  cursor: pointer;
+  user-select: none; /*отменяем выделение текста подписи цветом*/
+  margin-bottom: 20px; /*расстояние между чекбоксами*/
+
+}
+
+
+legend > ul{
+    margin-bottom: 24px;
+}
+
+
+.border-grey{
+    border: 1px solid #e5e5e5;
 }
 
 
@@ -594,51 +1494,143 @@ a {
 
 
 .filter label{
+
     font-size: 15px ;/*переопределили*/
     line-height: 20px;/*переопределили*/
     font-family: "PTSans";
+    
 }
+
+
+.filter-input-checkbox + label::before { /* псевдоэлемент нечекнтутый чекбокс*/
+  content: "";
+  position: absolute;
+  left: -44px;
+  top: 0;
+
+  width: 23px;
+  height: 23px;
+
+  background: url("../img/checkbox-off.svg") no-repeat 0 0;
+ 
+}
+
+
+.filter-input-checkbox:checked + label::before { /* псевдоэлемент чекнутый чекбокс*/
+  content: "";
+  position: absolute;
+  left: -44px;
+  top: 0px;
+  width: 27px;
+  height: 23px;
+   
+  background: url("../img/checkbox-on.svg") no-repeat 0 0;
+}
+
+
+.filter-input-radio + label::before {/* псевдоэлемент радиобаттон нечекнутый*/
+  content: "";
+  position: absolute;
+  left: -46px;
+  top: 0px;
+  width: 25px;/*размеры иконки*/
+  height: 25px;
+
+  background: url("../img/radio-off.svg") no-repeat 0 0;
+}
+
+
+.filter-input-radio:checked + label::after {/* псевдоэлемент радиобаттон чекнутый*/
+  content: "";
+  position: absolute;
+  left: -46px;
+  top: 0px;
+  width: 25px;/*размеры иконки*/
+  height: 25px;
+
+  background: url("../img/radio-on.svg") no-repeat 0 0;
+}
+
+
 
 
 .button_show{ /*кнпока Показать  в фильтрах*/
+  display: block;
+  padding-left: 38px;
+  padding-right: 38px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  margin-top: 70px;
+  font-size: 13px;
+  line-height: 18px;
+  font-family: "PT Sans", sans-serif;
   background-color: white;
   color: black;
   border: solid 1px #e5e5e5;
-  font: inherit; /*унаследуем от родителя .inner-page*/
-  font-size: 13px;
-    line-height: 18px;
-    font-family: "PTSans";
+  border-radius: 3px;
 }
 
+
+
 .catalog{
-   
-    width: 710px;
-    
+
+    /*width: 710px;*/
+
 }
 
 
 .catalog-list{ /* флекс элемент, котрый сам флекс контейнер, меню карточек товаров*/
-    
-    display: flex;
-    justify-content: space-between;/*равномерное распредление элементов вдоль гланвой оси*/
-    flex-wrap: wrap; /*перенос есть*/
     padding: 0; /*убираем стили по умолчанию*/
-    margin: 0;/*убиарем стили по умолчанию*/
-    list-style: none;/*убираем маркеры у пунктов(карточек товара) меню котрый ставит сам браузер*/
+    margin: 0;/*убиарем стили по умолчани*/
+    list-style: none;
 
+
+}
+
+.row{
+    display: flex;
+    width: 700px; /*иззеплина взяла*/
+    flex-wrap: wrap;
+    margin: 0 -10px;/* (в нашем случае между элементами сетки отступы по 20 пикселей, тобишь по 10 слева и справа от блока, сделав отрицательный margin для row, мы сделали его ширину 100% +10px слева и 10px справа);*/
+    justify-content: flex-start;
+    align-items: flex-start; /*(2е последние строки чтобы элементы шли слева-направо с верхнего левого угла)*/
+}
+
+.row-main{
+
+   flex-wrap: nowrap;
+}
+
+
+.col-3{
+    position: relative;
+    width: 32.333333%; /*(так будет 3 элемента в одном ряду, % берется от родителя-row)*/
+    
+}
+
+
+.col-4{ /*список карточек товаров в  index.html*/
+    position: relative;
+    width: 32.333333%; /*(так будет 4 элемента в одном ряду, % берется от родителя-row)*/
+    padding: 0 10px; /*(отступы слева и справа от каждого элемента)*/
 }
 
 
 .catalog-item{ /*  флекс элемент, задаем карточке товара*/
-    width: 220px;
-    margin-bottom: 20px; /*чтобы карточки твара не слипались*/
+    position: relative; /*родитель для изображения .flag(NEW) и для .actions */
+    display: inline-block;
+    width: 222px;
+    margin-bottom: 20px; /*чтобы карточки товара не слипались*/
     margin-right: 20px;
-    
-    margin-bottom: 25px;/*чтобы пагинация не прилипала  к каталогу*/
+
+
     background-color: #ffffff;  /*фоновый цвет */
-    border: solid 1px #e5e5e5;
-    /*text-align: center;*/ /*потом добавим может быть*/
+    border:1px solid  #e5e5e5;
+    text-align: center;
+    color: #000000;
 }
+
 
 
 
@@ -654,19 +1646,41 @@ a {
 }
 
 
-.catalog-item { /*цвет текста ссылки на картчоке товара*/
-    color: #000000;
+
+
+
+.catalog-item .flag{ /*потомок -NEW*/
+    position: absolute;
+    width: 60px; /*размер иконки*/
+    height: 60px;
+    top: -1px;
+    right: -1px;
+    z-index: 20;
+    overflow: hidden;
+    text-indent: -1000px;/*зачем это?*/
 }
 
 
-.pagination-list { /*Пагинация*/
-    
-  padding: 0; /*сбрасываем стили по умолчанию*/
-  margin: 0;
+.catalog-item .flag-new{
+    background: url("../img/new-flag.jpg")  no-repeat 0 0;
+}
 
-  list-style: none;
 
-  
+.catalog-item .actions{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 218px;
+    height: 88px;
+    padding: 40px 0;
+    background-color: rgba(255,255,255,0.9);
+    z-index: 10;
+}
+
+
+.catalog-item h3{
+    min-height: 40px;
+    margin: 0;
 }
 
 
@@ -676,11 +1690,9 @@ a {
     font-size: 18px;
     line-height: 20px;
     text-transform: none;
-    font-family: "PTSans";
+    font-family: "PT Sans", sans-serif;
+    margin-top: -30px;
 }
-
-
-
 
 
 .catalog-item-price { /*стиль дял цены товара*/
@@ -692,23 +1704,60 @@ a {
 }
 
 
-.price_grey { /*переопрелеояем стили*/
+.price-grey { /*переопрелеояем стили*/
     font: inherit;
     color: #999999;
     font-size: 17px;
     text-align: center;
+    margin-top: -10px;
 }
 
 
 
 
 /*.catalog-item-price ~ .item-button*/
-.item-button{/*кнопка с ценой на картчоке товара*/
+.catalog-item .price-button{/*кнопка с ценой на картчоке товара*/
+
+
     font: inherit;
-    font-family: "PTSans";
+    font-family: "PT Sans", sans-serif;
     background-color: #ee3643;
     color: #ffffff;  /*цвет текста на кнопках*/
 
+
+}
+
+.catalog-item .price-button:after { /*разобраться с надписью на кнопке*/
+    content: "";
+
+    position: absolute;
+    width: 141px;
+    height: 38px;
+    left: 43px;
+    bottom: 21px;
+    background: url("../img/red-button.svg") no-repeat; 
+}
+
+
+
+.catalog-item .buy-button,
+.catalog-item .bookmark-button{
+    display: block;
+    width: 129px;
+    margin: 0 auto; /*центруруем кнопки в контенере*/
+    margin-bottom: 7px; /*отлепим первую кнопку от второй*/
+    padding: 7px 0;
+
+    border-bottom-color: #367315;
+    border-radius: 3px;
+
+
+    font-size: 14px;
+    font-weight: normal;
+    font-family: "Cuprum", sans-serif;
+    line-height: 18px;
+    text-decoration: none;
+    text-transform: uppercase;
 }
 
 
@@ -716,49 +1765,48 @@ a {
 
 
 
-.buy_button{ /*  зеленая кнопка Купить*/
-    font-family: "Cuprum"; /*переопредеяляем*/
+.buy-button{ /*  зеленая кнопка Купить*/
+   /*переопредеяляем*/
     color: #ffffff; /*переопределили*/
     background-color: #63a63e;
     box-shadow: inset 0px -3px 0 0 #367315;
-    text-transform: uppercase;
+
 
 }
 
 
-.buy_button:hover,
-.buy_button:focus{
+.buy-button:hover,
+.buy-button:focus{
     background-color: #5fbb2d;
     box-shadow: inset 0px -3px 0 0 #367315;
 
 }
 
 
-.buy_button:active{
+.buy-button:active{
     background-color: #518534;
 
 }
 
 
-.bookmark_button{ /*Кнопка В закладки*/
-    font: inherit;
+.bookmark-button{ /*Кнопка В закладки*/
+    border: 3px solid #63a63e;
     background-color: #ffffff;
-    border: solid 3px #63a63e;
+
     color: #32425c;/*переопределили*/
-    text-transform: uppercase;
-    font-family: "Cuprum"; /*переопредеяляем*/
-    
+
+
 }
 
 
-.bookmark_button:hover,
-.bookmark_button:focus{
+.bookmark-button:hover,
+.bookmark-button:focus{
     border: solid 3px #32425c;
     color: #32425c;
 }
 
 
-.bookmark_button:active{
+.bookmark-button:active{
     color: rgba(50, 66, 92, 0.3);
     border: solid 3px rgba(50, 66, 92, 0.3);
 }
@@ -773,3 +1821,100 @@ a {
      display: none; /*не отобраажем*/
 }
 
+
+
+
+.pagination-list { /*Пагинация, флекс контейнер*/
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0; /*сбрасываем стили по умолчанию*/
+  margin: 0;
+  list-style: none;
+  
+
+}
+
+
+.pagination-item {
+   margin-right: 5px; /*чтоб пункты пагинации не прилипали друг к другу*/
+}
+
+
+.pagination-item:last-child {
+  margin-right: 0;
+}
+
+
+.pagination-item a{
+    display: block;
+    padding: 8px 13px;
+    background-color:  #ffffff;
+    
+    border: solid 1px #e5e5e5;
+    border-radius: 2px;
+    color: #000000;
+    size: 13px;
+    line-height: 18px;
+    font-family: "PT Sans", sans-serif;
+}
+
+
+.next{
+    padding: 8px 30px; /*КАК СДЕЛАТЬ БЕЗ КЛАССА??*/
+}
+
+
+.pagination-item-current a{
+    background-color: #ee3643;
+
+    color: white;
+}
+    
+
+
+
+.pagination-item a:hover, /*при наведении*/
+.pagination-item a:focus
+{
+    border: solid 1px #bdc6ca;
+
+}
+
+
+.pagination-item a:active{ /*при нажатии*/
+    border: solid 1px #ee3643;
+}
+
+
+
+
+.about-perforators{
+   width: auto; /*ЩИРИНА НЕ ПО УМОЛЧАНИЮ почему то*/
+    background-color: #f4f7f9;
+}
+
+
+.text-about-perforators{
+    
+}
+
+
+
+
+.visually-hidden:not(:focus):not(:active), /*для скрытия элементов со страницы.*/
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
