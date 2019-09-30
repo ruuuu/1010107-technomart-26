@@ -171,7 +171,7 @@ h2{
 }
 
 
-.bookmark{ /*флекс элемент*/
+.bookmark-icon{ /*флекс элемент*/
     
     
     position: relative;/*родитель для иконки*/
@@ -181,7 +181,7 @@ h2{
 }
 
 
-.bookmark::before { /* псевдоэлемент для иконки закладки*/
+.bookmark-icon::before { /* псевдоэлемент для иконки закладки*/
   content: "";
   position: absolute;
     
@@ -1308,7 +1308,7 @@ red-defis{
 
 
 
-.before-catalog::before{/*псевдоэлемент домик*/
+.before-catalog a::before{/*псевдоэлемент домик*/
   content: "";
 
   position: absolute;
@@ -1410,17 +1410,17 @@ red-defis{
 .catalog-columns {/*флекс контейнр(объединяет фильтры и каталаг)*/
 
     display: flex;
-    justify-content: space-between;
-    margin-bottom: 60px; /*отлепляем секцию О первораторах от Конетйнера с пагинацией*/
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    margin-bottom: 60px; /*отлепляем секцию О перфораторах от Конетйнера с пагинацией*/
 }
 
 
 
 
 .filters{
-
     width: 200px;
-
 }
 
 
@@ -1573,191 +1573,170 @@ legend > ul{
 
 
 
-.catalog{
-
-    /*width: 710px;*/
-
-}
 
 
-.catalog-list{ /* флекс элемент, котрый сам флекс контейнер, меню карточек товаров*/
-    padding: 0; /*убираем стили по умолчанию*/
-    margin: 0;/*убиарем стили по умолчани*/
-    list-style: none;
+                    /*СТИЛИ К КАРТОЧКАМ ТОВАРОВ*/
 
-
-}
-
-.row{
+.catalog-items {
+    width: 710px; /*ширина списка*/
+    margin: 10px auto; /*отцентровали список товаров*/
     display: flex;
-    width: 700px; /*иззеплина взяла*/
     flex-wrap: wrap;
-    margin: 0 -10px;/* (в нашем случае между элементами сетки отступы по 20 пикселей, тобишь по 10 слева и справа от блока, сделав отрицательный margin для row, мы сделали его ширину 100% +10px слева и 10px справа);*/
+    
     justify-content: flex-start;
     align-items: flex-start; /*(2е последние строки чтобы элементы шли слева-направо с верхнего левого угла)*/
-}
-
-.row-main{
-
-   flex-wrap: nowrap;
-}
-
-
-.col-3{
-    position: relative;
-    width: 32.333333%; /*(так будет 3 элемента в одном ряду, % берется от родителя-row)*/
+    
     
 }
 
 
-.col-4{ /*список карточек товаров в  index.html*/
+.catalog-items .row {
+   margin: 0 -10px;/* (в нашем случае между элементами сетки отступы по 20 пикселей, тобишь по 10 слева и справа от блока, сделав отрицательный margin для row, мы сделали его ширину 100% +10px слева и 10px справа);*/
+}
+
+
+.catalog-item { /*флекс элеент*/
+  position: relative;
+ 
+  width: 218px;
+ 
+  
+  margin-bottom: 20px;
+  
+  line-height: 20px;
+  font-weight: bold;
+  text-align: center;
+  border: 1px solid #ccc;
+}
+
+
+.catalog-item:nth-child(3n) { /*у каждой 3-ей картоки убираем отступ справа*/
+  margin-right: 0;
+}
+
+
+.catalog-item .flag {
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  
+  width: 60px;
+  height: 60px;
+  
+  text-indent: -1000px;
+  overflow: hidden;
+  z-index: 20;
+}
+
+
+.catalog-item .flag-new {
+  background: url("../img/new-flag.jpg") no-repeat 0 0;
+}
+
+
+.catalog-item .actions {
+  position: absolute;
+  top: 0;
+  left: 0;
+  
+  width: 218px;
+  height: 88px;
+  padding: 40px 0;
+  
+  background-color: rgba(255,255,255,0.9);
+  z-index: 10;
+    
+    
+}
+
+
+.catalog-item .buy,
+.catalog-item .bookmark{
+    
+  display: block;
+  width: 129px;
+  margin: 0 auto;/*центруруем кнопки в контенере*/
+  margin-bottom: 7px;/*отлепим первую кнопку от второй*/
+  padding: 7px 0;
+  
+  background-color: #63a63e;
+  border: 3px solid #63a63e;
+  border-bottom-color: #367315;
+  border-radius:3px;
+
+  font-size: 14px;
+  font-weight: normal; 
+  font-family: "Cuprum", sans-serif;
+  line-height: 18px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+
+
+.catalog-item .image {
+  width: 218px;
+  height: 170px;
+}
+
+
+.catalog-item .image img {
+  max-width: 100%;
+}
+
+
+.catalog-item .title {
+  min-height: 40px;
+  padding: 0 25px;
+  margin-top: 10px;
+  margin-bottom: 15px;    
+}
+
+
+.catalog-item .discount {
+  min-height: 20px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  
+  color: #999;
+  text-decoration: line-through;
+}
+
+
+
+.catalog-item .price{/* розовая кнопка с ценой на картчоке товара*/
+
     position: relative;
-    width: 32.333333%; /*(так будет 4 элемента в одном ряду, % берется от родителя-row)*/
-    padding: 0 10px; /*(отступы слева и справа от каждого элемента)*/
-}
-
-
-.catalog-item{ /*  флекс элемент, задаем карточке товара*/
-    position: relative; /*родитель для изображения .flag(NEW) и для .actions */
-    display: inline-block;
-    width: 222px;
-    margin-bottom: 20px; /*чтобы карточки товара не слипались*/
-    margin-right: 20px;
-
-
-    background-color: #ffffff;  /*фоновый цвет */
-    border:1px solid  #e5e5e5;
-    text-align: center;
-    color: #000000;
-}
-
-
-
-
-.catalog-item:nth-child(3n){
-    margin-right:0; /*у последней картчоки убираем отсптуп справа*/
-}
-
-
-
-.catalog-item:hover{ /*при наведении на карточку*/
-    box-shadow: 0px 10px 25px 0 rgba(41, 52, 73, 0.5);
-
-}
-
-
-
-
-
-.catalog-item .flag{ /*потомок -NEW*/
-    position: absolute;
-    width: 60px; /*размер иконки*/
-    height: 60px;
-    top: -1px;
-    right: -1px;
-    z-index: 20;
-    overflow: hidden;
-    text-indent: -1000px;/*зачем это?*/
-}
-
-
-.catalog-item .flag-new{
-    background: url("../img/new-flag.jpg")  no-repeat 0 0;
-}
-
-
-.catalog-item .actions{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 218px;
-    height: 88px;
-    padding: 40px 0;
-    background-color: rgba(255,255,255,0.9);
-    z-index: 10;
-}
-
-
-.catalog-item h3{
-    min-height: 40px;
-    margin: 0;
-}
-
-
-.catalog-item h3{ /*заголовки в картчоках*/
     font: inherit;
-    color: #000000;
-    font-size: 18px;
-    line-height: 20px;
-    text-transform: none;
     font-family: "PT Sans", sans-serif;
-    margin-top: -30px;
-}
-
-
-.catalog-item-price { /*стиль дял цены товара*/
-
-    font-size: 17px;
-
-    text-align: center; /*выравнивание текста по центру, ПОЧЕМУ НЕ ПЕРЕОПРЕДЕЛЯЕТСЯ ПОТОМКАМи .price_grey и .item-button, центриурется только у 5-гои последнего элемента??? */
-
-}
-
-
-.price-grey { /*переопрелеояем стили*/
+    
+    
+    
+    width: 80px;
+    margin: 10px auto;
+    margin-bottom: 20px;
+    padding: 10px 30px;
+  
+    color: black;
     font: inherit;
     color: #999999;
     font-size: 17px;
-    text-align: center;
-    margin-top: -10px;
-}
-
-
-
-
-/*.catalog-item-price ~ .item-button*/
-.catalog-item .price-button{/*кнопка с ценой на картчоке товара*/
-
-
-    font: inherit;
-    font-family: "PT Sans", sans-serif;
-    background-color: #ee3643;
-    color: #ffffff;  /*цвет текста на кнопках*/
-
+    z-index: 30px;/*???*/
 
 }
 
-.catalog-item .price-button:after { /*разобраться с надписью на кнопке*/
+
+
+.catalog-item .price:after { /*псевдоэлемент для  розовой кнопки*/
     content: "";
-
     position: absolute;
     width: 141px;
     height: 38px;
-    left: 43px;
-    bottom: 21px;
+    
+    left: 0px;
+    bottom: 0px;
     background: url("../img/red-button.svg") no-repeat; 
-}
-
-
-
-.catalog-item .buy-button,
-.catalog-item .bookmark-button{
-    display: block;
-    width: 129px;
-    margin: 0 auto; /*центруруем кнопки в контенере*/
-    margin-bottom: 7px; /*отлепим первую кнопку от второй*/
-    padding: 7px 0;
-
-    border-bottom-color: #367315;
-    border-radius: 3px;
-
-
-    font-size: 14px;
-    font-weight: normal;
-    font-family: "Cuprum", sans-serif;
-    line-height: 18px;
-    text-decoration: none;
-    text-transform: uppercase;
+    z-index: 10px;/*???*/
 }
 
 
@@ -1765,32 +1744,51 @@ legend > ul{
 
 
 
-.buy-button{ /*  зеленая кнопка Купить*/
+
+
+
+
+.catalog-item .buy{ /*  зеленая кнопка Купить*/
+    position: relative;
+    
    /*переопредеяляем*/
     color: #ffffff; /*переопределили*/
     background-color: #63a63e;
-    box-shadow: inset 0px -3px 0 0 #367315;
-
-
+    
 }
 
 
-.buy-button:hover,
-.buy-button:focus{
+.catalog-item .buy::before{ /*псевдоэлемент для коризины на  кнопке Купить*/
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    
+    top  2px;
+    left: 14px ;
+/*background-color: red;*/
+    background: url("../img/cart-icon.svg") no-repeat 0 0;
+    opacity: 0.3;
+}
+
+
+
+.catalog-item .buy:hover,
+.catalog-item .buy:focus{
     background-color: #5fbb2d;
-    box-shadow: inset 0px -3px 0 0 #367315;
+    /*box-shadow: inset 0px -3px 0 0 #367315;*/
 
 }
 
 
-.buy-button:active{
+.catalog-item .buy:active{
     background-color: #518534;
 
 }
 
 
-.bookmark-button{ /*Кнопка В закладки*/
-    border: 3px solid #63a63e;
+.catalog-item .bookmark{ /*Кнопка В закладки*/
+    
     background-color: #ffffff;
 
     color: #32425c;/*переопределили*/
@@ -1799,14 +1797,26 @@ legend > ul{
 }
 
 
-.bookmark-button:hover,
-.bookmark-button:focus{
+.catalog-item .actions {
+  display: none; /*по умолчниаю кнопки  Купиь и В закладки не отображаем*/
+}
+
+
+
+.catalog-item:hover .actions {
+  display: block; /*деалет так чтобы кнопки отображались только при наведении*/
+} 
+
+
+
+.catalog-item .bookmark:hover,
+.catalog-item .bookmark:focus{
     border: solid 3px #32425c;
     color: #32425c;
 }
 
 
-.bookmark-button:active{
+.catalog-item .bookmark:active{
     color: rgba(50, 66, 92, 0.3);
     border: solid 3px rgba(50, 66, 92, 0.3);
 }
