@@ -24,8 +24,8 @@
           </section>
             
           <section class="section_two"><!-- входят Закладки  Корзина, Офрмить заказ,  флекс сэлемент, сам является флекс контейнером-->
-              <div class="bookmark">Закладки: 0</div><!--флекс элемент-->
-              <div class="trash">Корзина: 0</div><!--флекс элемент-->
+              <a class="bookmark-icon">Закладки: 0</a><!--флекс элемент-->
+              <a class="trash">Корзина: 0</a><!--флекс элемент-->
               <button class="button make-order-button" type="button"><!--флекс элемент--> 
                     Оформить заказ
               </button>
@@ -83,7 +83,7 @@
          <ul class="cards"><!--флекс контейнер-->
              <li class="block-item for-label-button"><!-- карточка , флекс элемент -->
                     <h3>Материалы</h3>
-                    <a class="button"  href=""><!-- ссылка в виде кнопки-->
+                    <a class="button-on-cards"  href=""><!-- ссылка в виде кнопки-->
                          НА ЛЮБОЙ ВКУС
                     </a>
                    <p class="icon">
@@ -92,7 +92,7 @@
              </li>
              <li class="block-item for-label-button"><!-- карточка  , флекс элемент-->
                  <h3>Инструмент</h3>
-                 <a class="button"  href="">
+                 <a class="button-on-cards"  href="">
                      НА ВСЕ СЛУЧАИ
                  </a>
                  <p class="icon">
@@ -101,7 +101,7 @@
              </li>
              <li class="block-item for-label-button"><!-- карточка  , флекс элемент-->
                  <h3>Техника</h3>
-                 <a  class="button" href="">
+                 <a  class="button-on-cards" href="">
                      ДЛЯ СТРОЙКИ
                  </a>
                  <p class="icon">
@@ -114,21 +114,23 @@
     <section class="container three-cards"><!-- три блока: Дрели Скидка Доставка-->
           <div class="wrapper-cards"> <!-- флекс-контейнер-->
             <div class="for-big-image"><!-- флекс элемент-->
-                <h3 class="visually-hidden">Дрели</h3>
+               <!--<h3></h3>-->
                 <img src="img/slide-image.jpg" width="620" height="266">
-                <a class="button" href="catalog.html">Открыть каталог</a><!-- ссылка в виде кнопки-->
+                <a class="button open-catalog" href="catalog.html">Открыть каталог</a><!-- ссылка в виде кнопки-->
+                <a class="dot1" href=""></a>
+                <a class="dot2" href=""></a>
             </div>
             <div><!-- флекс элемент-->
                 <div class="block-item for-label-button last-two-cards">
                     <h3>Cкидка 50%</h3>
-                    <a class="button" href="">на 350 товаров</a>
+                    <a class="button-on-cards" href="">на 350 товаров</a>
                     <p class="icon">
                       <img src="img/icon-4.svg" width="59" height="72" alt="instrument">
                     </p>
                 </div>
                 <div class="block-item for-label-button last-two-cards">
                     <h3>Доставка</h3>
-                    <a class="button" href="">бесплатно</a>
+                    <a class="button-on-cards" href="">бесплатно</a>
                     <p class="icon">
                       <img src="img/icon-5.svg" width="78" height="63" alt="instrument">
                     </p>
@@ -145,85 +147,76 @@
         </section>
     </div>
     
-      
-    <section><!-- список карточек с товарами-->
-      <div class="container">
-        <h2 class="visually-hidden">Список инструментов</h2>
-        <ul class="catalog-list"><!-- список карточек товаров-->
-          <div class="row row-main"><!--- строка-->
-            <div class="col-4"> 
-                    <li class="catalog-item"><!-- карточка товара-->
-                         <div class="flag flag-new"></div>
-                         <a href=""><!--строчный -->
-                             <p>
-                                <img src="img/item.jpg" width="218" height="170"  alt="фото товара">
-                             </p>
-                             <h3><!-- по нажатию на текст пеереходим на нужную страницу-->
-                                <span>Перфоратор BOSCH</span><!--строчный элемент -->
-                                <span>BFG 3000</span>
-                            </h3>
-                        </a>
-                        <p class="catalog-item-price">
-                           <div class="price-grey"><del>22500 P.</del></div>
-                           <a class="price-button" href="">15500 Р.</a>
-                        </p>
-                     </li>
-            </div>
-            <div class="col-4">
-                     <li class="catalog-item"> <!-- карточка товара-->
-                         <a href="">
-                           <p>
-                             <img src="img/item.jpg" width="218" height="170" alt="фото товара">
-                           </p>
-                           <h3><!-- по нажатию на текст пеереходим на нужную страницу-->
-                             <span>Перфоратор BOSCH</span>
-                             <span>BFG 3000</span>
-                          </h3>
-                       </a>
-                       <p class="catalog-item-price">
-                            <div class="price-grey">22500 P.</div>
-                            <a class="price-button" href="">15500 Р.</a>
-                       </p>
-                   </li>
-            </div>
-            <div class="col-4">
-                     <li class="catalog-item"> <!-- карточка товара-->
-                         <a href="">
-                           <p>
-                             <img src="img/item.jpg" width="218" height="170" alt="фото товара">
-                           </p>
-                           <h3><!-- по нажатию на текст пеереходим на нужную страницу-->
-                             <span>Перфоратор BOSCH</span>
-                             <span>BFG 3000</span>
-                          </h3>
-                       </a>
-                       <p class="catalog-item-price">
-                            <div class="price-grey">22500 P.</div>
-                            <a class="price-button" href="">15500 Р.</a>
-                       </p>
-                   </li>
-            </div>
-            <div class="col-4">
-                     <li class="catalog-item"> <!-- карточка товара-->
-                         <a href="">
-                           <p>
-                             <img src="img/item.jpg" width="218" height="170" alt="фото товара">
-                           </p>
-                           <h3><!-- по нажатию на текст пеереходим на нужную страницу-->
-                             <span>Перфоратор BOSCH</span>
-                             <span>BFG 3000</span>
-                          </h3>
-                       </a>
-                       <p class="catalog-item-price">
-                            <div class="price-grey">22500 P.</div>
-                            <a class="price-button" href="">15500 Р.</a>
-                       </p>
-                   </li>
-            </div>
-          </div><!-- row-->
-         </ul>
-        </div>
-    </section><!-- список карточек с товарами--> 
+    <div class="container">
+       <section class="catalog-on-main-page"><!-- список карточек с товарами-->
+             <h2 class="visually-hidden">Список инструментов</h2><!--этот заголовок потом уберем -->
+             <div class="catalog-list">
+               <div class="row"><!--- строка-->
+                   <div class="col-4">
+                     <div class="catalog-item"><!-- карточка товара-->
+                        <div class="flag flag-new">новинка</div>
+                        <div class="actions">
+                          <a href="#" class="buy">Купить</a>
+                          <a href="#" class="bookmark">В закладки</a>
+                        </div>
+                        <div class="image">
+                            <img width="218" height="170" src="img/item.jpg">
+                        </div>
+                        <div class="title">Перфоратор BOSCH BFG 3000</div>
+                        <div class="discount">22 500 Р.</div>
+                        <div class="price">15 500 Р.</div>
+                     </div>
+                   </div>
+                   
+                   <div class="col-4">
+                      <div class="catalog-item"><!-- карточка товара-->
+                        <div class="actions">
+                          <a href="#" class="buy">Купить</a>
+                          <a href="#" class="bookmark">В закладки</a>
+                        </div>
+                        <div class="image">
+                            <img width="218" height="170" src="img/item.jpg">
+                        </div>
+                        <div class="title">Перфоратор BOSCH BFG 3000</div>
+                        <div class="discount"></div>
+                        <div class="price">90 500 Р.</div>
+                     </div>
+                   </div>
+                   
+                   <div class="col-4">
+                     <div class="catalog-item">
+                        <div class="actions">
+                          <a href="#" class="buy">Купить</a>
+                          <a href="#" class="bookmark">В закладки</a>
+                        </div>
+                        <div class="image">
+                            <img width="218" height="170" src="img/item.jpg">
+                        </div>    
+                        <div class="title">Перфоратор BOSCH BFG 3000</div>
+                        <div class="discount"></div>
+                        <div class="price">15 500 Р.</div>
+                     </div>
+                   </div>
+                   
+                   <div class="col-4">
+                      <div class="catalog-item"><!-- карточка товара-->
+                        <div class="flag flag-new">новинка</div>
+                        <div class="actions">
+                          <a href="#" class="buy">Купить</a>
+                          <a href="#" class="bookmark">В закладки</a>
+                        </div>
+                        <div class="image">
+                            <img width="215" height="170" src="img/item.jpg">
+                        </div>    
+                        <div class="title">Перфоратор BOSCH BFG 3000</div>
+                        <div class="discount">22 500 Р.</div>
+                        <div class="price">15 500 Р.</div>
+                      </div>
+                   </div>
+		   </div><!--от row -->
+          </div><!-- от catalog-list-->
+        </section><!-- список карточек с товарами-->
+    </div><!-- от ценровщика-->    
     
     <div class="container"> <!--центровщик-->
         <section class="popular-tovar"><!-- флекс контейнер-->
@@ -443,27 +436,41 @@
             </div><!--вторая часть подвала -->
         </footer>
         
-        <section><!-- Модальное окно Личный кабинет-->
-          <h2 class="visually-hidden">Личный кабинет</h2><!--потом уберем этот заголовок -->
-          <form sction="https://echo.htmlacademy.ru" method="post">
+        <section class="modal modal-login"><!-- Модальное окно отправки данных-->
+          <h2 class="visually-hidden">окно отправки данных</h2><!--потом уберем этот заголовок -->
+          <form  class="login-form" sction="https://echo.htmlacademy.ru" method="post">
+             <div class="for-name-and-emal-fields">
+                 <p class="wrap-for-label-with-field">
+                     <label for="user-name">Ваше имя: </label>
+                     <input  id="user-name"  type="text" name="login"  value="" placeholder="Имя Фамилия">
+                 </p>
+                 <p class="wrap-for-label-with-field">
+                     <label for="user-mail">Ваш e-mail: </label>
+                     <input  id="user-mail"  type="text" name="mail" value="" placeholder="email@example.com">
+                 </p>
+             </div>
              <p>
-                 <label for="user-name">Ваше имя: </label>
-                 <input  id="user-name"  type="text" name="login"  value="" placeholder="Имя Фамилия">
+                 <label  class="for-textarea-label" for="user-text">Текст письма: </label>
+                 <textarea id="user-text" placeholder="В свободной форме"   value=""></textarea>
              </p>
-             <p>
-                 <label for="user-mail">Ваш e-mail: </label>
-                 <input  id="user-mail"  type="text" name="mail" value="" placeholder="email@example.com">
-             </p>
-             <p>
-                 <label for="user-text">Текст письма: </label>
-                 <textarea id="user-text" placeholder="В свободной форме" cols="100" rows="10" value="">
-                 </textarea>
-             </p>
-             <button type="submit"> <!-- кнопка отправки данных формы-->
+            <div class="wrap-for-button">
+                <button type="submit"> <!-- кнопка отправки данных формы-->
                  Отправить
-             </button>
+                </button>
+            </div>
          </form>
-         <button type="button">Закрыть </button><!-- верхняя кнпока Крестик, чобы закрыть модальное окно-->
+         <button class="modal-close" type="button"><!-- верхняя кнпока Крестик, чобы закрыть модальное окно-->
+             <span class="visually-hidden">Закрыть</span>
+            </button>
+      </section>
+      
+      
+      <section class="modal modal-map">
+          <h2 class="visually-hidden">Как до нас добраться</h2>
+          <p><img src="img/map.jpg" width="940" height="446" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург"></p>
+          <button class="modal-close" type="button">
+            <span class="visually-hidden">Закрыть</span>
+          </button>
       </section>
 
     </body>

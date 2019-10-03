@@ -126,21 +126,43 @@ h2{
     padding: 13px 55px;
     background-color: #ee3643;
     line-height: 1;
-    margin-right: 25px;
+    
     box-shadow: inset 0px -5px 0 0 rgba(0, 0, 0, 0.24);
 }
 
 
+.main-header-logo:hover
 
+{
+    background-color: #ca2c37; 
+}
+
+
+.main-header-logo:focus{
+    background-color:  #ee3643;
+}
+
+.main-header-logo:active{ /*при нажатии на кнпоку*/
+    background-color: #ba2732;
+}
 
 
 
 .search/*флекс элемент*/
 {
     position: relative;/*родитель для иконки*/
-    max-width: 180px;
-    margin-left: 35px; /*место для иконки поиска*/
-   
+    display: block;
+    /*width: 270px;*/
+    
+    
+    padding-top: 13px ;
+    padding-bottom: 13px;
+    
+    padding-left: 50px;/*место для иконки поиска*/ 
+    padding-right: 165px;
+    
+    
+    /*border: 1px solid black;/*уберем потом*/
 }
 
 
@@ -148,8 +170,8 @@ h2{
   content: "";
   position: absolute;
     
-  top: 0px;
-  left: -33px;
+  top: 12px;
+  left: 20px;
   width: 17px;/*размеры иконки*/
   height: 17px;
   background-image: url("../img/icon-search.svg");
@@ -159,8 +181,23 @@ h2{
     
 }
 
+.search:hover
+
+{
+    background-color: #212a3a;
+}
 
 
+.search:focus{
+    background-color: white;
+    color: black;
+}
+
+.search:focus::before{
+    background-image: url("../img/icon-search-red.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
 
 
 .section_two{/*флекс элементу задаем размер , флекс элемент корый сам является флекс контенйером*/
@@ -175,18 +212,23 @@ h2{
     
     
     position: relative;/*родитель для иконки*/
-    max-width: 95px;
-    padding-left: 50px; /*место для иконки заклдаки*/
-    margin-right: 20px;
+    display: block;
+    /*width: 150px;*/
+    padding-left: 44px; /*место для иконки заклдаки*/
+    padding-right: 28px;
+    
+    padding-top: 13px;
+    padding-bottom: 13px;
 }
 
 
-.bookmark-icon::before { /* псевдоэлемент для иконки закладки*/
+.bookmark-icon::before { /* псевдоэлемент для иконки Закладки*/
   content: "";
   position: absolute;
     
-  top: 0px;
-  left: 22px;
+  top: 12px;
+  left: 17px;
+    
   width: 14px;/*размеры иконки*/
   height: 16px;
   background-image: url("../img/icon-bookmark.svg");
@@ -200,9 +242,13 @@ h2{
 
 .trash{/*флекс элемент*/
     position: relative;/*родитель для иконки*/
-    max-width: 95px;
+    display: block;
+    /*width: 150px;*/
     padding-left: 50px; /*место для иконки корзины*/
-    margin-right: 30px;
+    padding-right: 31px;
+    
+    padding-top: 13px;
+    padding-bottom: 13px;
 }
 
 
@@ -210,8 +256,9 @@ h2{
   content: "";
   position: absolute;
     
-  top: 0px;
+  top: 12px;
   left: 22px;
+    
   width: 15px;/*размеры иконки*/
   height: 15px;
   background-image: url("../img/icon-cart.svg");
@@ -222,6 +269,65 @@ h2{
 }
 
 
+
+
+.bookmark-icon:hover,
+.bookmark-icon:focus{
+    background-color: #212a3a;
+    
+}
+
+
+/*.section_two svg:hover path
+{
+    fill: white;
+    
+   
+}*/
+
+
+
+.bookmark-icon:active{
+    background-color:#161d29;
+}
+
+
+
+
+
+.trash:hover,
+.trash:focus{
+    background-color:#212a3a;
+}
+
+.trash:active{
+    background-color:#161d29;
+}
+
+
+.make-order-button{/*Кнопка вверху страницы Оформить заказ*/
+    display: block;
+    padding-top: 12px ;
+    padding-bottom: 13px ;
+    padding-left: 20px ;
+    padding-right: 22px ;
+    line-height: 1;
+    text-transform: none; /*переопределили*/
+    background-color: #63a63e;
+
+}
+
+
+
+.make-order-button:hover,
+.make-order-button:focus{
+    background-color:#518534;
+}
+
+
+.make-order-button:active{/*при нажатии*/
+    background-color:#63a63e;
+}
 
 
 
@@ -389,87 +495,6 @@ h2{
      
 }
     
-    
-    
-
-                    /* С Т И Л И  Д Л Я  Б Л О К   Н А В И Г А Ц И Я*/
-
-.site-navigation { /* для главного меню*/
-    
-  width:940px;
-  font-size: 17px;
-  line-height: 17px;
-  color: #ffffff;
-  box-shadow:  0px -5px 0 0 #293449;
-  background-color: #293449;/* фоновое изображение */
-  box-shadow: inset 0px -5px 0 0 #32425c; 
-    
-}
-
-
-
-.site-navigation ul{  /*флекс элемент, котрый сам является флекс контенером*/
-    display: flex;
-    flex-wrap: wrap; /*перенос элементов*/
-    justify-content: space-between;
-    align-items: center; /*выравнивание элементов вдоль попереченой оси*/
-    list-style: none; /*убираем маркеры*/
-    padding-left: 52px; /*отсупы от первого пункта меню до левой границы списка*/
-    padding-right: 55px;   /*отсупы от последнего пункта меню до правой границы списка*/
-}
-
-.site-navigation li{
-    padding-top: 22px;
-    padding-bottom: 26px;
-}
-
-
-.site-navigation a{
-    display: block;/*делаем ссылки блочными*/
-    color: #ffffff;
-
-}
-
-
-.site-navigation a:hover,/*при наведении */
-.site-navigation a:focus
-{
-    background-color:  #293449;
-}
-
-
-.site-navigation a:active{ /*при нажатии на пункт главного  меню*/
-    color: rgba(255, 255, 255, 0.5);
-}
-
-
-.make-order-button{/*Кнопка вверху страницы Оформить заказ*/
-    display: block;
-    padding-top: 12px ;
-    padding-bottom: 13px ;
-    padding-left: 20px ;
-    padding-right: 22px ;
-    line-height: 1;
-    text-transform: none; /*переопределили*/
-    background-color: #63a63e;
-
-}
-
-
-
-.make-order-button:hover,
-.make-order-button:focus{
-    background-color:#518534;
-}
-
-
-.make-order-button:active{/*при нажатии*/
-    background-color:#63a63e;
-}
-
-
-
-
 .content_of_second_head section:last-child{
     margin-right: -40px; /*чтобы выравнить кнопку Регитрация по правому краю*/
 }
@@ -489,7 +514,79 @@ h2{
 .button_registration:active
 {
     color:rgba(0, 0, 0, 0.3);
+}    
+    
+
+.for-login-icon:active::before{
+   background-image: url("../img/icon-login-active.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
 }
+
+
+                    /* С Т И Л И  Д Л Я  Б Л О К   Н А В И Г А Ц И Я*/
+
+.site-navigation { /* для главного меню*/
+    
+  width:940px;
+  font-size: 17px;
+  line-height: 17px;
+  color: #ffffff;
+ 
+  background-color: #32425c;/* фоновое изображение */
+   box-shadow:   inset 0px -5px 0 0 #293449;
+    
+}
+
+
+
+.site-navigation ul{  /*флекс элемент, котрый сам является флекс контенером*/
+    display: flex;
+    flex-wrap: wrap; /*перенос элементов*/
+    justify-content: space-between;
+    align-items: center; /*выравнивание элементов вдоль попереченой оси*/
+    list-style: none; /*убираем маркеры*/
+    padding-left: 52px; /*отсупы от первого пункта меню до левой границы списка*/
+    padding-right: 55px;   /*отсупы от последнего пункта меню до правой границы списка*/
+}
+
+.site-navigation li{
+    padding-top: 22px;
+    padding-bottom: 26px;
+    padding-left:  24px; /*как-то рассчитала на обум*/
+    padding-right:24px ;
+}
+
+/*.site-navigation li:first-child,
+.site-navigation li:last-child{
+    margin-left:  -50px;
+}*/
+
+.site-navigation a{
+    display: block;/*делаем ссылки блочными*/
+    color: #ffffff;
+
+}
+
+
+.site-navigation li:hover,/*при наведении */
+.site-navigation li:focus
+{
+    background-color:  #293449;
+}
+
+
+.site-navigation li:active{ /*при нажатии на пункты главного  меню*/
+    color: rgba(255, 255, 255, 0.5);
+    background-color: #1d2739;
+    opacity: 0.4;
+}
+
+
+
+
+
+
 
 
 
@@ -509,10 +606,10 @@ h2{
 }
 
 
-.site-navigation a:hover, /*при наведении на элемент меню*/
-.site-navigation a:focus,
-.user-navigation a:hover,
-.user-navigation a:focus {
+.site-navigation li:hover, /*при наведении на элемент меню*/
+.site-navigation li:focus,
+.user-navigation li:hover,
+.user-navigation li:focus {
   background-color: #242424; /*фоновый цвет менятся*/
 }
 
@@ -544,28 +641,115 @@ h2{
 
 }
 
-.for-big-image{
+
+.for-big-image {
     width: 620px;
+    position: relative;
 }
 
-.for-big-image a{
-    position:relative;
-}
-
-/*.for-big-image a::after{
-    content:"";
-    position: absolute;
-    top:0;
-    left:0;
+/*.for-big-image h3{
     
+}
+
+.for-big-image h3::before{
+    content:"ДРЕЛИ";
+    position: absolute;
+    top: 27px;
+    left: 24px;
+    width: 94px;
+    height: 30px;
 }
 */
 
-
-.for-big-image a{
-    margin-top: -30px;
-    z-index: 30px;
+.for-big-image::before{ /*псевдоэлемент для стрелки влево*/
+    content:"";
+    position: absolute;
+    top: 110px;
+    left: 24px;
+    width: 22px;/*размеры иконки*/
+    height: 40px;
+    background-image: url("../img/icon-left.svg");
+    
+    background-repeat: no-repeat;
+    background-position: 0 0;
 }
+
+
+.for-big-image::after{/*псевдоэлемент для стрелки вправо*/
+    content:"";
+    position: absolute;
+    top: 110px;
+    right: 24px;
+    width: 22px;/*размеры иконки*/
+    height: 40px;
+    background-image: url("../img/icon-right.svg");
+    
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+
+
+
+.for-big-image .dot1::before{ /*псевдоэлемент для кнопок(круглешков) маленьких*/
+    content:"";
+    position: absolute;
+    
+    bottom: 71px;
+    left: 315px;
+    
+    width: 7px;/*размеры иконки*/
+    height: 7px;
+    
+    border: 2px solid white;
+    border-radius: 5px;
+    background-color: #ee3643;/**/
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+
+
+
+.for-big-image .dot2::before{ /*псевдоэлемент для кнопок(круглешков) маленьких*/
+    content:"";
+    position: absolute;
+    
+    bottom: 71px;
+    left: 340px;
+    
+    width: 10px;/*размеры круглешка*/
+    height: 10px;
+    
+    border-radius: 5px;
+    background-color: white;/**/
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+
+
+.open-catalog{ /*кнпока Открыть каталог*/
+    width: 100px;
+    padding: 10px 40px;
+    border-radius: 2px;
+   /*margin-bottom:20px;*/
+}
+
+
+
+/*.for-big-image a::before{ /* псевдоэлемент для кнопки Открыть каталог
+    content:"";
+    position: absolute;
+    
+    
+    top: 110px;
+    right: 24px;
+    width: 22px;/*размеры иконки
+    height: 40px;
+    
+}*/
+
+
+
+
 
 
 
@@ -588,6 +772,7 @@ h2{
     font-size: 24px;
     line-height: 30px;
 }
+
 
 
 
@@ -644,7 +829,7 @@ div .last-two-cards:nth-child(2){
 
 
 
-.block-item .button{/*кнопка на карточках(Материалы Инструмент Техника  Скидка50% Доставка)*/
+.block-item .button-on-cards{/*кнопка на карточках(Материалы Инструмент Техника  Скидка50% Доставка)*/
     padding-top: 12px;
     padding-bottom: 14px;
     padding-left:0;
@@ -653,13 +838,33 @@ div .last-two-cards:nth-child(2){
     margin-bottom: 7px;
     padding: 10px 20px;
 
-
-    opacity: 0.1;
+    text-transform: uppercase;
+    color: white;
     background-color: #000000;
+    opacity: 0.1;
+     
+    border-radius: 3px;
+    
 }
 
 
+
+
+.block-item a:hover
+{
+   opacity: 0.2;
+  background-color: #000000;
+}
     
+
+.block-item a:active{
+    opacity: 0.3;
+  background-color: #000000;
+}
+
+
+
+
     
 .popular-tovar{ /*флекс контейнер*/
    display: flex;
@@ -753,10 +958,25 @@ div .last-two-cards:nth-child(2){
 }
 
 
+
+.catalog-item-perfomances:hover{
+    box-shadow: 0px 10px 25px 0 rgba(41, 52, 73, 0.5);
+}
+
+
+.catalog-item-perfomances:active{
+    box-shadow: 0px 4px 10px 0 rgba(41, 52, 73, 0.5);
+    opacity: 0.3;
+}
+
+
 .catalog-item-perfomances:nth-child(4n){
     margin-right:0;
 }
 
+.catalog-item:hover{
+    box-shadow: 0px 10px 25px 0 rgba(41, 52, 73, 0.5);
+}
 
 .delivery-services-section{
     height: 522px;
@@ -1168,6 +1388,19 @@ red-defis{
 }
 
 
+.for-user-icon:hover::before{
+    background-image: url("../img/icon-user-blue.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+
+
+.for-user-icon:active::before{ /*ghb yf;fnbb*/
+    background-image: url("../img/icon-user-active.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+
 
 .for-logout-icon{
     position:relative;
@@ -1188,6 +1421,22 @@ red-defis{
   background-position: 0 0;
   /*background-color: #ff0000;*/
 }
+
+
+
+.for-logout-icon:hover::after{
+    background-image: url("../img/icon-logout-hover.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+
+
+.for-logout-icon:active::after{ /*ghb yf;fnbb*/
+    background-image: url("../img/icon-logout-active.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+
 
 
 
@@ -1373,7 +1622,7 @@ red-defis{
 
 
 .sortirovka-block{/*флекс элемент, котрый сам вялется флекс контейнером*/
-    width: 720px; /*675*/
+    width: 710px; /*675*/
     
     display: flex;
     justify-content: space-around;/*неравномерное
@@ -1390,7 +1639,7 @@ red-defis{
 }
 
 .sortirovka-block  div{ /*СОРТИРОВКА сдвигаем  влево*/
-    margin-left: -80px;
+    margin-left: 0px;
 }
 
 
@@ -1413,6 +1662,7 @@ red-defis{
     justify-content: flex-start;
     flex-wrap: wrap;
     align-items: flex-start;
+    margin: 0;
     margin-bottom: 60px; /*отлепляем секцию О перфораторах от Конетйнера с пагинацией*/
 }
 
@@ -1431,9 +1681,11 @@ red-defis{
     border: none; /*убираем  обводку у fieldset()*/
 }
 
+
 .filter fieldset:first-child {
   margin-bottom: 35px;
 }
+
 
 .filter legend{
     margin-left: 0;
@@ -1577,42 +1829,68 @@ legend > ul{
 
                     /*СТИЛИ К КАРТОЧКАМ ТОВАРОВ*/
 
-.catalog-items {
-    width: 710px; /*ширина списка*/
-    margin: 10px auto; /*отцентровали список товаров*/
+.catalog{
+    width: 700px;
+    margin-left: 33px;
+    /*margin-top: -10px;*/
+    
+}
+
+.catalog-on-main-page{
+    width: 940px;
+}
+
+.catalog-list{
+    padding-left: 0;
+    
+    
+}
+
+
+.row{
     display: flex;
     flex-wrap: wrap;
-    
+    margin: 0 -10px;
     justify-content: flex-start;
-    align-items: flex-start; /*(2е последние строки чтобы элементы шли слева-направо с верхнего левого угла)*/
-    
+    align-items: flex-start;
     
 }
 
 
-.catalog-items .row {
-   margin: 0 -10px;/* (в нашем случае между элементами сетки отступы по 20 пикселей, тобишь по 10 слева и справа от блока, сделав отрицательный margin для row, мы сделали его ширину 100% +10px слева и 10px справа);*/
+.col-3{
+    
+   position: relative;
+    width: 218px; /* 30%  с процуентов не получается*/
+    padding: 0 10px; /*(отступы слева и справа от каждого элемента*/
 }
+
+
+.col-4{
+    
+   position: relative;
+    width: 218px;  /*чет с 25% последняя карта не влезает, вроде все рассчитала width: 940px;*/
+    padding: 0 10px; /*(отступы слева и справа от каждого элемента*/
+}
+
 
 
 .catalog-item { /*флекс элеент*/
-  position: relative;
- 
-  width: 218px;
+   position: relative; /*родитель для иконки NEW*/
  
   
-  margin-bottom: 20px;
+    
+   width: 100%;
   
-  line-height: 20px;
-  font-weight: bold;
-  text-align: center;
-  border: 1px solid #ccc;
+   margin-bottom: 20px;
+  
+   line-height: 20px;
+    font-weight: bold;
+   text-align: center;
+   border: 1px solid #ccc;
 }
 
 
-.catalog-item:nth-child(3n) { /*у каждой 3-ей картоки убираем отступ справа*/
-  margin-right: 0;
-}
+
 
 
 .catalog-item .flag {
@@ -1686,6 +1964,9 @@ legend > ul{
 
 
 .catalog-item .title {
+    font-size: 18px;
+    font-family: "PT Sans", sans-serif;
+    line-height: 20px;    
   min-height: 40px;
   padding: 0 25px;
   margin-top: 10px;
@@ -1694,6 +1975,12 @@ legend > ul{
 
 
 .catalog-item .discount {
+  
+  font-family: "PT Sans", sans-serif;
+  font-size: 17px;
+  font-weight: bold;
+  line-height: 18px;
+    
   min-height: 20px;
   margin-top: 15px;
   margin-bottom: 10px;
@@ -1707,21 +1994,25 @@ legend > ul{
 .catalog-item .price{/* розовая кнопка с ценой на картчоке товара*/
 
     position: relative;
+    
+    
+  
+    background-color: #ee3643;
+    width: 70px;
+    margin: 10px auto;/*центрируем кнопку*/
+    margin-bottom: 20px;
+    margin-left: 45px;
+    padding: 10px 20px;
+    
+  
+    color: white;
+    
     font: inherit;
     font-family: "PT Sans", sans-serif;
-    
-    
-    
-    width: 80px;
-    margin: 10px auto;
-    margin-bottom: 20px;
-    padding: 10px 30px;
-  
-    color: black;
-    font: inherit;
-    color: #999999;
     font-size: 17px;
-    z-index: 30px;/*???*/
+    
+    line-height: 1;
+    border-radius: 2px;
 
 }
 
@@ -1730,13 +2021,20 @@ legend > ul{
 .catalog-item .price:after { /*псевдоэлемент для  розовой кнопки*/
     content: "";
     position: absolute;
-    width: 141px;
-    height: 38px;
+   
     
-    left: 0px;
-    bottom: 0px;
-    background: url("../img/red-button.svg") no-repeat; 
-    z-index: 10px;/*???*/
+    top: 0px;
+    right: -24px;
+    
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 18.5px 0 18.5px 25px;
+    border-color: transparent transparent transparent #ee3642; /**/
+    line-height: 0px;/**/
+    /*border-radius: px;*/
+    
+   
 }
 
 
@@ -1928,3 +2226,374 @@ input[type="radio"].visually-hidden {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
+
+
+            /*СТИЛИ ДЛЯ МОДАЛЬНОГО ОКНА */
+
+
+
+.modal {
+   color: #000000;
+
+  background-color: #ffffff;
+  position: fixed;
+  box-shadow: 0px 20px 40px 0 rgba(0, 0, 0, 0.75);
+  border-top: 7px solid #ee3643;
+}
+
+
+.modal-login {
+
+    width: 460px; /*ширина содержимого окна*/
+    padding-left: 80px ;
+    padding-right: 80px;
+    
+    padding-top: 50px;
+    padding-bottom: 37px;
+    
+    top: 120px;/*расположение  модальнго окна, отступ от верхней границы браузера до верхней граниыцы модального окна*/
+    left: 50%;/*отсутп от левой границы браузера до левой границы модального окна*/
+    margin-left: -230px; /*сдвигаем окно влево*/
+    /*display: none; /*не отображаем окно*/
+    
+}
+
+
+.modal-close { /*кнпока закрытия крестик*/
+  width: 22px;
+  height: 22px;
+
+  
+    
+  position: absolute;
+  top: 20px; /*сдвигаем крестик*/
+  right: 15px;
+    
+  /*backgroud-color: black;*/
+  border: 0;
+  cursor: pointer;
+}
+
+
+
+
+.modal-close::before,
+.modal-close::after { /* псевдоэлемент две розовые полосы для крестика*/
+  content: "";
+
+  position: absolute;
+  top: 9px ;
+  left: -2px;
+
+  width: 27px;
+  height: 4px;
+
+  background-color: #ee3643;
+}
+
+
+.modal-close::before {
+  transform: rotate(45deg);
+}
+
+
+.modal-close::after {
+  transform: rotate(-45deg);
+}
+
+
+.for-name-and-emal-fields{ /*флекс контецнер*/
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+
+.for-name-and-emal-fields label{
+    display: block; /*чтобы поле перенеслось на следующую строку */
+    
+}
+
+
+.modal-login p label{
+    font: inherit;
+    font-family: "Cuprum;", sans-serif;
+    font-size: 18px;
+    line-height: 1;
+    font-weight: normal;
+    font-style: normal;
+  font-stretch: normal;
+  line-height: 1;
+  letter-spacing: normal;
+}
+
+
+
+.login-form p{
+    
+    margin:0;
+    
+}
+
+
+.wrap-for-label-with-field label{
+    margin-bottom: 10px;/*отлепляем надпись от поля*/
+}
+
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+    
+    box-sizing: border-box;/*чтобы отступы не влияли на размеры поля ввода.*/
+    width: 220px;/*ширина поля*/
+    padding: 11px;
+    padding-left: 14px;
+    
+    font-family: "PT Sans", sans-serif;
+  font-size: 13px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.38;
+  letter-spacing: normal;
+   
+   color: #a9a9a9;
+   text-transform: inherit;
+    border:  2px solid #dee3e4;
+    background-color: #ffffff;
+    border-radius: 2px;
+}
+
+
+
+.login-form input:hover
+{
+    border-color: #b5b5b5;
+}
+
+
+.login-form input:focus{
+    border: 2px solid   #ee3643;
+}
+
+
+p .for-textarea-label{
+    display: block;
+    margin-bottom: 10px;/*после того как сделаем блочным, этот отступ будет*/
+}
+
+
+.login-form textarea{ /*строчный элемент*/
+    
+    display: block;/*делаем блочным*/
+    width: 100%; /*почему края выходят за пределы формы??*/
+    height: 110px;
+    
+    padding: 11px;
+    padding-left: 14px;
+    
+    margin-bottom: 30px;
+    
+    
+    border-radius: 2px;
+    border: 2px solid  #dee3e4;
+    font-family: "PT Sans", sans-serif;
+  font-size: 13px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.38;
+  letter-spacing: normal;
+    color: #a9a9a9;
+   
+}
+
+
+.login-form .wrap-for-button{
+    width:  620px;
+    padding: 0;
+    /*height: 112px;*/
+    margin-left: -80px;
+    background-color:  #f4f4f4;
+    margin-bottom: -40px; /*убираем  лишнее пространство*/
+}
+
+
+.login-form button{ /*кнпока Отправить*/
+    width: 460px; /**/
+   
+    
+    
+    padding-top: 14px;
+    padding-bottom: 14px;
+    padding-left: 198px;
+    padding-right: 198px;
+    margin: 30px auto; /*почему то кнопка не  центруется?????*/
+    /*margin-top: 30px;
+    margin-bottom: 30px;*/
+    
+    color: white;
+    background-color: #ee3643;
+    font-family: "Cuprum", sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.29;
+    letter-spacing: normal;
+    border-radius: 2px;
+    text-transform: uppercase;
+}
+
+
+
+
+
+            /*  МОДАЛЬНОЕ ОКНО ДОБАВИТЬ В КОРЗИНУ*/
+
+.modal-trash{
+   color: #000000;
+
+   background-color: #ffffff;
+   position: fixed;
+   
+   box-shadow: 0px 20px 40px 0 rgba(41, 52, 73, 0.75);
+   border-top: 7px solid #ee3643;
+}
+
+
+.modal-login-add-trash {
+
+    width: 460px; /*ширина содержимого*/
+    padding-left: 80px ;
+    padding-right: 90px;
+    
+    padding-top: 50px;
+    padding-bottom: 37px;
+    
+    top: 120px;/*расположение  модальнго окна, отступ от верхней границы браузера до верхней граниыцы модального окна*/
+    left: 50%;/*отсутп от левой границы браузера до левой границы модального окна*/
+    margin-left: -230px; /*сдвигаем окно влево*/
+    /*display: none; /*не отображаем*/
+    
+}
+
+.modal-trash h3{
+    
+    margin:0;
+    margin-top:20px;
+    padding-left: 100px; /*оставляем место для иконки Галочка*/
+    margin-bottom: 55px;
+    
+    
+    font-family: "Cuprum", sans-serif;
+  font-size: 30px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1;
+  letter-spacing: normal;
+    
+}
+
+
+.modal-trash h3:before{ /*псевдоэлемент для иконки Галочка*/
+  content: "";
+
+  position: absolute;
+  top: 50px ;
+  left: 80px;
+
+  width: 66px;/*размеры изображения*/
+  height: 66px;
+
+    
+  background-image: url("../img/modal-check.svg");
+  background-position: 0 0;
+  background-repeat: repeat;
+  /*background-color: black;*/
+}
+
+
+.modal-trash  .fon-wrapper{
+    width: 630px;
+    background-color: #f1f1f1;
+    margin-left: -80px;
+    height: 112px;
+    
+    margin-bottom: -40px; /*убираем  лишнее пространстов  внизу*/
+}
+
+
+.for-buttons-in-trash{ /*флекс контейнер*/
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-top:35px;  /*опускам кнопки*/
+}
+
+
+.for-buttons-in-trash a{
+    display: block;
+    width: 220px;
+   
+    border: 1px solid black;
+    text-align: center; /*надпись на кнопке по центру*/
+    padding-top: 12px;
+    padding-bottom: 12px;
+    
+  font-family: "Cuprum", sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.29;
+  letter-spacing: normal;
+   text-transform: uppercase;
+    
+    border: 3px;
+}
+
+.for-buttons-in-trash a:first-child{
+    background-color: #ee3643;
+    margin-left: 80px;
+    color: white;
+}
+
+
+
+.for-buttons-in-trash a:last-child{
+    background-color: #ffffff;
+    margin-right: 80px;
+    color: black;
+}
+
+
+
+
+.modal-close::before,
+.modal-close::after { /* псевдоэлемент две розовые полосы для крестика*/
+  content: "";
+
+  position: absolute;
+  top: -2px ;
+  left: -2px;
+
+  width: 27px;
+  height: 4px;
+
+  background-color: #ee3643;
+}
+
+
+
+
+
+
+
+
+
+
+
