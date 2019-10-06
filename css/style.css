@@ -1819,6 +1819,7 @@ for-red-defis{
 .feedback:active,
 .for_link:active{
     color:#ee3643;
+    text-decoration: none;
 }
 
 
@@ -2181,7 +2182,7 @@ for-red-defis{
 
 .sortirovka-block li:nth-child(4){
     padding-left:0;
-    padding-right;
+    padding-right: 0;
     margin-left: 20px;
     border-bottom: none;
 }
@@ -2243,7 +2244,7 @@ for-red-defis{
 
 
 
-s
+
 .sortirovka-block li:nth-child(4):hover::before{ /*при наведении на стрелку вверх*/
     background-image: url("../img/icon-up-dir-hover.svg");
     background-repeat: no-repeat;
@@ -2258,6 +2259,10 @@ s
     background-position: 0 0;
     
 }
+
+
+
+
 
 
 .sortirovka-block li:nth-child(4):active::before{ /*при нажатии на стрелку вверх*/
@@ -2277,12 +2282,14 @@ s
 
 
 
+.sortirovka-block li:nth-child(1):active,
+.sortirovka-block li:nth-child(2):active,
+.sortirovka-block li:nth-child(3):active
 
-.sortirovka-block li:active{
+{
     color:#ee3643;
     border-bottom: none;
 }
-
 
 
 
@@ -2304,11 +2311,13 @@ s
 
 
 .filters{
-    width: 170px;
+    width: 170px;/*220 */
 }
 
 
+
 .filter fieldset{ /*форма группы полей*/
+    
     padding: 0;
     margin: 0;
     margin-bottom: 20px;
@@ -2330,9 +2339,6 @@ s
 }
 
 
-.filter-item legend{
-    margin-top: -px;
-}
 
 .range-filter {
   width: 205px; /*ширина фильтра*/
@@ -2610,7 +2616,8 @@ legend > ul{
   top: 0px;
   width: 25px;/*размеры иконки*/
   height: 25px;
-
+  
+  color: black;  
   background: url("../img/radio-on.svg") no-repeat 0 0;
 }
 
@@ -2632,22 +2639,27 @@ legend > ul{
 
 .button_show{ /*кнпока Показать  в фильтрах*/
   display: block;
-  padding-left: 38px;
-  padding-right: 38px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+    
+    
+  padding:10px  38px;
+  
+  background-color: white;
+  color: black;
+  border: solid 1px #e5e5e5;
+  border-radius: 3px;
 
   margin-top: 70px;
   font-size: 13px;
   line-height: 18px;
   font-family: "PT Sans", sans-serif;
-  background-color: white;
-  color: black;
-  border: solid 1px #e5e5e5;
-  border-radius: 3px;
+    
+  
 }
 
-
+.button_show:hover,
+.button_show:active{
+    background-color: white;
+}
 
 
 
@@ -3107,6 +3119,45 @@ input[type="radio"].visually-hidden {
 
             /*СТИЛИ ДЛЯ МОДАЛЬНОГО ОКНА */
 
+@keyframes bounce {/*анимацию для открытия модального окна. Сначала описываем анимацию.*/
+  0% {
+    transform: translateY(-2000px);
+  }
+
+  70% {
+    transform: translateY(30px);
+  }
+
+  90% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes shake { /*анимацию для тряски формы в случае ошибки.*/
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
+}
 
 
 .modal {
@@ -3116,12 +3167,26 @@ input[type="radio"].visually-hidden {
   position: fixed;
   box-shadow: 0px 20px 40px 0 rgba(0, 0, 0, 0.75);
   border-top: 7px solid #ee3643;
+  display: none; /*не отображаем окно*/
+}
+
+
+.modal-show {
+  display: block;
+    
+  animation: bounce 0.6s;/*Добавляем анимацию к классу открытия модального окна.*/
+}
+
+
+.modal-error {/*класс, который будет добавлять эту анимацию к модальному окну.*/
+  animation: shake 0.6s;
 }
 
 
 .modal-login {
 
     width: 460px; /*ширина содержимого окна*/
+    
     padding-left: 80px ;
     padding-right: 80px;
     
@@ -3131,7 +3196,7 @@ input[type="radio"].visually-hidden {
     top: 120px;/*  120px расположение  модальнго окна, отступ от верхней границы браузера до верхней граниыцы модального окна*/
     left:  50%;/* 50%отсутп от левой границы браузера до левой границы модального окна*/
     margin-left: -230px; /*сдвигаем окно влево*/
-    display: none; /*не отображаем окно*/
+    
     
 }
 
@@ -3139,7 +3204,7 @@ input[type="radio"].visually-hidden {
 .modal-close { /*кнпока закрытия крестик*/
   position: absolute;
     
-  top: 20px; /*сдвигаем крестик*/
+  top: 10px; /*сдвигаем крестик*/
   right: 15px;
     
   width: 22px;
@@ -3179,7 +3244,9 @@ input[type="radio"].visually-hidden {
 }
 
 
-.for-name-and-emal-fields{ /*флекс контецнер*/
+
+
+.for-name-and-emal-fields{ /*флекс контецнер для двух полей*/
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -3194,7 +3261,7 @@ input[type="radio"].visually-hidden {
 
 
 .modal-login p label{
-    font: inherit;
+    
     font-family: "Cuprum;", sans-serif;
     font-size: 18px;
     line-height: 1;
@@ -3252,8 +3319,8 @@ input[type="radio"].visually-hidden {
 }
 
 
-.login-form input:focus
-
+.login-form input:focus, 
+.login-form textarea:focus
 {
     border-color: #ee3643;
     background-color: white; 
@@ -3271,7 +3338,7 @@ p .for-textarea-label{
 .login-form textarea{ /*строчный элемент*/
     
     display: block;/*делаем блочным*/
-    width: 100%; /*почему края выходят за пределы формы??*/
+    width: 94%; /* если 100% указать то почему края выходят за пределы формы??*/
     height: 110px;
     
     padding: 11px;
@@ -3295,9 +3362,12 @@ p .for-textarea-label{
 
 
 .login-form .wrap-for-button{
+    display: block;
     width:  620px; 
-    padding: 0;
-    /*height: 112px;*/
+   
+    text-align: center;/*чтобы кнпока выровнилась по центру серого блока!!!*/
+    
+    
     margin-left: -80px;
     background-color:  #f4f4f4;
     margin-bottom: -40px; /*убираем  лишнее пространство*/
@@ -3305,17 +3375,11 @@ p .for-textarea-label{
 
 
 .login-form button{ /*кнпока Отправить*/
-    width: 460px; /*460px*/
-   
-
-    padding-top: 14px;
-    padding-bottom: 14px;
-    /*padding-left: 198px;
-    padding-right: 198px;*/
+    width: 460px; /*шиина всей кнопки*/
+    padding: 14px 0;
+    margin: 37px auto;
     
-    /*margin: 0 auto;*/
-    /*margin-top: 30px;
-    margin-bottom: 30px;*/
+    border-radius: 5px;
     
     
     color: white;

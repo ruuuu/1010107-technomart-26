@@ -74,7 +74,7 @@
         </div> <!-- центровшик-->
       </div><!--вторая часть шапки--> 
 
-  </header>
+    </header>
 
     <main><!--основное содержимое-->
     
@@ -409,10 +409,10 @@
                <a href="img/map.jpg"><!-- при нажатии на превью, откроется большая крата -->
                     <img src="img/map_preview.jpg" width="300" height="135" alt="карта">
                </a>
-              <p><a class="button write-us-button" href="">Заблудились?Напишите нам!</a></p><!-- ссылка в виде кнопки-->
+               <p><a class="button write-us-button" href="">Заблудились? Напишите нам!</a></p><!-- ссылка в виде кнопки-->
          </section>
       </div>
-   </main>
+    </main>
       
     <footer><!-- ПОДВАЛ-->
        <div class="for_footer_part_one"><!--первая часть подвала -->
@@ -500,7 +500,7 @@
              </div>
              <p>
                  <label  class="for-textarea-label" for="user-text">Текст письма: </label>
-                 <textarea id="user-text" placeholder="В свободной форме"   value=""></textarea>
+                 <textarea id="user-text" placeholder="В свободной форме"  name="area-text"   value="" ></textarea>
              </p>
             <div class="wrap-for-button">
                 <button type="submit"> <!-- кнопка отправки данных формы-->
@@ -510,7 +510,7 @@
          </form>
          <button class="modal-close" type="button"><!-- верхняя кнпока Крестик, чобы закрыть модальное окно-->
              <span class="visually-hidden">Закрыть</span>
-            </button>
+         </button>
     </section>
       
       
@@ -521,6 +521,81 @@
             <span class="visually-hidden">Закрыть</span>
           </button>
     </section>
+    <script>
+         var link = document.querySelector(".write-us-button");/*кнопка*/
+        
+         var popup = document.querySelector(".modal-login");/*окно модальное*/
+        
+         var close = popup.querySelector(".modal-close");  /*кнопку закрытия(крестик) модального окна */
+        
+         var form = popup.querySelector("form");/*форма наша*/
+        
+         var login = popup.querySelector("[name=login]");/*поле Имя Фамилия*/
+        
+         var email = popup.querySelector("[name=mail]");/*поле mail*/
+         var text = popup.querySelector("[name=area-text]");/*textarea*/
+        
+         var isStorageSupport = true;
+         var storage = "";
+  
+         try {
+            storage = localStorage.getItem("login");
+         } 
+         catch (err) {
+             isStorageSupport = false;
+         }
+        
+        
+        
+         
+        link.addEventListener("click", function (evt) {/*обработчки события клика по этой кнопке.*/
+                evt.preventDefault();/*Отменим стандартное действие ссылки при нажатии на неё.*/
+                popup.classList.add("modal-show");/*добавляем этот класс к модальному окну по клику на ссылку.*/
+                
+                if (storage) {/*Если значение существует, записываем логин в соответствующее поле ввода при открытии модального окна.*/
+                    login.value = storage;
+                    email.focus(); /*уcтанавливаем фокус в поле email*/
+                }
+                else{
+                    login.focus(); /*устанавливаем фокус в поле Имя Фамилия*/
+                }
+                    
+         });
+        
+        
+         close.addEventListener("click", function (evt) {/*обработчик клика по кнопке закрытия модального окна.*/
+               evt.preventDefault();
+               popup.classList.remove("modal-show");/*удаляем класс, который отвечает за показ модального окна.*/
+               popup.classList.remove("modal-error");/*Уберём этот класс при закрытии формы.*/
+               
+         });
+        
+        
+        form.addEventListener("submit", function (evt) {/*обработчик события отправки формы*/
+              if (!login.value || !email.value || !text.value) {/*если что-то незапполнено*/
+                    evt.preventDefault();
+                    popup.classList.add("modal-error");/*Если форма не валидна, добавим модальному окну класс ошибки.*/
+              }
+              else {
+                    if (isStorageSupport) { /*если  true то*/ 
+                        localStorage.setItem("login", login.value);/* в случае правильно заполненной формы запишем логин пользователя в локальное хранилище.*/
+                    }
+                }
+        });
+        
+        
+        window.addEventListener("keydown", function (evt) {/*обработчик события, который будет отлавливать нажатие кнопки ESC и в случае, если модальное окно открыто, закрывать его.*/
+            if (evt.keyCode === 27) {
+                evt.preventDefault();
+                if (popup.classList.contains("modal-show")) {
+                    popup.classList.remove("modal-show");
+                    popup.classList.remove("modal-error");/*при нажатии на ESC тоже убираем этот класс.*/
+                }
+            }
+        });
+        
+        
+      </script>    
 
     </body>
 </html>
