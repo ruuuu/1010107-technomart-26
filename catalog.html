@@ -27,9 +27,11 @@
           </section>
             
           <section class="section_two"><!-- входят Закладки  Корзина, Офрмить заказ,  флекс сэлемент, сам является флекс контейнером-->
-              <!--<svg xmlns="http://www.w3.org/2000/svg" width="14" height="16" viewBox="0 0 14 16"><path fill="#ffffff" d="M14 15c0 .55-.368.741-.818.426l-5.363-3.765c-.45-.315-1.187-.315-1.637 0L.818 15.426C.368 15.741 0 15.55 0 15V1c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v14z"/></svg>-->
-              <div class="bookmark-icon">Закладки: 0</div><!--флекс элемент-->
-              <div class="trash">Корзина: 0</div><!--флекс элемент-->
+              
+              <div class="bookmark-icon">
+                  <!--<svg xmlns="http://www.w3.org/2000/svg" width="14" height="16" viewBox="0 0 14 16"><path fill="#ffffff" d="M14 15c0 .55-.368.741-.818.426l-5.363-3.765c-.45-.315-1.187-.315-1.637 0L.818 15.426C.368 15.741 0 15.55 0 15V1c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v14z"/></svg>-->
+                  Закладки: 0</div><!--флекс элемент-->
+              <div class="trash trash-fill">Корзина: 10</div><!--флекс элемент-->
               <button class="button make-order-button" type="button"><!--флекс элемент--> 
                     Оформить заказ
               </button>
@@ -69,8 +71,8 @@
                </div>
             </section>
           </div>
-          <nav class="site-navigation"><!-- гланвое меню <!-- флекс элемент, котрый сам является флекс контенером-->
-                <ul><!-- меню-->
+          <!-- гланвое меню <!-- флекс элемент, котрый сам является флекс контенером-->
+          <ul class="site-navigation"><!-- меню-->
                   <li><a href="index.html">Главная</a></li>
                   <li><a href="">Компания</a></li>
                   <li><a href="catalog.html">Каталог</a></li>
@@ -78,9 +80,8 @@
                   <li><a href="">Спецпредложения</a></li>
                   <li><a href="">Доставка</a></li>
                   <li><a href="">Контакты</a></li>
-                </ul>
-          </nav>
-        </div> <!-- центровшик-->
+          </ul>
+         </div> <!-- центровшик-->
       </div><!--вторая часть шапки-->
 
   </header>
@@ -92,7 +93,7 @@
          <li class="before-catalog"><a href="index.html"></a></li><!-- иконка домика-->
          <li><a href="catalog.html">Каталог</a></li>
          <li><a href="">Инструменты</a></li>
-         <li class="breadcrumbs-current">Перфораторы</li>
+          <li class="breadcrumbs-current"><a href="">Перфораторы</a></li>
       </ul>
         
       <section class="popular-tovar change-fon"> 
@@ -103,24 +104,42 @@
           <div class="filtes-small-block"><!--флекс элемент -->
                Фильтр:
           </div>
-          <div class="sortirovka-block"><!--флекс элемент, котрый сам вялется флекс контейнером -->
-              <div>Сортировка:</div><!--флекс элемент-->
-              <ul><!--флекс элемент и флекс контейнер-->
+          <div class="wrap-for-filter-big-block"><!-- флекс элемент, ктрый сам флекс контейнер-->
+            <div class="sort-item">Сортировка:</div><!-- флекс элемент-->
+            <ul class="sortirovka-block"><!--флекс элемент, котрый сам вялется флекс контейнером-->
                   <li>По цене</li>
                   <li>По типу</li>
                   <li>По функционалу</li>
-                  <li><img src="img/icon-down-dir.svg"  width="11" height="10" alt="иконка стрелочки вверх"></li>
-                  <li><img src="img/icon-up-dir.svg"   width="11" height="10" alt="иконка стрелочки вниз"></li>
-              </ul>
+                  <li></li><!-- стрелка вниз-->
+                  <li></li><!-- стрелка вверх-->
+            </ul>
           </div>
       </section>
         
       <div class="catalog-columns"> <!-- флекс контейнр , Чтобы расположить раздел с фильтрами и раздел с каталогом рядом друг с другом-->
 
-          <!--<section class="slider">Блок слайдер</section>-->
+          
           <section class="filters"><!-- флекс элемент-->
              <h2 class="visually-hidden">Фильтр товаров</h2><!--этот заголовок потом уберем -->
              <form  class="filter" action="https://echo.htmlacademy.ru" method="get">
+                <fieldset class="filter-item"><!--блок для ползунка-->
+                    <legend>Цена:</legend>     
+                    <div class="range-filter"> <!--родитель для круглешков -->
+                        <div class="range-controls"><!--  блок для ползунка -->
+                            <div class="scale"><!-- указывает полную ширину прогресс бара-->
+                                <div class="bar"></div><!-- указывает выбранный диапазон-->
+                            </div>  
+                            <div class="toggle toggle-min"></div><!-- круглешок мин-->
+                            <div class="toggle toggle-max"></div><!-- круглешок мах-->
+                        </div>
+                        <div class="price-controls"><!--для полей ввода цены -->
+                            <input name="min-price" type="text" value="0">
+                            <label class="max-price"> &#8212;</label>    
+                            <input name="max-price" type="text" value="15000">
+                        </div>
+                        <div class="grey-border"></div>
+                    </div>
+                </fieldset>
                 <fieldset><!-- группа полей-->
                    <legend>Производители:</legend>
                    <ul>
@@ -129,7 +148,7 @@
                            <label for="filter-for-Bosch">Bosch</label>
                        </li>
                        <li class="filter-option">
-                           <input class="visually-hidden filter-input filter-input-checkbox"  id="filter-for-Интерскол" type="checkbox" name="Интерскол"><!--связываем label и input -->
+                           <input class="visually-hidden filter-input filter-input-checkbox"  id="filter-for-Интерскол" type="checkbox" name="Интерскол" disabled><!--связываем label и input -->
                            <label for="filter-for-Интерскол">Интерскол</label>
                        </li>
                        <li class="filter-option">
@@ -144,8 +163,7 @@
                            <input class="visually-hidden filter-input filter-input-checkbox"  id="filter-for-Hitachi" type="checkbox" name="Hitachi" ><!--связываем label и input -->
                           <label for="filter-for-Hitachi">Hitachi</label>
                        </li>
-                       <div class="border-grey"></div>
-                   </ul>
+                    </ul>
                 </fieldset>
                 <fieldset class="filters"><!-- группа полей-->
                     <legend>Питание:</legend>
@@ -332,9 +350,10 @@
                        </li>
                 </ul>
                 
-          </section><!-- -->
-        </div><!-- catalog-columns-->
-        
+            </section><!-- -->
+          </div><!-- catalog-columns-->
+        </div><!-- центровщик--> 
+      
         <section class="about-perforators">
             <div class="container">
                 <h1 class="page-title">Пара слов о перфораторах</h1>
@@ -344,7 +363,7 @@
                 </div>
             </div>
         </section>
-    </div><!-- ценровщик-->
+    
   </main>
 
 
@@ -421,7 +440,7 @@
 
 
 
-    <section class="modal-trash modal-login-add-trash"><!--попап "Добавить в корзину" -->
+  <section class="modal-trash modal-login-add-trash"><!--попап "Добавить в корзину" -->
         <h2 class="visually-hidden">попап "Добавить в корзину" </h2><!--уберем потом этот элемент -->
         <!-- <img src="img/modal-check.svg"  width="66" height="66" alt="иконка галочки в зеленом кружке"><!-- галочка в зеленом кружке-->
         <h3>Товар добавлен в корзину</h3>
