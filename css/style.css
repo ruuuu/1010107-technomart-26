@@ -20,7 +20,7 @@ body{
 .inner-page{/*общие стили для catalog.html*/
     font: inherit; /*унаследуем от родителя body*/
     color: #000000;
-    font-family: "Open Sans", sans-serif;;/*на внутренней станице др шрифт, преопределили*/
+    font-family: "PT Sans", "Open Sans", sans-serif;/*на внутренней станице др шрифт, преопределили*/
     text-transform: uppercase; /*буквы текста большие*/
     margin-top: -40px;
 }
@@ -91,6 +91,7 @@ h2{
             /*С Т И Л И   Д Л Я  Ш А П К И*/
 .first_head{
     color: white;
+    /*height: 42px; высота синего блока*/
     background-color: #293449;/**темносиний фоновый цвет*/
     font-family: "Cuprum", sans-serif;
     font-size: 17px;
@@ -105,8 +106,8 @@ h2{
 .first_head .container{ /*флекс контейнер*/
   display: flex;
   justify-content: space-between;
-  
-  align-items: center; /*выравнивание элементов вдоль по оси*/
+ 
+  align-items: center; /*выравнивание элементов вдоль попеерчной оси*/
     
 }
 
@@ -125,16 +126,16 @@ h2{
 
 
 .main-header-logo{ /*флекс элемент*/
-    width: 109px; /*разvеры иконки*/
-    height: 19px;
-    display: block;
+    width: 109px; /*ширина текста*/
     
-    padding: 13px 55px;
+    display: block;
+   
+    padding: 12px 55px;/*горизональне паддинги указываем. так как задали только ширину текста*/
     
     background-color: #ee3643;
     line-height: 1;
     
-    box-shadow: inset 0px -5px 0 0 rgba(0, 0, 0, 0.24);
+    box-shadow: inset 0px -5px 0 0 rgba(0, 0, 0, 0.24); 
 }
 
 
@@ -149,61 +150,108 @@ h2{
     background-color:  #ee3643;
 }
 
-.main-header-logo:active{ /*при нажатии на кнпоку*/
+.main-header-logo:active{ /*при нажатии на кнопку*/
     background-color: #ba2732;
 }
 
 
 
-.search/*флекс элемент*/
+/*-----------------------------------*/
+.wrap-for-seacrh{
+     /*width: 270px; горизонтальные паддинги задали, ширину не указываем*/
+     position: relative;/*родитель для иконки поиска*/
+     outline: none;
+}
+
+
+ 
+
+.search/*флекс элемент, поле ввода*/
 {
-    position: relative;/*родитель для иконки*/
+   
     display: block;
-    /*width: 270px;*/
     
+   
+    padding-top: 14px ;
+    padding-bottom: 14px;
+    background-color: #293449; 
+    border: 0px solid transparent;
+    outline: none; /*чтобы по умолчанию цвета рамки   поля не было*/
+    padding-left: 50px;/*место для иконки поиска*/
+    padding-right: 70px;
     
-    padding-top: 13px ;
-    padding-bottom: 13px;
+    margin-left: 0px;/**/
+   
+    color: white;
     
-    padding-left: 50px;/*место для иконки поиска*/ 
-    padding-right: 165px;
-    
+    font-size: 17px;
+    line-height: 18px;
+    font-family: "Cuprum", sans-serif;
+  font-size: 17px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.06;
+  letter-spacing: normal;
     
     /*border: 1px solid black;/*уберем потом*/
 }
 
+   
 
-.search::before { /* псевдоэлемент для иконки поиска*/
+.wrap-for-seacrh a::before { /* псевдоэлемент для иконки поиска*/
   content: "";
+  padding-left: 30px; /*чтобы текст "Поиск" был правее иконки*/
   position: absolute;
     
-  top: 12px;
-  left: 20px;
+  top: 13px;
+  left: 15px;
   width: 17px;/*размеры иконки*/
   height: 17px;
-  background-image: url("../img/icon-search.svg");
+  
+  
+  background-image: url("../img/icon-search-default.svg");
+  
   background-repeat: no-repeat;
   background-position: 0 0;
-  opacity: 0.3;
+  opacity: 0.3;/*с прозрачностью*/
+  
+
     
 }
 
-.search:hover
+
+.search:hover /*.search*/
 {
     background-color: #212a3a;
 }
 
 
+.wrap-for-seacrh a:hover::before{
+    background-image: url("../img/icon-search.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    opacity: 1; /*без прозрачности*/
+}
+ 
 .search:focus{
     background-color: white;
     color: black;
+    outline: none;
 }
 
-.search:focus::before{
+
+.wrap-for-seacrh a:active::before{ 
     background-image: url("../img/icon-search-red.svg");
     background-repeat: no-repeat;
     background-position: 0 0;
+    opacity:1; /*без прозрачности*/
 }
+
+
+
+
+
 
 
 
@@ -213,21 +261,24 @@ h2{
     display: flex;
     justify-content: space-between;
     align-items: center; /*выравнивание элементов вдоль по оси*/
+   
 }
+
 
 
 .bookmark-icon{ /*флекс элемент*/
     
-    
-    position: relative;/*родитель для иконки*/
     display: block;
+    position: relative;/*родитель для иконки*/
+    
    
-    padding-left: 44px; /*место для иконки заклдаки*/
+    padding-left: 44px; /*место для иконки закладки*/
     padding-right: 28px;
     
     padding-top: 13px;
-    padding-bottom: 13px;
-    
+    padding-bottom: 12px;
+   
+    cursor: pointer;
     
 }
 
@@ -284,7 +335,7 @@ h2{
 
 
 .bookmark-icon:active{
-    background-color:#161d29;
+    
     color: rgba(255, 255, 255, 0.6)
     
 }
@@ -294,6 +345,7 @@ h2{
     background-image: url("../img/icon-bookmark.svg");
     background-position: 0 0;
     background-repeat:  no-repeat;
+    
     opacity: 0.6;
 }
 
@@ -306,8 +358,9 @@ h2{
     padding-left: 50px; /*место для иконки корзины*/
     padding-right: 31px;
     
-    padding-top: 13px;
+    padding-top: 14px;
     padding-bottom: 13px;
+    cursor:pointer;
 }
  
 
@@ -320,7 +373,7 @@ h2{
   content: "";
   position: absolute;
     
-  top: 12px;
+  top: 14px;
   left: 22px;
     
   width: 15px;/*размеры иконки*/
@@ -358,15 +411,17 @@ h2{
 .make-order-button{/*Кнопка вверху страницы Оформить заказ*/
     display: block;
     
-    padding-top: 13px ;
-    padding-bottom: 13px ;
+    /*height:49px;*/
+    padding-top:13px;
+    padding-bottom: 13px;
     padding-left: 20px ;
     padding-right: 22px ;
     
     line-height: 1;
     text-transform: none; /*переопределили*/
     background-color: #63a63e;
-
+    cursor:pointer;
+    outline: none;
 }
 
 
@@ -382,7 +437,9 @@ h2{
 .make-order-button:active{/*при нажатии*/
     background-color:#63a63e;
     color: rgba(255, 255, 255, 0.5);
-    box-shadow: none;
+    
+    
+    
 }
 
 
@@ -417,7 +474,7 @@ h2{
 
 .content_of_second_head section:nth-child(1){ /*флекс элемент*/
     width: 196px;
-    margin-left: 20px;
+    padding-left: 20px;
 
 }
 
@@ -425,7 +482,7 @@ h2{
 .content_of_second_head section:nth-child(2){/*флекс элемент*/
     width:  270px;
     
-    margin-left: 10px;
+    /*margin-left: 0px;*/
 }
 
 
@@ -491,17 +548,20 @@ h2{
 
 
 
-.wrap-for-login-button{/*флекс элемент */
+.wrap-for-login-button{/*флекс элемент  сам является флекс контейнером*/
+    display: flex;
+    justify-content: space-between;
     width: 280px;
     /*border: 1px solid grey;*/
-    padding-top: 12px ;
-    padding-bottom: 12px;
+    /*padding-top: 11px ;
+    padding-bottom: 11px;*/
+    margin-top:-25px;
     margin-left: -20px;
-    margin-top:-20px;
     
 }
 
 .for-login-icon{ /*  для иконки логина*/
+    
     position: relative;
 }
 
@@ -530,13 +590,14 @@ h2{
     padding-left: 48px;
     padding-right:27px;
     
+    margin-left: -3px ;
     
     color: #000000;
     text-transform: none; /*переопределили*/
     font-size: 21px;
     line-height: 1;
     /*border: 1px solid grey; /*потом уберем*/
-    margin-right: 4px; /*расстояние между кнопками*/
+    /*margin-right: 4px; /*расстояние между кнопками*/
     
 }
 
@@ -579,11 +640,19 @@ h2{
 }    
     
 
-.for-login-icon:active::before{
+.for-login-icon:hover::before{ /*при наведении на иконку менеят цвет*/
    background-image: url("../img/icon-login-active.svg");
     background-repeat: no-repeat;
     background-position: 0 0;
 }
+
+.for-login-icon:active::before{ /*при нажатии на иконку менеят цвет*/
+   background-image: url("../img/icon-login.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+
+
 
 
                     /* С Т И Л И  Д Л Я  Б Л О К   Н А В И Г А Ц И Я*/
@@ -596,7 +665,7 @@ h2{
 .site-navigation {  /*флекс элемент, котрый сам является флекс контенером*/
     display: flex;
     flex-wrap: wrap; /*перенос элементов*/
-    width:940px;
+    width: 940px;
     
     
     justify-content: space-between;
@@ -607,10 +676,7 @@ h2{
     
     margin: 0;
     padding: 0;
-    
-    /*padding-left: 12px; /*отсупы от первого пункта меню до левой границы списка
-    padding-right: 5px;   /*отсупы от последнего пункта меню до правой границы списка*/
-    
+   
     
   
      color: #ffffff;
@@ -627,21 +693,21 @@ h2{
   letter-spacing: normal;
 }
 
-.site-navigation li:first-child{
-    padding-left: 32px;
+.site-navigation .first-element{
+    padding-left: 58px;
    
 }
 
 
-.site-navigation li:last-child{
-    padding-right: 32px;
+.site-navigation .last-element{
+    padding-right: 58px;
 }
 
 
 
 .site-navigation a{
     display: block;/*делаем ссылки блочными*/
-    padding: 25px 20px;
+    padding: 25px 29px;
     vertical-align: middle;
     color: #ffffff;
     
@@ -852,11 +918,6 @@ h2{
 
 
 
-
-
-
-
-
 .slider-item h3{
     margin:0;
     font-family: "Cuprum", sans-serif;
@@ -967,7 +1028,7 @@ h2{
     left: 24px;
     bottom: 45px;
     
-    padding: 10px 0;/*тогда деь верхний и нижний паддинг равен 0*/
+    padding: 10px 0;/*тогда  верхний и нижний паддинг равен 0*/
     border-radius: 2px;
    /*margin-bottom:20px;*/
     
@@ -1116,20 +1177,20 @@ div .last-two-cards:nth-child(2){
     position: absolute;
     
     top: 65px ;
-    left:  ;
+    left: 0px ;
     
     padding: 10px 0;
     
     
     text-align: center;
-
+    margin-left:25px;  
     
     
-    background-color: #000000;
+    background-color: rgba(0, 0, 0, 0.1);/*прозрачность применяем только ккнопке, тгда текст будет белым*/
     text-transform: uppercase;
     color: white;
     border-radius: 3px;
-    opacity: 0.1;
+    
     
     font-family: "Cuprum", sans-serif;;
   font-size: 14px;
@@ -1352,7 +1413,7 @@ div .last-two-cards:nth-child(2){
     padding: 0;
     margin: 0;
     
-    margin-right: 100px;
+    margin-right: 80px;
 
 }
 
@@ -1482,7 +1543,7 @@ box-shadow: inset 200px 10px 50px -90px rgba(64,80,105,1);*/
     position: absolute;
     
     top: -5px;
-    right: -70px;
+    right: -10px;
     
     width: 465px ;
     height: 285px ;
@@ -1571,7 +1632,7 @@ for-red-defis{
 
 
 
-.write-us-button{
+.write-us-button{ 
     display: block;
     
     border-radius: 2px;
@@ -1613,7 +1674,7 @@ for-red-defis{
 .wrap-for-footer_first_menu  {/*флекс элемент котрый сам является  контенйером*/
     display: flex;
     justify-content: space-between;/*расстояние между флекс элементом и границей коненера */
-    margin-bottom: 20px; /*чтобы отлепить*/
+    margin-bottom: 30px; /*чтобы отлепить*/
 }
 
 
@@ -1622,12 +1683,16 @@ for-red-defis{
     padding-bottom: 25px;
 }
 
-.for_footer_part_one  .footer_first_menu{/*флекс элемент котрый сам является  конетнйером*/
-    width: 720px; /*флексэлементу задаем размер*/
+.for_footer_part_one  .footer_first_menu{/*флекс элемент котрый сам является  контенйером*/
+    width: 720px; /* 940-220=720 флексэлементу задаем размер*/
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;/*расстояние между флекс элементом и границей коненера*/
     margin:0;
     margin-top: 35px;
+    padding-left: 170px;
+    
+     list-style: none;
     font-family: "Cuprum", sans-serif;
     font-size: 18px;
   font-weight: normal;
@@ -1638,35 +1703,6 @@ for-red-defis{
 }
 
 
-
-
-
-.for_footer_part_one  section{/*флекс элемент, котрый сам является флекс контейнером*/
-    display: flex;
-    justify-content:space-around;/*расстояние между флекс элементом и границей контейнера нет*/
-    align-items: center; /*выравнивание элементов вдоль поперечной*/
-    margin-bottom: 40px;
-
-}
-
-.about-address-footer{
-    width: 322px;
-    
-    font-family: "Cuprum", sans-serif;
-    font-size: 18px;
-  font-weight: normal;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: 1.33;
-  letter-spacing: normal;
-    
-    
-    
-}
-
-.footer_first_menu{
-    list-style: none;
-}
 
 
 .footer_first_menu a{
@@ -1681,6 +1717,34 @@ for-red-defis{
 }
 
 
+
+
+.for_footer_part_one  section{/*флекс элемент, котрый сам является флекс контейнером*/
+    display: flex;
+    justify-content:space-between;/*расстояние между флекс элементом и границей контейнера нет*/
+    align-items: center; /*выравнивание элементов вдоль поперечной*/
+    margin-bottom: 40px;
+
+}
+
+.about-address-footer{ /*флекс-элемент*/
+    width: 470px;
+    margin:0;
+    
+    font-family: "Cuprum", sans-serif;
+    font-size: 18px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.33;
+  letter-spacing: normal;
+    
+    
+    
+}
+
+
+
 .footer_first_menu a:active{
     text-decoration: none;
     color: rgba(241, 245, 247, 0.5);
@@ -1691,10 +1755,11 @@ for-red-defis{
 .footer_second_menu{/*флекс-элемент*/
     width: 720px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     list-style: none; /*убираем маркеры корты сатвит браузер по умолчанию*/
-    margin-top: -30px;
-    
+    margin:0;
+    padding-left: 60px;
+    margin-top:-30px;
     
     font-family: "Cuprum", sans-serif;
     font-size: 18px;
@@ -1838,9 +1903,10 @@ for-red-defis{
 
 .wrap-for-logout-button{/**/
     /*border: 1px solid grey;*/
-    width: 290px;
+    width: 310px;
     padding-top: 10px ;
     padding-bottom: 10px;
+    margin-left: -15px;
     background-color: white;
     
 }
@@ -1891,7 +1957,7 @@ for-red-defis{
   
   position: absolute;
   top: -3px;
-  left: 20px;
+  left: 40px;
   
   width: 21px;
   height: 17px;
@@ -2099,14 +2165,17 @@ for-red-defis{
 
 
 .block-for-filter-sortirovka{ /*флекс контенер*/
+    
     display: flex;
 
     justify-content: space-between;/*равномерное распредление элементов вдоль гланвой оси*/
 
-    padding: 0; /*убираем стили по умолчанию*/
+    padding:  0; /*убираем стили по умолчанию*/
     
     margin: 0;/*убиарем стили по умолчанию*/
     list-style: none;/*убираем маркеры у пунктов(карточек товара) меню котрый ставит сам браузер*/
+    
+    
     font-family: "PT Sans", sans-serif;
     font-size: 13px;
     font-weight: normal;
@@ -2121,22 +2190,21 @@ for-red-defis{
 
 
 .filtes-small-block{/*флекс элемент*/
-    width: 170px;
+    width: 200px; /*такак  padding-left: 20px*/
     background-color: #f7f3ec;
-    padding: 14px 18px;
+    padding: 11px 0;
+    padding-left: 20px;
     
   
 }
 
 .wrap-for-filter-big-block{
+    width: 700px; 
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
     align-items: center;
-    width: 710px; 
     
-    padding-top:14px;
-    padding-bottom: 14px;
     background-color: #f7f3ec;
     
 }
@@ -2158,7 +2226,7 @@ for-red-defis{
     padding-left:0;
     margin: 0;/*убиарем стили по умолчанию*/
     list-style: none;/*убираем маркеры у пунктов(карточек товара) меню котрый ставит сам браузер*/
-    position: relative;
+    position: relative; /*относительно этого блока позиционируем стрелочки вверх/вниз*/
     
 }
 
@@ -2201,10 +2269,10 @@ for-red-defis{
     content: "";
     position: absolute;
     
-    top: 0px ;
-    right: 20px ;
+    top: 3px;
+    right: 30px;
     
-    width: 11px ;
+    width: 11px;
     height: 11px ;
     background-image: url("../img/icon-up-dir.svg");
     background-position: 0 0;
@@ -2218,8 +2286,8 @@ for-red-defis{
     content: "";
     position: absolute;
     
-    top: 0px ;
-    right: -10px ;
+    top: 3px ;
+    right: 0px ;
     
     width: 11px ;
     height: 11px ;
@@ -2297,8 +2365,8 @@ for-red-defis{
 
 
 
-.catalog-columns {/*флекс контейнр(объединяет фильтры и каталаг)*/
-
+.catalog-columns {/*флекс контейнр(объединяет  боковые фильтры и каталаг)*/
+    
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
@@ -2311,8 +2379,11 @@ for-red-defis{
 
 
 .filters{
-    width: 170px;/*220 */
+    width: 220px;
+    margin-right: 20px; /*отлепляем карты от бокового фильтра*/
+    
 }
+
 
 
 
@@ -2341,13 +2412,15 @@ for-red-defis{
 
 
 .range-filter {
-  width: 205px; /*ширина фильтра*/
+  width: 220px; /*ширина фильтра*/
   margin-top: 0px;
 }
 
 
 .filter-item legend {
-  font-family: "PT Sans";
+ 
+  
+    font-family: "PT Sans", sans-serif;
     text-transform: uppercase;
   font-size: 17px;
   font-weight: bold;
@@ -2414,7 +2487,7 @@ for-red-defis{
 }
 
 .range-controls .toggle-max {/*для правого кружка*/
-  left: 150px;
+  left: 165px;
 }
 
 
@@ -2652,7 +2725,7 @@ legend > ul{
   font-size: 13px;
   line-height: 18px;
   font-family: "PT Sans", sans-serif;
-    
+    outline: none; /*чтобы при нажатии не было темно-синий рамки котрая устанволена по умолчанию*/
   
 }
 
@@ -2665,67 +2738,78 @@ legend > ul{
 
                     /*СТИЛИ К КАРТОЧКАМ ТОВАРОВ*/
 
-.catalog{
-    width: 700px;
-    margin-left: 60px; /*отлепляем карточки от фильра*/
-    /*margin-top: -10px;*/
-   
-    
-}
 
-.catalog-on-main-page{ /*вindex.html */
+
+.catalog-on-main-page{ /*в index.html */
     width: 940px;
 }
 
-.catalog-list{
-   
-    
+.catalog-list-on-main-page{/*в index.html */
     
 }
 
-
-.row{
-    display: flex;
+.wrap-for-catalog-list{
+    width: 700px; /**/
     flex-wrap: wrap;
-    margin: 0 -10px;
     justify-content: flex-start;
     align-items: flex-start;
     
 }
 
+.row{
+     display: flex;
+    flex-wrap: wrap;
+    
+    justify-content: flex-start;
+    align-items: flex-start;
+    
+    
+    
+    /*margin: 0 -10px; /*ширина равна 100% + 10px слева +10px справа*/
+    margin-left:-10px; /*левые карточки сдвинутся*/
+    
+    list-style: none;
+    margin-right: -10px;
+    margin-top:0;
+    padding-left: 0px;
+}
+
 
 .col-3{
     
-   position: relative;
-    width: 218px; /* 30%  с процуентов не получается*/
-    padding: 0 10px; /*(отступы слева и справа от каждого элемента*/
+  
+    width: 30.393939393%; /*   30.393939393  33.333333333*/
+    padding: 0 10px; /*(отступы слева и справа от каждой карточки*/
+     
 }
 
-/*.row .col-3:nth-child(3n){
-   margin-right:-15px; 
-}*/
+
 
 
 .col-4{
     
-   position: relative;
-    width: 218px;  /*чет с 25% последняя карта не влезает, вроде все рассчитала width: 940px;*/
+    position: relative;
+    width: 22.9%;  /*чет с 25% последняя карта не влезает, вроде все рассчитала width: 940px;*/
     padding: 0 10px; /*(отступы слева и справа от каждого элемента*/
 }
 
 
 
 .catalog-item { /*флекс элеент*/
+    
    position: relative; /*родитель для иконки NEW*/
  
-   width: 100%;
-  
+   width: 100%; /*ширина такая же как и у родителя то есть у col-3*/
+   
+    
+    
    margin-bottom: 20px;
   
    line-height: 20px;
     font-weight: bold;
    text-align: center;
    border: 1px solid #ccc;
+   
 }
 
 
@@ -2776,7 +2860,7 @@ legend > ul{
   top: 0;
   left: 0;
   
-  width: 218px;
+  width: 100%; /*такая же как и у родителя*/
   height: 88px;
   padding: 40px 0;
   
@@ -2833,6 +2917,7 @@ legend > ul{
 
 .catalog-item .image img {
   max-width: 100%;
+  height: auto; /*значение по умолчанию*/
 }
 
 
@@ -2844,9 +2929,12 @@ legend > ul{
   min-height: 40px;
     
   padding: 0 25px;
+    
   margin-top: 10px;
   margin-bottom: 15px;    
 }
+
+
 
 
 .catalog-item .discount {
@@ -2864,20 +2952,28 @@ legend > ul{
   text-decoration: line-through;
 }
 
+catalog-item .wrap-for-price_button{
+    display: flex;
+    
+}
 
-
-.catalog-item .price{/* розовая кнопка с ценой на картчоке товара*/
+.catalog-item .price{/* розовая кнопка с ценой на карточке товара*/
 
     position: relative;
     
     
-  
+    display: block;
     background-color: #ee3643;
-    width: 70px;
-    margin: 10px auto;/*центрируем кнопку*/
+    width: 120px; /*ширина всей кнопки*/
+    margin:  auto;/*центрируем кнопку*/
     margin-bottom: 20px;
-    margin-left: 45px;
-    padding: 10px 20px;
+    
+    /*margin-left: 36px;*/
+    
+    padding:10px 0; /*так как задали ширину всей кнопки а не содержимого, то горизотальные паддинги убираем*/
+    padding-left: 5px; /*если сожержимое кнопки будет больше, сотавляем отсупы чтобы текст не прилип ккраям*/
+    padding-right: 5px;
+    
     
   
     color: white;
@@ -2933,7 +3029,7 @@ legend > ul{
     
     top  2px;
     left: 14px ;
-/*background-color: red;*/
+    /*background-color: red;*/
     background: url("../img/icon-cart.svg") no-repeat 0 0;
     opacity: 0.3;
    
@@ -3011,6 +3107,9 @@ legend > ul{
   flex-wrap: wrap;
   padding: 0; /*сбрасываем стили по умолчанию*/
   margin: 0;
+  margin-top: 30px;    
+    
+    
   list-style: none;
   
   font-family: "PT Sans", sans-serif;
@@ -3042,7 +3141,7 @@ legend > ul{
     border: solid 1px #e5e5e5;
     border-radius: 2px;
     color: #000000;
-    size: 13px;
+    font-size: 13px;
     line-height: 18px;
     font-family: "PT Sans", sans-serif;
 }
@@ -3197,12 +3296,14 @@ input[type="radio"].visually-hidden {
 }
 
 
-.modal-error {/*класс, который будет добавлять эту анимацию к модальному окну.*/
+.modal-error {/*этот класс, который будет добавлять эту анимацию к модальному окну.*/
   animation: shake 0.6s;
 }
 
 
-.modal-login {
+
+
+.modal-login {/*окно вовда данных*/
 
     width: 460px; /*ширина содержимого окна*/
     
@@ -3281,7 +3382,7 @@ input[type="radio"].visually-hidden {
 
 .modal-login p label{
     
-    font-family: "Cuprum;", sans-serif;
+    font-family: "Cuprum", sans-serif;
     font-size: 18px;
     line-height: 1;
     font-weight: normal;
@@ -3312,6 +3413,7 @@ input[type="radio"].visually-hidden {
     width: 220px;/*ширина поля*/
     padding: 11px;
     padding-left: 14px;
+     outline: none;/*убираем стиль у поля при наведении фокуса, чтобы не окрашивалось в темносиний цвет*/
     
     font-family: "PT Sans", sans-serif;
   font-size: 13px;
@@ -3364,7 +3466,9 @@ p .for-textarea-label{
     padding-left: 14px;
     
     margin-bottom: 30px;
+    outline: none; /*стиль по умолчанию убираем, то есть чтобы  граница при фокусе не крашивалась в темно-синий*/
     
+    resize: none;/*чтобы пользователь не мог размер ему менять*/
     
     border-radius: 2px;
     border: 2px solid  #dee3e4;
@@ -3398,8 +3502,8 @@ p .for-textarea-label{
     padding: 14px 0;
     margin: 37px auto;
     
-    border-radius: 5px;
-    
+    border: none;
+    outline: none; /*чтоы не было при нажатии темно-синей рамки*/
     
     color: white;
     background-color: #ee3643;
@@ -3428,6 +3532,7 @@ p .for-textarea-label{
    
    box-shadow: 0px 20px 40px 0 rgba(41, 52, 73, 0.75);
    border-top: 7px solid #ee3643;
+    display: none; /*не отображаем окно*/
 }
 
 
@@ -3440,10 +3545,10 @@ p .for-textarea-label{
     padding-top: 50px;
     padding-bottom: 37px;
     
-    top: 120px;/*расположение  модальнго окна, отступ от верхней границы браузера до верхней граниыцы модального окна*/
+    top: 400px;/*расположение  модальнго окна, отступ от верхней границы браузера до верхней граниыцы модального окна*/
     left: 50%;/*отсутп от левой границы браузера до левой границы модального окна*/
     margin-left: -230px; /*сдвигаем окно влево*/
-    display: none; /*не отображаем*/
+    /*display: none; /*не отображаем*/
     
 }
 
@@ -3507,7 +3612,7 @@ p .for-textarea-label{
     display: block;
     width: 220px;
    
-    border: 1px solid black;
+    border: 1px solid transparent;
     text-align: center; /*надпись на кнопке по центру*/
     padding-top: 12px;
     padding-bottom: 12px;
@@ -3521,7 +3626,7 @@ p .for-textarea-label{
   letter-spacing: normal;
    text-transform: uppercase;
     
-    border: 3px;
+    border-radius: 3px;
 }
 
 

@@ -21,8 +21,9 @@
               <a  class="main-header-logo" href="index.html"><!---флекс элемент -->
                   <img src="img/invalid-name.svg" width="109" height="19" alt="Логотип Техномарт">
               </a>
-              <div class="search"><!--флекс элемент-->
-                  Поиск:
+              <div class="wrap-for-seacrh"><!--флекс элемент-->
+                  <input name="s"  type="text" class="search" value="Поиск">
+                  <a></a>
               </div>
           </section>
             
@@ -63,7 +64,7 @@
                <div class="wrap-for-logout-button">
                  <a class="for-user-icon" href=""></a>
                  <a class="name" href="">Равшан Джамшутович</a><!-- ссылка на профиль-->
-                 <a class="for-logout-icon" href=""></a><!-- кнопка Выхода -->
+                 <a class="for-logout-icon" href="index.html"></a><!-- кнопка Выхода -->
                </div>
                <div class="wrap-for-small-link">
                     <a class="small_link small_link_first" href="">Мои заказы</a> <!--ссылка в   виде кнопки -->
@@ -71,15 +72,15 @@
                </div>
             </section>
           </div>
-          <!-- гланвое меню <!-- флекс элемент, котрый сам является флекс контенером-->
+          <!-- гланвое меню флекс элемент, котрый сам является флекс контенером-->
           <ul class="site-navigation"><!-- меню-->
-                  <li><a href="index.html">Главная</a></li>
+                  <li><a class="first-element" href="index.html">Главная</a></li>
                   <li><a href="">Компания</a></li>
                   <li><a href="catalog.html">Каталог</a></li>
                   <li><a href="">Новости</a></li>
                   <li><a href="">Спецпредложения</a></li>
                   <li><a href="">Доставка</a></li>
-                  <li><a href="">Контакты</a></li>
+                  <li><a class="last-element" href="">Контакты</a></li>       
           </ul>
          </div> <!-- центровшик-->
       </div><!--вторая часть шапки-->
@@ -89,18 +90,18 @@
   <main class="inner-page">
     <div class="container"> <!-- центровщик-->
 
-      <ul class="breadcrumbs"><!-- меню флекс контейнр, хлебные крошки-->
-         <li class="before-catalog"><a href="index.html"></a></li><!-- иконка домика-->
-         <li><a href="catalog.html">Каталог</a></li>
-         <li><a href="">Инструменты</a></li>
-          <li class="breadcrumbs-current"><a href="">Перфораторы</a></li>
-      </ul>
+        <ul class="breadcrumbs"><!-- меню флекс контейнр, хлебные крошки-->
+             <li class="before-catalog"><a href="index.html"></a></li><!-- иконка домика-->
+             <li><a href="catalog.html">Каталог</a></li>
+             <li><a href="">Инструменты</a></li>
+             <li class="breadcrumbs-current"><a href="">Перфораторы</a></li>
+       </ul>
         
-      <section class="popular-tovar change-fon"> 
+       <section class="popular-tovar change-fon"> 
         <h2 class="page-title">Перфораторы</h2>
       </section>   
         
-      <section class="block-for-filter-sortirovka container"> <!-- флекс контейнер-->
+       <section class="block-for-filter-sortirovka container"> <!-- флекс контейнер-->
           <div class="filtes-small-block"><!--флекс элемент -->
                Фильтр:
           </div>
@@ -116,10 +117,10 @@
           </div>
       </section>
         
-      <div class="catalog-columns"> <!-- флекс контейнр , Чтобы расположить раздел с фильтрами и раздел с каталогом рядом друг с другом-->
+       <div class="catalog-columns"> <!--940 px флекс контейнр , Чтобы расположить раздел с фильтрами и раздел с каталогом рядом друг с другом-->
 
           
-          <section class="filters"><!-- флекс элемент-->
+            <section class="filters"><!-- флекс элемент-->
              <h2 class="visually-hidden">Фильтр товаров</h2><!--этот заголовок потом уберем -->
              <form  class="filter" action="https://echo.htmlacademy.ru" method="get">
                 <fieldset class="filter-item"><!--блок для ползунка-->
@@ -182,15 +183,12 @@
                     Показать
                 </button>
              </form>
-          </section> <!-- фильтры-->
-
-
-
-         <section class="catalog"><!--РАЗДЕЛ КАРТОЧЕК , флекс элемент-->
+          </section> <!-- фильтры флекс элемент-->
             <h2 class="visually-hidden">Список инструментов</h2><!--этот заголовок потом уберем -->
-             <div class="catalog-list">
-               <div class="row"><!--- строка-->
-                   <div class="col-3">
+          
+            <div class="wrap-for-catalog-list"><!--флекс элемент -->
+                    <ol class="row"><!--- список флекс элемент сам флекс конейнер-->
+                   <li class="col-3">
                      <div class="catalog-item"><!-- карточка товара-->
                         <div class="flag flag-new">новинка</div>
                         <div class="actions">
@@ -198,45 +196,45 @@
                           <a href="#" class="bookmark">В закладки</a>
                         </div>
                         <div class="image">
-                            <img width="218" height="170" src="img/item.jpg">
+                            <img width="218" height="170" src="img/item.jpg" alt="товар">
                         </div>
                         <div class="title">Перфоратор BOSCH BFG 3000</div>
                         <div class="discount">22 500 Р.</div>
                         <div class="price">15 500 Р.</div>
                      </div>
-                   </div>
+                   </li>
                    
-                   <div class="col-3">
+                   <li class="col-3">
                       <div class="catalog-item"><!-- карточка товара-->
                         <div class="actions">
                           <a href="#" class="buy">Купить</a>
                           <a href="#" class="bookmark">В закладки</a>
                         </div>
                         <div class="image">
-                            <img width="218" height="170" src="img/item.jpg">
+                            <img width="218" height="170" src="img/item.jpg" alt="товар">
                         </div>
                         <div class="title">Перфоратор BOSCH BFG 3000</div>
                         <div class="discount"></div>
                         <div class="price">90 500 Р.</div>
                      </div>
-                   </div>
+                   </li>
                    
-                   <div class="col-3">
+                   <li class="col-3">
                      <div class="catalog-item">
                         <div class="actions">
                           <a href="#" class="buy">Купить</a>
                           <a href="#" class="bookmark">В закладки</a>
                         </div>
                         <div class="image">
-                            <img width="218" height="170" src="img/item.jpg">
+                            <img width="218" height="170" src="img/item.jpg" alt="товар">
                         </div>    
                         <div class="title">Перфоратор BOSCH BFG 3000</div>
                         <div class="discount"></div>
                         <div class="price">15 500 Р.</div>
                      </div>
-                   </div>
+                   </li>
                    
-                   <div class="col-3">
+                   <li class="col-3">
                       <div class="catalog-item"><!-- карточка товара-->
                         <div class="flag flag-new">новинка</div>
                         <div class="actions">
@@ -244,15 +242,15 @@
                           <a href="#" class="bookmark">В закладки</a>
                         </div>
                         <div class="image">
-                            <img width="215" height="170" src="img/item.jpg">
+                            <img width="218" height="170" src="img/item.jpg" alt="товар">
                         </div>    
                         <div class="title">Перфоратор BOSCH BFG 3000</div>
                         <div class="discount">22 500 Р.</div>
                         <div class="price">15 500 Р.</div>
                       </div>
-                   </div>
+                   </li>
                    
-                   <div class="col-3">
+                   <li class="col-3">
                       <div class="catalog-item"><!-- карточка товара-->
                         <div class="flag flag-new">новинка</div>
                         <div class="actions">
@@ -260,15 +258,15 @@
                           <a href="#" class="bookmark">В закладки</a>
                         </div>
                         <div class="image">
-                            <img width="215" height="170" src="img/item.jpg">
+                            <img width="218" height="170" src="img/item.jpg" alt="товар">
                         </div>    
                         <div class="title">Перфоратор BOSCH BFG 3000</div>
                         <div class="discount">22 500 Р.</div>
                         <div class="price">15 500 Р.</div>
                      </div>
-                   </div>   
+                   </li>   
                        
-                   <div class="col-3">  
+                   <li class="col-3">  
                       <div class="catalog-item"><!-- карточка товара-->
                         <div class="flag flag-new">новинка</div>
                         <div class="actions">
@@ -276,15 +274,15 @@
                           <a href="#" class="bookmark">В закладки</a>
                         </div>
                         <div class="image">
-                            <img width="215" height="170" src="img/item.jpg">
+                            <img width="218" height="170" src="img/item.jpg" alt="товар">
                         </div>
                         <div class="title">Перфоратор BOSCH BFG 3000</div>
                         <div class="discount">22 500 Р.</div>
                         <div class="price">15 500 Р.</div>
                      </div>
-                   </div>   
+                   </li>   
                      
-                   <div class="col-3">
+                   <li class="col-3">
                      <div class="catalog-item"><!-- карточка товара-->
                         <div class="flag flag-new">новинка</div>
                         <div class="actions">
@@ -292,15 +290,15 @@
                           <a href="#" class="bookmark">В закладки</a>
                         </div>
                         <div class="image">
-                            <img width="215" height="170" src="img/item.jpg">
+                            <img width="218" height="170" src="img/item.jpg" alt="товар">
                         </div>
                         <div class="title">Перфоратор BOSCH BFG 3000</div>
                         <div class="discount">22 500 Р.</div>
                         <div class="price">15 500 Р.</div>
                      </div>
-                   </div>  
+                   </li>  
                    
-                   <div class="col-3">
+                   <li class="col-3">
                      <div class="catalog-item"><!-- карточка товара-->
                         <div class="flag flag-new">новинка</div>
                         <div class="actions">
@@ -308,15 +306,15 @@
                           <a href="#" class="bookmark">В закладки</a>
                         </div>
                         <div class="image">
-                            <img width="215" height="170" src="img/item.jpg">
+                            <img width="218" height="170" src="img/item.jpg" alt="товар">
                         </div>    
                         <div class="title">Перфоратор BOSCH BFG 3000</div>
                         <div class="discount">22 500 Р.</div>
                         <div class="price">15 500 Р.</div>
                      </div>
-                   </div>
+                   </li>
                    
-                   <div class="col-3">
+                   <li class="col-3">
                       <div class="catalog-item"><!-- карточка товара-->
                         <div class="flag flag-new">новинка</div>
                         <div class="actions">
@@ -324,18 +322,16 @@
                           <a href="#" class="bookmark">В закладки</a>
                         </div>
                         <div class="image">
-                            <img width="215" height="170" src="img/item.jpg">
+                            <img width="218" height="170" src="img/item.jpg" alt="товар">
                         </div>    
                         <div class="title">Перфоратор BOSCH BFG 3000</div>
                         <div class="discount">22 500 Р.</div>
                         <div class="price">15 500 Р.</div>
                      </div>
-                   </div>
-                 </div><!--от row -->
-                </div>
-            
-
-                <ul class="pagination-list"><!-- ПАГИНАЦИЯ -->
+                   </li>
+                 </ol><!--от .row -->
+              
+                    <ul class="pagination-list"><!-- ПАГИНАЦИЯ -->
                        <li class="pagination-item pagination-item-current">
                            <a>1</a> <!--эта страница текущая -->
                        </li>
@@ -348,11 +344,11 @@
                        <li class="pagination-item">
                            <a class="next" href="#">Следующая</a>
                        </li>
-                </ul>
-                
-            </section><!-- -->
-          </div><!-- catalog-columns-->
-        </div><!-- центровщик--> 
+            </ul>
+            </div>
+       </div><!---->
+    </div><!-- -->
+        
       
         <section class="about-perforators">
             <div class="container">
@@ -378,7 +374,6 @@
                            <li><a href="">Компания</a></li>
                            <li><a href="">Новости</a></li>
                            <li><a href="catalog.html">Каталог</a></li>
-                           <li><a href="">Спецпредложения</a></li>
                            <li><a href="">Доставка</a></li>
                            <li><a href="">Контакты</a></li>
                     </ul>
@@ -409,19 +404,19 @@
                           <li>
                               <a class="social-button" href=""> 
                               <span class="visually-hidden">Вконтакте</span> 
-                              <img src="img/icon-vk.svg" width="26" height="15">      
+                              <img src="img/icon-vk.svg" width="26" height="15" alt="Вконтакте">      
                               </a>
                           </li>
                           <li>
                               <a class="social-button" href=""> 
                               <span class="visually-hidden">Фейсбук</span> 
-                              <img src="img/icon-fb.svg" width="12" height="22">
+                              <img src="img/icon-fb.svg" width="12" height="22" alt="Фейсбук">
                               </a>
                           </li>
                           <li>
                               <a class="social-button" href=""> 
                               <span class="visually-hidden">Инстаграм</span> 
-                              <img src="img/icon-insta.svg" width="21" height="21"> 
+                              <img src="img/icon-insta.svg" width="21" height="21" alt="Вконтакте"> 
                               </a>
                           </li>
                       </ul>
@@ -442,8 +437,8 @@
 
   <section class="modal-trash modal-login-add-trash"><!--попап "Добавить в корзину" -->
         <h2 class="visually-hidden">попап "Добавить в корзину" </h2><!--уберем потом этот элемент -->
-        <!-- <img src="img/modal-check.svg"  width="66" height="66" alt="иконка галочки в зеленом кружке"><!-- галочка в зеленом кружке-->
-        <h3>Товар добавлен в корзину</h3>
+        <!-- <img src="img/modal-check.svg"  width="66" height="66" alt="иконка галочки в зеленом кружке">галочка в зеленом кружке-->
+        <h3>Товар добавлен в корзину!</h3>
         <div class="fon-wrapper">
           <div class="for-buttons-in-trash"><!-- флекс контейнер-->
             <a href="">Оформить заказ</a><!--кнопка в виде ссылки -->
@@ -454,6 +449,8 @@
              <span class="visually-hidden">Закрыть</span>
       </button>
     </section>
+    
+    
 
   </body>
 </html>

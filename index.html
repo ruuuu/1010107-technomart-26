@@ -18,8 +18,9 @@
               <a class="main-header-logo" href="index.html"><!---флекс элемент -->
                   <img src="img/invalid-name.svg" width="109" height="19" alt="Логотип Техномарт">
               </a>
-              <div class="search"><!--флекс элемент-->
-                  Поиск:
+              <div class="wrap-for-seacrh">
+                <input name="s"  type="text" class="search" value="Поиск">
+                <a></a>
               </div>
           </section>
             
@@ -60,16 +61,16 @@
                 
                 <a class="button button_registration" href="">Регистрация</a>
             </section>
-          </div>      
-          <!-- главное меню, флекс элемент, котрый сам является флекс контенером-->
+           </div>      
+           <!-- главное меню, флекс элемент, котрый сам является флекс контенером-->
            <ul class="site-navigation"><!-- меню-->
-                  <li><a href="index.html">Главная</a></li>
+                  <li><a class="first-element" href="index.html">Главная</a></li>
                   <li><a href="">Компания</a></li>
                   <li><a href="catalog.html">Каталог</a></li>
                   <li><a href="">Новости</a></li>
                   <li><a href="">Спецпредложения</a></li>
                   <li><a href="">Доставка</a></li>
-                  <li><a href="">Контакты</a></li>       
+                  <li><a class="last-element" href="">Контакты</a></li>       
           </ul>
         </div> <!-- центровшик-->
       </div><!--вторая часть шапки--> 
@@ -78,7 +79,7 @@
 
     <main><!--основное содержимое-->
     
-    <section class="container"><!-- три блока: Материалы Инстурменты Техника-->
+      <section class="container"><!-- три блока: Материалы Инстурменты Техника-->
          <ul class="cards"><!--флекс контейнер-->
              <li class="block-item for-label-button"><!-- карточка , флекс элемент -->
                     <div class="flag flag-on-card"></div><!-- для иконки флажка-->
@@ -110,12 +111,12 @@
                  </p>
              </li>
          </ul>
-    </section>
+      </section>
         
-    <section class="container three-cards"><!-- три блока: Дрели Скидка Доставка-->    
+      <section class="container three-cards"><!-- три блока: Дрели Скидка Доставка-->    
         
         <div class="wrapper-cards"> <!-- флекс-контейнер-->
-           <div class="slider"> 
+            <div class="slider"> 
               <input class="visually-hidden-1" type="radio" id="product-1" name="toggle" checked>
               <input class="visually-hidden-1" type="radio" id="product-2" name="toggle">
               <div class="slider-controls"><!--флекс элемент(контейнер для переключатеелй) -->
@@ -126,13 +127,13 @@
                  <li class="slider-item"> 
                     <h3></h3>
                     <h4></h4>
-                    <img src="img/slider-image1.jpg" width="620" height="266">
+                    <img src="img/slider-image1.jpg" width="620" height="266" alt="слайдер">
                     <a class="button slider-item-button" href="catalog.html">Открыть каталог</a><!-- ссылка в виде кнопки-->
                  </li>  
                  <li class="slider-item"> 
                     <h3></h3>
                     <h4></h4>
-                    <img src="img/slider-image2.jpg" width="620" height="266">
+                    <img src="img/slider-image2.jpg" width="620" height="266" alt="слайдер">
                     <a class="button slider-item-button" href="catalog.html">Открыть каталог</a><!-- ссылка в виде кнопки-->
                 </li> 
               </ul>
@@ -153,22 +154,22 @@
                     </p>
                 </div>
             </div>
-        </div>
+         </div>
        
-    </section>
+      </section>
     
     
-    <div class="container"> <!--центровщик-->
+      <div class="container"> <!--центровщик-->
         <section class="popular-tovar"><!-- флекс контейнер-->
             <h2 class="page-title">Популярные товары:</h2>
             <a class="button popular-tovar-button" href="catalog.html">Все популярные товары</a><!-- ссылка ввиде кнопки-->
         </section>
-    </div>
+      </div>
     
-    <div class="container">
-       <section class="catalog-on-main-page"><!-- список карточек с товарами-->
+      <div class="container">
+        <section class="catalog-on-main-page"><!-- width= 940 px, список карточек с товарами-->
              <h2 class="visually-hidden">Список инструментов</h2><!--этот заголовок потом уберем -->
-             <div class="catalog-list">
+             <div class="catalog-list-on-main-page"><!-- 940px-->
                <div class="row"><!--- строка-->
                    <div class="col-4">
                      <div class="catalog-item"><!-- карточка товара-->
@@ -178,11 +179,13 @@
                           <a href="#" class="bookmark">В закладки</a>
                         </div>
                         <div class="image">
-                            <img width="218" height="170" src="img/item.jpg">
+                            <img width="218" height="170" src="img/item.jpg" alt="товар">
                         </div>
                         <div class="title">Перфоратор BOSCH BFG 3000</div>
                         <div class="discount">22 500 Р.</div>
-                        <div class="price">15 500 Р.</div>
+                        <div class="wrap-for-price_button">
+                          <div class="price">15875487 Р.</div>
+                         </div>
                      </div>
                    </div>
                    
@@ -193,7 +196,7 @@
                           <a href="#" class="bookmark">В закладки</a>
                         </div>
                         <div class="image">
-                            <img width="218" height="170" src="img/item.jpg">
+                            <img width="218" height="170" src="img/item.jpg" alt="товар">
                         </div>
                         <div class="title">Перфоратор BOSCH BFG 3000</div>
                         <div class="discount"></div>
@@ -208,7 +211,7 @@
                           <a href="#" class="bookmark">В закладки</a>
                         </div>
                         <div class="image">
-                            <img width="218" height="170" src="img/item.jpg">
+                            <img width="218" height="170" src="img/item.jpg" alt="товар">
                         </div>    
                         <div class="title">Перфоратор BOSCH BFG 3000</div>
                         <div class="discount"></div>
@@ -224,99 +227,83 @@
                           <a href="#" class="bookmark">В закладки</a>
                         </div>
                         <div class="image">
-                            <img width="215" height="170" src="img/item.jpg">
+                            <img width="218" height="170" src="img/item.jpg" alt="товар">
                         </div>    
                         <div class="title">Перфоратор BOSCH BFG 3000</div>
                         <div class="discount">22 500 Р.</div>
                         <div class="price">15 500 Р.</div>
                       </div>
                    </div>
-		   </div><!--от row -->
+		    </div><!--от row -->
           </div><!-- от catalog-list-->
         </section><!-- список карточек с товарами-->
-    </div><!-- от ценровщика-->    
+      </div><!-- от ценровщика-->    
     
-    <div class="container"> <!--центровщик-->
+      <div class="container"> <!--центровщик-->
         <section class="popular-tovar"><!-- флекс контейнер-->
             <h2 class="page-title">Популярные производители:</h2>
             <a class="button popular-tovar-button" href="catalog.html">Все производители</a><!-- ссылка в виде кнопки-->
         </section>
-    </div>
+      </div>
     
-    <div class="container"> <!--блок-центровщик -->   
-      <section class="catalog-perfomances"><!-- карточки ПРОИЗВОДИТЕЛЕЙ-->
+      <div class="container"> <!--блок-центровщик -->   
+        <section class="catalog-perfomances"><!-- карточки ПРОИЗВОДИТЕЛЕЙ-->
         <h2 class="visually-hidden">Список производителей</h2>
         <ul class="catalog-list-perfonamces"><!--список производителей -->
             <li class="catalog-item-perfomances"><!-- флекс элемент(карточка)-->
                 <a href="">
-                    
-                      <img src="img/bosch.jpg" width="126" height="37" alt="фото bosch">
-                    
+                    <img src="img/bosch.jpg" width="126" height="37" alt="фото bosch">
                 </a>
             </li>
             <li class="catalog-item-perfomances"><!-- флекс элемент-->
                 <a href="">
-                    
-                      <img src="img/makita.jpg" width="123" height="40" alt="фото makita">
-                    
+                    <img src="img/makita.jpg" width="123" height="40" alt="фото makita">
                 </a>
             </li>
             <li class="catalog-item-perfomances"><!-- флекс элемент-->
                 <a href="">
-                   
-                        <img src="img/de-walt.jpg" width="146" height="44" alt="фото Dewalt">
-                   
+                   <img src="img/de-walt.jpg" width="146" height="44" alt="фото Dewalt">
                 </a>
             </li>
             <li class="catalog-item-perfomances"><!-- флекс элемент-->
                 <a href="">
-                    
-                       <img src="img/invalid-name.jpg" width="200" height="88" alt="фото Интерскол">
-                    
+                    <img src="img/invalid-name.jpg" width="200" height="88" alt="фото Интерскол">
                 </a>
             </li>
             <li class="catalog-item-perfomances"><!-- флекс элемент-->
                 <a href="">
-                    
-                       <img src="img/hitachi.jpg" width="169" height="31" alt="фото hitachi">
-                    
+                    <img src="img/hitachi.jpg" width="169" height="31" alt="фото hitachi">
                 </a>
             </li>
             <li class="catalog-item-perfomances"><!-- флекс элемент-->
                 <a href="">
-                    
-                       <img src="img/lg.jpg" width="121" height="73" alt="фото LG">
-                    
+                    <img src="img/lg.jpg" width="121" height="73" alt="фото LG">
                 </a>
             </li>
             <li class="catalog-item-perfomances"><!-- флекс элемент-->
                 <a href="">
-                    
-                      <img src="img/aeg.jpg" width="151" height="96" alt="фото AEG">
-                    
+                    <img src="img/aeg.jpg" width="151" height="96" alt="фото AEG">
                 </a>
             </li>
             <li class="catalog-item-perfomances"><!-- флекс элемент-->
                 <a href="">
-                    
-                      <img src="img/metabo.jpg" width="204" height="69" alt="фото Metabo">
-                    
+                    <img src="img/metabo.jpg" width="204" height="69" alt="фото Metabo">
                 </a>
             </li>
         </ul>
-    </section>
-  </div>    
+       </section>
+      </div> 
     
       
-  <section class="delivery-services-section">
-     <div class="container">   
-        <section class="about-cervices">
+      <section class="delivery-services-section">
+        <div class="container">   
+          <section class="about-cervices">
             <h2 class="services">Сервисы</h2>
             <p class="text-about-services">Хороший интернет-магазин отличается от плохого не только ценами!<br>
             Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
-        </section>
+         </section>
         
-        <section class="wrap_for-delivery-one"><!--флекс контейнер-->
+         <section class="wrap_for-delivery-one"><!--флекс контейнер-->
            
             <ul class="menu"><!-- флекс элемент-->
                     <li><a class="active-link"  href="">Доставка</a></li>
@@ -338,7 +325,7 @@
            </div>
             
        </section>
-       <section class="wrap_for-delivery-two">
+         <section class="wrap_for-delivery-two">
            
             <ul class="menu"><!-- флекс элемент-->
                     <li><a href="">Доставка</a></li>
@@ -358,7 +345,7 @@
            </div>
            
        </section> 
-       <section class="wrap_for-delivery-three">
+         <section class="wrap_for-delivery-three">
            
             <ul class="menu"><!-- флекс элемент-->
                     <li><a href="">Доставка</a></li>
@@ -377,12 +364,12 @@
            </div>
            
        </section>
-      </div> 
-   </section><!-- delivery-services-section-->
+       </div> 
+     </section><!-- delivery-services-section-->
       
       
 
-    <div class="container"><!-- объединяем два раздела Компания техномарт и Контакты-->
+      <div class="container"><!-- объединяем два раздела Компания техномарт и Контакты-->
           <div class="index-columns"><!-- центровшик и флекс контейнер--> 
             <section class="company"><!-- флекс элемент котрый сам является флекс конейнером-->
                 <h2>Компания "Техномарт"</h2>
@@ -414,6 +401,7 @@
                <p><a class="button write-us-button" href="">Заблудились? Напишите нам!</a></p><!-- ссылка в виде кнопки-->
          </section>
       </div>
+      </div>      
     </main>
       
     <footer><!-- ПОДВАЛ-->
@@ -427,7 +415,6 @@
                            <li><a href="">Компания</a></li>
                            <li><a href="">Новости</a></li>
                            <li><a href="catalog.html">Каталог</a></li>
-                           <li><a href="">Спецпредложения</a></li>
                            <li><a href="">Доставка</a></li>
                            <li><a href="">Контакты</a></li>
                     </ul>
@@ -446,9 +433,9 @@
                     </ul>
                 </section>
               </div> <!-- блок-центровщик-->
-            </div><!--первая часть подвала -->
+       </div><!--первая часть подвала -->
 
-            <div class="for_footer_part_two"><!--вторая часть подвала -->
+       <div class="for_footer_part_two"><!--вторая часть подвала -->
                   <div class="container"><!-- центровщк и флекс контейнер-->
                       <p>
                         @2010-2019Компания "Техномарт"<br>
@@ -458,19 +445,19 @@
                           <li>
                               <a class="social-button" href=""> 
                               <span class="visually-hidden">Вконтакте</span> 
-                              <img src="img/icon-vk.svg" width="26" height="15">      
+                              <img src="img/icon-vk.svg" width="26" height="15" alt="Вконтакте"  >     
                               </a>
                           </li>
                           <li>
                               <a class="social-button" href=""> 
                               <span class="visually-hidden">Фейсбук</span> 
-                              <img src="img/icon-fb.svg" width="12" height="22">
+                              <img src="img/icon-fb.svg" width="12" height="22" alt="фейсбук">
                               </a>
                           </li>
                           <li>
                               <a class="social-button" href=""> 
                               <span class="visually-hidden">Инстаграм</span> 
-                              <img src="img/icon-insta.svg" width="21" height="21"> 
+                              <img src="img/icon-insta.svg" width="21" height="21" alt="инстаграм"> 
                               </a>
                           </li>
                       </ul>
@@ -484,12 +471,12 @@
                       </p>
                     
                  </div><!-- блок-центровщик-->
-            </div><!--вторая часть подвала -->
-        </footer>
+       </div><!--вторая часть подвала -->
+    </footer>
         
     <section class="modal modal-login"><!-- Модальное окно отправки данных-->
           <h2 class="visually-hidden">окно отправки данных</h2><!--потом уберем этот заголовок -->
-          <form  class="login-form" sction="https://echo.htmlacademy.ru" method="post">
+          <form  class="login-form" action="https://echo.htmlacademy.ru" method="post">
              <div class="for-name-and-emal-fields">
                  <p class="wrap-for-label-with-field">
                      <label for="user-name">Ваше имя: </label>
@@ -502,7 +489,7 @@
              </div>
              <p>
                  <label  class="for-textarea-label" for="user-text">Текст письма: </label>
-                 <textarea id="user-text" placeholder="В свободной форме"  name="area-text"   value="" ></textarea>
+                 <textarea id="user-text" placeholder="В свободной форме"  name="area-text"></textarea>
              </p>
             <div class="wrap-for-button">
                 <button type="submit"> <!-- кнопка отправки данных формы-->
@@ -524,7 +511,7 @@
           </button>
     </section>
     <script>
-         var link = document.querySelector(".write-us-button");/*кнопка*/
+         var link = document.querySelector(".write-us-button");/*кнопка "Заблудились? Напишите Нам!"*/
         
          var popup = document.querySelector(".modal-login");/*окно модальное*/
         
@@ -532,13 +519,18 @@
         
          var form = popup.querySelector("form");/*форма наша*/
         
-         var login = popup.querySelector("[name=login]");/*поле Имя Фамилия*/
+         
+         var login = popup.querySelector("[name=login]");/*поле "Имя Фамилия"*/
         
-         var email = popup.querySelector("[name=mail]");/*поле mail*/
+         var email = popup.querySelector("[name=mail]");/*поле "mail"*/
          var text = popup.querySelector("[name=area-text]");/*textarea*/
+        
+         
         
          var isStorageSupport = true;
          var storage = "";
+        
+        
   
          try {
             storage = localStorage.getItem("login");
@@ -550,9 +542,9 @@
         
         
          
-        link.addEventListener("click", function (evt) {/*обработчки события клика по этой кнопке.*/
+        link.addEventListener("click", function (evt) {/*обработчки события клика по  кнопке link(.write-us-button).*/
                 evt.preventDefault();/*Отменим стандартное действие ссылки при нажатии на неё.*/
-                popup.classList.add("modal-show");/*добавляем этот класс к модальному окну по клику на ссылку.*/
+                popup.classList.add("modal-show");/*добавляем этот класс к модальному окну по клику на кнопку .write-us-button*/
                 
                 if (storage) {/*Если значение существует, записываем логин в соответствующее поле ввода при открытии модального окна.*/
                     login.value = storage;
@@ -576,7 +568,7 @@
         form.addEventListener("submit", function (evt) {/*обработчик события отправки формы*/
               if (!login.value || !email.value || !text.value) {/*если что-то незапполнено*/
                     evt.preventDefault();
-                    popup.classList.add("modal-error");/*Если форма не валидна, добавим модальному окну класс ошибки.*/
+                    popup.classList.add("modal-error");/*Если в формуне ввели не валидна, добавим модальному окну класс ошибки.*/
               }
               else {
                     if (isStorageSupport) { /*если  true то*/ 
@@ -595,6 +587,16 @@
                 }
             }
         });
+        
+        
+        add_trash.addEventListener("click", function (evt) {/*обработчки события клика по  кнопке Купить*/
+                evt.preventDefault();/*Отменим стандартное действие ссылки при нажатии на неё.*/
+                popup.classList.add("modal-show");/*добавляем этот класс к модальному окну по клику на кнопку .write-us-button*/
+                
+                
+                    
+         });
+        
         
         
       </script>    
