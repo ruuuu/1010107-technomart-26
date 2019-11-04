@@ -2,8 +2,6 @@ body{
     min-width: 960px;
     margin: 0;
     padding: 0;
-
-
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
@@ -11,11 +9,12 @@ body{
     font-weight: 700;
     font-family: "Cuprum", "Arial", sans-serif;
     color: #000000;
-
     background-color: #ffffff ;
     font-stretch: normal;
     letter-spacing: normal;
+    overflow: hidden;
 }
+
 
 
 .inner-page{/*общие стили для catalog.html*/
@@ -49,16 +48,12 @@ img {
     color: #ffffff;
     text-align: center;
     vertical-align: middle;
-
-
-
     background-color: #ee3643;
     border: none;
     text-transform: uppercase;
     font-weight: normal;
     font-style: normal;
     font-stretch: normal;
-
     letter-spacing: normal;
 }
 
@@ -79,7 +74,6 @@ img {
     width: 940px;
     margin: 0 auto;
     padding: 0 10px;
-
 }
 
 
@@ -87,8 +81,12 @@ img {
 
 
             /*С Т И Л И   Д Л Я  Ш А П К И*/
-.first_head{
+.for-main{
+   overflow: hidden;
+    
+}
 
+.first_head{
     color: white;
     background-color: #293449;
     font-family: "Cuprum", "Arial", sans-serif;
@@ -105,7 +103,6 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: stretch;
-
 }
 
 
@@ -117,13 +114,11 @@ img {
     justify-content: space-between;
     flex-wrap: nowrap;
     align-items: stretch;
-
-
 }
 
 
 .main-header-logo{
-    width:220px;
+    width: 220px;
     display: block;
     padding-top: 12px;
     padding-bottom: 12px;
@@ -263,18 +258,14 @@ a.bookmark-icon{
 .bookmark-icon::before {
   content: "";
   position: absolute;
-
   top: 15px;
   left: 17px;
-
   width: 14px;
   height: 16px;
   background-image: url("../img/icon-bookmark.svg");
-
   background-repeat: no-repeat;
   background-position: 0 0;
   opacity: 0.3;
-
 }
 
 
@@ -296,8 +287,8 @@ a.bookmark-icon{
 
 .bookmark-icon:active{
     color: rgba(255, 255, 255, 0.6)
-
 }
+
 
 .bookmark-icon:active::before{
     background-image: url("../img/icon-bookmark.svg");
@@ -328,14 +319,11 @@ a.trash{
 .trash::before {
   content: "";
   position: absolute;
-
   top: 15px;
   left: 25px;
-
   width: 15px;
   height: 15px;
   background-image: url("../img/icon-cart.svg");
-
   background-repeat: no-repeat;
   background-position: 0 0;
   opacity: 0.3;
@@ -396,7 +384,6 @@ a.make-order-button{
     justify-content: flex-start;
     background-color: #f4f7f9;
     margin-bottom: 60px;
-
 }
 
 
@@ -426,7 +413,7 @@ a.make-order-button{
 
 
 .info_about_shop{
-    width: 196px;
+    width: 190px;
     font-size: 16px;
     line-height: 23px;
     color: #ee3643;
@@ -446,7 +433,6 @@ a.make-order-button{
     padding-top: 9px;
     padding-bottom: 9px;
     margin-bottom: 4px;
-
 }
 
 
@@ -454,13 +440,11 @@ a.make-order-button{
 .phone::before {
   content: "";
   position: absolute;
-
   top: 10px;
   left: 10px;
   width: 19px;
   height: 19px;
   background-image: url("../img/icon-phone.svg");
-
   background-repeat: no-repeat;
   background-position: 0 0;
   opacity: 0.3;
@@ -471,7 +455,6 @@ a.make-order-button{
 
 .addresss{
     margin-left: 5px;
-
     color: #32425c;
     font-family: "Cuprum", "Arial", sans-serif;
     font-size: 14px;
@@ -490,7 +473,6 @@ a.make-order-button{
     width: 280px;
     margin-top:-25px;
     margin-left: -20px;
-
 }
 
 .for-login-icon{
@@ -537,6 +519,7 @@ a.make-order-button{
     line-height: 1;
 }
 
+
 .content_of_second_head section:last-child{
     margin-right: -40px;
 }
@@ -559,12 +542,12 @@ a.make-order-button{
 
 .for-login-icon:hover::before{
    background-image: url("../img/icon-login-active.svg");
-    background-repeat: no-repeat;
-    background-position: 0 0;
+   background-repeat: no-repeat;
+   background-position: 0 0;
 }
 
 .for-login-icon:active::before{
-   background-image: url("../img/icon-login.svg");
+    background-image: url("../img/icon-login.svg");
     background-repeat: no-repeat;
     background-position: 0 0;
 }
@@ -613,6 +596,7 @@ a.make-order-button{
     line-height: 1;
     letter-spacing: normal;
 }
+
 
 .site-navigation .first-element{
     padding-left: 58px;
@@ -680,7 +664,6 @@ a.make-order-button{
     margin: 0;
     padding: 0;
     list-style: none;
-
 }
 
 
@@ -693,13 +676,11 @@ a.make-order-button{
     position: absolute;
     left: 320px;
     bottom: 60px;
-
     z-index: 100;
     width: 60px;
     height: 18px;
     text-align: center;
     transform: translateX(-50%);
-
 }
 
 
@@ -720,15 +701,11 @@ a.make-order-button{
 .slider-controls label::after {
     content: "";
     position: absolute;
-
     top: 4px;
     left: 10px;
-
     width: 10px;
     height: 10px;
-
     z-index: 1;
-
     background: white;
     border-radius: 50%;
 }
@@ -872,13 +849,10 @@ a.make-order-button{
 .slider-item::after{
     content:"";
     position: absolute;
-
     top: 110px;
     right: 24px;
-
     width: 22px;
     height: 40px;
-
     background-image: url("../img/icon-right.svg");
     background-repeat: no-repeat;
     background-position: 0 0;
@@ -888,17 +862,12 @@ a.make-order-button{
 .slider-item-button{
     display:block;
     width: 195px;
-
     content: "";
     position: absolute;
-
     left: 24px;
     bottom: 45px;
-
     padding: 10px 0;
     border-radius: 2px;
-   /*margin-bottom:20px;*/
-
 }
 
 
@@ -910,7 +879,6 @@ a.make-order-button{
     right: 24px;
     width: 22px;
     height: 40px;
-
 }
 
 
@@ -921,7 +889,6 @@ a.make-order-button{
     height: 103px;
     margin-bottom: 20px;
     margin-right: 20px;
-
     color: white;
     font-family: "Cuprum", "Arial", sans-serif;
     font-size: 24px;
@@ -930,17 +897,14 @@ a.make-order-button{
     font-stretch: normal;
     line-height: 1.25;
     letter-spacing: normal;
-
 }
 
 .block-item .flag{
   position: absolute;
   top: -1px;
   right: -1px;
-
   width: 60px;
   height: 60px;
-
   text-indent: -1000px;
   overflow: hidden;
 
@@ -1005,6 +969,7 @@ div .last-two-cards:nth-child(2){
     background-color: #3bbce3;
 }
 
+
 .block-item:nth-child(3){
     background-color: #dc91d8;
     margin-right: 0;
@@ -1023,8 +988,6 @@ div .last-two-cards:nth-child(2){
     text-transform: uppercase;
     color: white;
     border-radius: 3px;
-
-
     font-family: "Cuprum", "Arial" ,sans-serif;
     font-size: 14px;
     font-weight: normal;
@@ -1059,8 +1022,7 @@ div .last-two-cards:nth-child(2){
    justify-content:space-between;
    align-items:center;
    width: 886px;
-
-   /*min-height: 49px;/*чтобы большой текст вмещался.а не выпадал из блока*/
+   min-height: 49px;
    padding: 20px;
    padding-left:30px;
    padding-right: 24px;
@@ -1087,21 +1049,18 @@ h2.page-title{
     font-style: normal;
     line-height: 1;
     letter-spacing: normal;
-
 }
 
 
 
 .popular-tovar-button{
-    align-self: baseline;
-    width: 253px;
+    width: 268px;
     min-height: 12px;
     text-align: center;
     padding-top: 13px;
     padding-bottom: 13px;
     line-height: 1;
     border-radius: 3px;
-
 }
 
 
@@ -1136,7 +1095,6 @@ h2.page-title{
     display: -webkit-flex;
     -webkit-box-align: center;
     -ms-flex-align: center;
-
 }
 
 
@@ -1156,9 +1114,11 @@ h2.page-title{
     margin-right:0;
 }
 
+
 .catalog-item:hover{
     box-shadow: 0px 10px 25px 0 rgba(41, 52, 73, 0.5);
 }
+
 
                 /*блок Сервисы  и Доставка*/
 .delivery-services-section{
@@ -1189,31 +1149,44 @@ h2.page-title{
      font-stretch: normal;
      line-height: 30px;
      letter-spacing: normal;
-    text-transform: uppercase;
+     text-transform: uppercase;
 }
 
 
 .text-about-services{
-    width: 500px;
+    width: 400px;
     margin-bottom:70px;
 }
 
+
+.containre-for-menu-with-block{
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
 
 
 .wrap_for-delivery-one{
     display: flex;
     justify-content: flex-start;
-    flex-wrap: wrap;
-    position: relative;
-    padding-bottom: 190px;
-
+    flex-wrap: nowrap;
+    width: 619px;
+    position: relative; /*родитель для картикни*/
 }
+
 
 .title-services{
     padding-top:0;
     margin: 0;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     color: #32425c;
+    font-family: "Cuprum", "Arial", sans-serif;
+    font-size: 36px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1;
+    letter-spacing: normal;
 }
 
 
@@ -1221,8 +1194,9 @@ h2.page-title{
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
+     width: 619px;
     position: relative;
-    padding-bottom: 190px;
+    
 }
 
 
@@ -1230,13 +1204,14 @@ h2.page-title{
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
+    width: 619px;
     position: relative;
     padding-bottom: 120px;
 }
 
 
 .text-credit{
-    margin-bottom: 40px;
+    margin-bottom: 30px;
 
 }
 
@@ -1254,7 +1229,6 @@ h2.page-title{
     font-style: normal;
     line-height: 1.29;
     letter-spacing: normal;
-
 }
 
 
@@ -1268,25 +1242,27 @@ h2.page-title{
      margin-right: 80px;
 }
 
+
 .menu::after{
     position: absolute;
     content: "";
-
     top: -30px;
     left: 230px;
-
     width: 10px;
     height:279px;
-    /*background: url("../img/shadow.jpg") 0 0 no-repeat;*/
-
-  /*-webkit-box-shadow: inset 200px 10px 50px -90px rgba(64,80,105,0.25);
--moz-box-shadow: inset 200px 10px 50px -90px rgba(64,80,105,0.25);*/
 }
 
 
 
 .menu li {
   margin-bottom: 0;
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-size: 36px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 0.67;
+  letter-spacing: normal;  
 }
 
 
@@ -1295,11 +1271,13 @@ h2.page-title{
 }
 
 
+
 .menu a {
     display: block;
-    padding: 20px 20px;
+    padding: 16px 16px;
+    padding-left: 20px;
     color:  white;
-    margin-top: -1px;
+    /*margin-top: -1px;*/
     font-family: "Cuprum", "Arial", sans-serif;
     font-size: 21px;
     font-weight: bold;
@@ -1311,11 +1289,6 @@ h2.page-title{
 }
 
 
-.menu .active-link{
-    box-shadow: 0px 1px 0 0 #ffffff, inset 0px 1px 0 0 #ffffff;
-    background-color: #ffffff;
-    color: #32425c;
-}
 
 
 .menu a:hover{
@@ -1324,11 +1297,27 @@ h2.page-title{
 }
 
 
+
+
 .menu a:active{
     box-shadow: 0px 1px 0 0 #ffffff, inset 0px 1px 0 0 #ffffff;
     background-color: #ffffff;
     color: #32425c;
 }
+
+
+
+.menu  li.active{
+    background-color: #ffffff;
+    color: #32425c;
+}
+    
+
+
+.hidden {
+  display: none;
+}
+
 
 
 .shadow{
@@ -1341,18 +1330,17 @@ h2.page-title{
     width: 275px;
     margin-bottom: 30px;
     position: relative;
-
 }
 
 .about-guarantee{
-     width: 376px;
+    width: 376px;
     margin-bottom: 30px;
     position: relative;
 }
 
 .about-credit{
-     width: 279px;
-     position: relative;
+    width: 279px;
+    position: relative;
 
 }
 
@@ -1360,37 +1348,30 @@ h2.page-title{
 .for-delivery-image-one{
     content: "";
     position: absolute;
-    top:8px;
+    top: 22px;
     right: 0px;
     width: 468px ;
     height: 251px ;
-
 }
 
 
 .for-delivery-image-two{
     content: "";
     position: absolute;
-
     top:0px;
-    right: -20px;
-
-    width: 389px ;
-    height: 283px ;
-
+    right: -5px;
+    width: 389px;
+    height: 283px;
 }
 
 
 .for-delivery-image-three{
     content: "";
     position: absolute;
-
-    top: -5px;
+    top: 10px;
     right: -40px;
-
     width: 465px ;
     height: 285px ;
-
 }
 
 
@@ -1402,6 +1383,7 @@ h2.page-title{
     background-color: #ffffff;
     color: #000000;
 }
+
 
 .title-technomart{
     padding-top:0;
@@ -1427,19 +1409,18 @@ h2.page-title{
 .index-columns h2{
     margin-bottom: 30px;
     margin-top: 80px;
-
 }
+
 
 .index-columns p{
     margin: 0;
-
-
 }
+
 
 p.text{
      line-height: 24px;
      margin: 0;
-     margin-bottom: 30px;
+     margin-bottom: 20px;
      font-family: "PT Sans",  "Open Sans", sans-serif;
      font-size: 13px;
      font-weight: normal;
@@ -1447,24 +1428,22 @@ p.text{
      font-stretch: normal;
      line-height: 1.85;
      letter-spacing: normal;
-
-
 }
+
 
 .company .text-about-shopping{
    width:560px;
-
-
 }
 
+
 .text-about-remote-points{
-    max-width: 440px;
+   max-width: 440px;
 
 }
 
 .text-about-self-delivery{
     width: 179px;
-
+    margin-bottom: 20px;
 }
 
 
@@ -1482,15 +1461,13 @@ p.text{
 }
 
 
-.items-companies  span{
-    display: block;
-    margin-bottom: 25px;
-
+.items-companies  div{
+   margin-bottom: 20px;
 }
 
-.items-companies  span:last-child{
-     margin-bottom:0;
-     margin-bottom: 40px;
+
+.items-companies  div:last-child{
+    margin-bottom:35px;
 }
 
 
@@ -1499,38 +1476,37 @@ p.text{
     height: 2px;
     color:  #ee3643;
     margin-right: 10px;
-
 }
+
 
 .more-details-button{
     width: 140px;
-    padding: 12px 38px;
+    padding: 10px 38px;
     border-radius: 3px;
     margin-bottom: 80px;
 }
 
+
 .contacts p{
-    margin-bottom: 40px;
+    margin-bottom: 25px;
 }
 
+
 .contacts .map{
-    margin-bottom: 45px;
+    margin-bottom: 25px;
 }
+
 
 .write-us-button{
     display: block;
     border-radius: 3px;
-    padding-top: 13px;
-    padding-bottom: 13px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     margin-bottom: 80px;
-
 }
 
 
-
-
-
-            /*С Т И Л И  Д Л Я  П О Д В А Л А*/
+           /*С Т И Л И  Д Л Я  П О Д В А Л А*/
 .main-footer {
     margin-top: 65px;
 }
@@ -1541,18 +1517,17 @@ p.text{
     color: #f1f5f7;
     font-size: 18px;
     line-height: 24px;
-
 }
+
 
 .for_footer_part_one .container{
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-
 }
 
 
-.wrap-for-footer_first_menu  {
+.wrap-for-footer_first_menu {
     display: flex;
     justify-content: space-between;
     margin-bottom: 30px;
@@ -1560,12 +1535,14 @@ p.text{
 
 
 .logo-for-footer{
+    margin-right: auto;
     padding-top:20px;
     padding-bottom: 25px;
 }
 
+
 .for_footer_part_one  .footer_first_menu{
-    width: 720px;
+    width: 550px; /*720*/
     min-height: 13px;
     display: flex;
     flex-wrap: wrap;
@@ -1573,7 +1550,6 @@ p.text{
     margin:0;
     margin-top: 35px;
     padding-left: 170px;
-
     list-style: none;
     font-family: "Cuprum", "Arial", sans-serif;
     font-size: 18px;
@@ -1586,10 +1562,8 @@ p.text{
 
 
 
-
 .footer_first_menu a{
     color: #f1f5f7;
-
 }
 
 
@@ -1600,18 +1574,18 @@ p.text{
 
 
 
-
 .for_footer_part_one  section{
     display: flex;
     justify-content:space-between;
     align-items: center;
     margin-bottom: 40px;
-
 }
 
+
 .about-address-footer{
-    width: 470px;
+    width: 450px; 
     margin:0;
+    margin-right: 50px;
     min-height: 40px;
     font-family: "Cuprum", "Arial", sans-serif;
     font-size: 18px;
@@ -1630,7 +1604,6 @@ p.text{
 }
 
 
-
 .footer_second_menu{
     width: 720px;
     display: flex;
@@ -1639,7 +1612,6 @@ p.text{
     margin:0;
     padding-left: 60px;
     margin-top:-30px;
-
     font-family: "Cuprum", "Arial", sans-serif;
     font-size: 18px;
     font-weight: normal;
@@ -1649,9 +1621,11 @@ p.text{
     letter-spacing: normal;
 }
 
+
 .footer_second_menu:last-child{
     padding-right: 0;
 }
+
 
 .footer_second_menu a{
     color: #ffd180;
@@ -1673,7 +1647,6 @@ p.text{
 .for_footer_part_two{
     background-color:#293449;
     color: #ffffff;
-
     font-family: "Cuprum", "Arial", sans-serif;
     font-size: 16px;
     font-weight: normal;
@@ -1681,7 +1654,6 @@ p.text{
     font-stretch: normal;
     line-height: 1.13;
     letter-spacing: normal;
-
 }
 
 
@@ -1691,21 +1663,20 @@ p.text{
     align-items: center;
     padding-top: 20px;
     padding-bottom: 20px;
-
 }
 
 
-.for_footer_part_two .container p:nth-child(1){
+.for_footer_part_two  p:nth-child(1){
     margin-right: 140px;
 }
 
 
-.for_footer_part_two .container p:nth-child(3){
+.for_footer_part_two  p:nth-child(3){
     margin-left: auto;
 }
 
-.for_footer_part_two .container p:nth-child(4){
-    margin-left: 50px; /**/
+.for_footer_part_two  p:nth-child(4){
+    margin-left: 50px; 
 }
 
 
@@ -1731,7 +1702,7 @@ p.text{
 .social-button:hover,
 .social-button:focus,
 .social-button:active{
-  background-color: #ee3643;
+    background-color: #ee3643;
 }
 
 
@@ -1759,12 +1730,6 @@ p.text{
 
 
 
-
-
-
-
-/***********************************************************************/
-
                     /*С Т И Л И  Д Л Я catalog.html*/
 
 .wrap-for-logout-button{
@@ -1773,13 +1738,11 @@ p.text{
     padding-bottom: 10px;
     margin-left: -15px;
     background-color: white;
-
 }
 
 
 .for-user-icon{
     position:relative;
-
 }
 
 
@@ -1788,12 +1751,11 @@ p.text{
    position: absolute;
    width: 20px;
    height: 18px;
-   top: -4px;
+   top: 4px;
    left: 13px;
    background-image: url("../img/icon-user.svg");
    background-repeat: no-repeat;
    background-position: 0 0;
-
 }
 
 
@@ -1811,6 +1773,7 @@ p.text{
 }
 
 
+
 .for-logout-icon{
     position:relative;
 }
@@ -1826,7 +1789,6 @@ p.text{
   background-image: url("../img/icon-logout.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
-  /*background-color: #ff0000;*/
 }
 
 
@@ -1870,7 +1832,6 @@ p.text{
     text-decoration: underline;
     color: #32425c;
     font-size: 16px;
-
 }
 
 
@@ -1886,7 +1847,6 @@ p.text{
 
 
 
-
 .wrap-for-small-link{
     width: 280px;
     margin-left: 20px;
@@ -1898,6 +1858,7 @@ p.text{
     line-height: 1.71;
     letter-spacing: normal;
 }
+
 
 .small_link_second{
     position: relative;
@@ -1911,10 +1872,8 @@ p.text{
     position: absolute;
     width: 4px;
     height: 5px;
-
     top:5px;;
     left:10px;
-
     background-color: #32425c;
     border-radius: 5px;
 }
@@ -1931,7 +1890,6 @@ p.text{
     margin-bottom: 20px;
     list-style: none;
     margin-top: -40px;
-
 }
 
 
@@ -1941,6 +1899,7 @@ p.text{
   margin-right: 20px;
   margin-left: 23px;
 }
+
 
 
 .breadcrumbs li:last-child {
@@ -1959,6 +1918,7 @@ p.text{
 }
 
 
+
 .breadcrumbs-current::after {
    display: none;
 }
@@ -1973,7 +1933,6 @@ p.text{
   top: 4px;
   right: 10px;
   background: url("../img/icon-home.svg") no-repeat;
-
 }
 
 
@@ -1987,7 +1946,7 @@ p.text{
    font-stretch: normal;
    line-height: 1.38;
    letter-spacing: normal;
-    color: #000000;
+   color: #000000;
 }
 
 
@@ -2024,7 +1983,6 @@ p.text{
     line-height: 1.38;
     letter-spacing: normal;
     margin-bottom: 20px;
-
 }
 
 
@@ -2033,7 +1991,6 @@ p.text{
     background-color: #f7f3ec;
     padding: 11px 0;
     padding-left: 20px;
-
 }
 
 .wrap-for-filter-big-block{
@@ -2044,7 +2001,6 @@ p.text{
     align-items: center;
     min-height: 38px;
     background-color: #f7f3ec;
-
 }
 
 .sort-item{
@@ -2079,7 +2035,6 @@ p.text{
 
 .sortirovka-block li:nth-child(4){
     margin-right: auto;
-
 }
 
 
@@ -2091,7 +2046,6 @@ p.text{
 
 .sortirovka-block .arrow-2{
     border-bottom: none;
-
 }
 
 
@@ -2106,30 +2060,25 @@ p.text{
     background-image: url("../img/icon-up-dir.svg");
     background-position: 0 0;
     background-repeat: no-repeat;
-
 }
 
 
 .sortirovka-block .arrow-2::before{
     content: "";
     position: absolute;
-
     top: 3px ;
-    right: -10px ;
-
-    width: 11px ;
-    height: 11px ;
+    right: -10px;
+    width: 11px;
+    height: 11px;
     background-image: url("../img/icon-down-dir.svg");
     background-position: 0 0;
     background-repeat: no-repeat;
-
 }
 
 
 
 .sortirovka-block li:not(.arrow-1):hover,
 .sortirovka-block li:not(.arrow-2):hover{
-
     color: black;
     border-bottom: 1px solid #ee3643;
 }
@@ -2148,7 +2097,6 @@ p.text{
     background-image: url("../img/icon-down-dir-hover.svg");
     background-repeat: no-repeat;
     background-position: 0 0;
-
 }
 
 
@@ -2178,7 +2126,6 @@ p.text{
 
 
 
-
 .catalog-columns {
     display: flex;
     justify-content: flex-start;
@@ -2194,7 +2141,6 @@ p.text{
 .filters{
     width: 220px;
     margin-right: 20px;
-
 }
 
 
@@ -2282,12 +2228,12 @@ p.text{
 }
 
 .range-controls .toggle-max {
-  left: 165px;
+   left: 165px;
 }
 
 
 .price-controls{
-   display: flex;
+    display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 25px;
@@ -2301,7 +2247,6 @@ p.text{
     border: none;
     border-radius: 5px;
     background-color: #f7f3ec;
-
     font-family: "PT Sans", "Open Sans", sans-serif;
     font-size: 17px;
     font-weight: normal;
@@ -2328,7 +2273,6 @@ p.text{
     font-stretch: normal;
     line-height: 1.76;
     letter-spacing: normal;
-
 }
 
 
@@ -2336,7 +2280,6 @@ p.text{
     padding: 0;
     margin: 0;
     list-style: none;
-
 }
 
 
@@ -2348,12 +2291,12 @@ p.text{
 
 
 .filter-option label {
-  position: relative;
-  display: block;
-  cursor: pointer;
-  user-select: none;
-  margin-bottom: 15px;
-  padding-top:2px;
+    position: relative;
+    display: block;
+    cursor: pointer;
+    user-select: none;
+    margin-bottom: 15px;
+    padding-top:2px;
 }
 
 
@@ -2375,7 +2318,6 @@ p.text{
 
 .filter-input:disabled + label{
     color: rgba(0, 0, 0, 0.4);
-
 }
 
 
@@ -2388,7 +2330,6 @@ p.text{
     font-style: normal;
     font-stretch: normal;
     letter-spacing: normal;
-
 }
 
 
@@ -2402,13 +2343,11 @@ p.text{
   width: 23px;
   height: 23px;
   background: url("../img/checkbox-off.svg") no-repeat 0 0;
-
 }
 
 
 .filter-input-checkbox + label:hover::before{
      background: url("../img/checkbox-off-hover.svg") no-repeat 0 0;
-    /*border-color: #b5b5b5;*/
 }
 
 
@@ -2420,7 +2359,6 @@ p.text{
   top: 0px;
   width: 27px;
   height: 23px;
-
   background: url("../img/checkbox-on.svg") no-repeat 0 0;
 }
 
@@ -2428,6 +2366,8 @@ p.text{
 .filter-input-checkbox:checked + label:hover::after {
      background: url("../img/checkbox-on-hover.svg") no-repeat 0 0;
 }
+
+
 
 
 .filter-input-radio + label::before {
@@ -2439,6 +2379,7 @@ p.text{
   height: 25px;
   background: url("../img/radio-off.svg") no-repeat 0 0;
 }
+
 
 
 .filter-input-radio:checked + label::after {
@@ -2465,6 +2406,7 @@ p.text{
 
 
 
+
 .button_show{
   display: block;
   padding:10px  38px;
@@ -2480,6 +2422,7 @@ p.text{
 
 }
 
+
 .button_show:hover,
 .button_show:active{
     background-color: white;
@@ -2488,8 +2431,6 @@ p.text{
 
 
                     /*СТИЛИ К КАРТОЧКАМ ТОВАРОВ*/
-
-
 .catalog-list{
     width: 700px;
     display: flex;
@@ -2498,7 +2439,6 @@ p.text{
     padding: 0;
     margin: 0;
     list-style: none;
-
 }
 
 
@@ -2515,10 +2455,7 @@ p.text{
     font-weight: bold;
     text-align: center;
     border: 1px solid #ccc;
-
 }
-
-
 
 
 
@@ -2530,13 +2467,11 @@ p.text{
   height: 60px;
   text-indent: -1000px;
   overflow: hidden;
-
 }
 
 
 .catalog-item .flag-new {
   background: url("../img/photoeditorsdk-export.png") no-repeat 0 0;
-
 }
 
 
@@ -2549,24 +2484,20 @@ p.text{
   height: 88px;
   padding: 40px 0;
   background-color: rgba(255,255,255);
-
 }
 
 
 .catalog-item .buy,
 .catalog-item .bookmark{
-
   display: block;
   width: 129px;
   margin: 0 auto;
   margin-bottom: 7px;
   padding: 7px 0;
-
   background-color: #63a63e;
   border: 3px solid #63a63e;
   border-bottom-color: #367315;
   border-radius:3px;
-
   color: white;
   font-size: 14px;
   font-weight: normal;
@@ -2574,8 +2505,8 @@ p.text{
   line-height: 18px;
   text-decoration: none;
   text-transform: uppercase;
-
 }
+
 
 .catalog-item .bookmark {
   color: #32425c;
@@ -2593,7 +2524,6 @@ p.text{
 
 .catalog-item:hover .actions {
   display: block;
-
 }
 
 .catalog-item .actions {
@@ -2603,15 +2533,14 @@ p.text{
 
 
 .catalog-item .image {
-  width: 218px;
-  height: 170px;
-
+   width: 218px;
+   height: 170px;
 }
 
 
 .catalog-item .image img {
-  max-width: 100%;
-  height: auto;
+   max-width: 100%;
+   height: auto;
 }
 
 
@@ -2630,7 +2559,6 @@ p.text{
 
 
 .catalog-item .discount {
-
   font-family: "PT Sans",  "Open Sans", sans-serif;
   font-size: 17px;
   font-weight: bold;
@@ -2645,9 +2573,8 @@ p.text{
 
 
 .catalog-item .price{
-
     position: relative;
-    width: 131px;
+    width: 141px;
     min-height: 18px;
     margin: 10px auto;
     margin-bottom: 20px;
@@ -2659,25 +2586,19 @@ p.text{
     font-family: "PT Sans",  "Open Sans", sans-serif;
     font-size: 17px;
     line-height: 1;
-
-
 }
 
 
 
 .catalog-item .price:after {
   content: "";
-
   position: absolute;
   top: 0px;
   right: -20px;
-
   width: 0;
   height: 0;
-
   border: 19px solid white;
   border-left-color: #ee3643;
-
 }
 
 
@@ -2687,7 +2608,6 @@ p.text{
     position: relative;
     color: #ffffff;
     background-color: #63a63e;
-
 }
 
 
@@ -2696,13 +2616,10 @@ p.text{
     position: absolute;
     width: 15px;
     height: 15px;
-
     top:  2px;
     left: 14px;
-
     background: url("../img/icon-cart.svg") no-repeat 0 0;
     opacity: 0.3;
-
 }
 
 
@@ -2717,7 +2634,6 @@ p.text{
 
 .catalog-item .buy:hover::before{
     opacity: 1;
-
 }
 
 
@@ -2728,13 +2644,10 @@ p.text{
 
 
 
-
 .catalog-item .bookmark{
     background-color: #ffffff;
     color: #32425c;
 }
-
-
 
 
 
@@ -2762,17 +2675,13 @@ p.text{
 
 
 
-
 .pagination-list {
   display: flex;
   flex-wrap: wrap;
   padding: 0;
   margin: 0;
   margin-top: 30px;
-  margin-left: 240px;
-
   list-style: none;
-
   font-family: "PT Sans", "Open Sans", sans-serif;
   font-size: 13px;
   font-weight: normal;
@@ -2780,7 +2689,6 @@ p.text{
   font-stretch: normal;
   line-height: 1.38;
   letter-spacing: normal;
-
 }
 
 
@@ -2807,16 +2715,15 @@ p.text{
 }
 
 
+
 .next{
     padding: 8px 30px;
 }
-
 
 .pagination-item-current a{
     background-color: #ee3643;
     color: white;
 }
-
 
 
 
@@ -2872,8 +2779,6 @@ p.text{
 
 
 
-
-
 .visually-hidden:not(:focus):not(:active),
 input[type="checkbox"].visually-hidden,
 input[type="radio"].visually-hidden {
@@ -2892,7 +2797,6 @@ input[type="radio"].visually-hidden {
 
 
             /*СТИЛИ ДЛЯ МОДАЛЬНОГО ОКНА */
-
 @keyframes bounce {
   0% {
     transform: translateY(-2000px);
@@ -2910,6 +2814,8 @@ input[type="radio"].visually-hidden {
     transform: translateY(0);
   }
 }
+
+
 
 @keyframes shake {
   0%,
@@ -2934,21 +2840,19 @@ input[type="radio"].visually-hidden {
 }
 
 
+
 .modal {
    color: #000000;
-
-  background-color: #ffffff;
-  position: fixed;
-
-  box-shadow: 0px 20px 40px 0 rgba(0, 0, 0, 0.75);
-  border-top: 7px solid #ee3643;
-  display: none;
+   background-color: #ffffff;
+   position: fixed;
+   box-shadow: 0px 20px 40px 0 rgba(0, 0, 0, 0.75);
+   border-top: 7px solid #ee3643;
+   display: none;
 }
 
 
 .modal-show {
   display: block;
-
   animation: bounce 0.6s;
 }
 
@@ -2961,33 +2865,23 @@ input[type="radio"].visually-hidden {
 
 
 .modal-login {
-
     width: 460px;
-
     padding-left: 80px ;
     padding-right: 80px;
-
     padding-top: 50px;
     padding-bottom: 37px;
-
     top: 120px;
     left:  50%;
     margin-left: -230px;
-
-
 }
 
 
 .modal-close {
   position: absolute;
-
   top: 10px;
   right: 15px;
-
   width: 22px;
   height: 22px;
-
-
   font-size: 0;
   background-color: transparent;
   border: 0;
@@ -2999,16 +2893,14 @@ input[type="radio"].visually-hidden {
 .modal-close::before,
 .modal-close::after {
   content: "";
-
   position: absolute;
   top: 9px ;
   left: -2px;
-
   width: 27px;
   height: 4px;
-
   background-color: #ee3643;
 }
+
 
 
 .modal-close::before {
@@ -3016,10 +2908,10 @@ input[type="radio"].visually-hidden {
 }
 
 
+
 .modal-close::after {
   transform: rotate(-45deg);
 }
-
 
 
 
@@ -3033,11 +2925,10 @@ input[type="radio"].visually-hidden {
 
 .for-name-and-emal-fields label{
     display: block;
-
 }
 
 
-.modal-login p label{
+.modal-login  label{
     font-family: "Cuprum", "Arial", sans-serif;
     font-size: 18px;
     line-height: 1;
@@ -3052,7 +2943,6 @@ input[type="radio"].visually-hidden {
 
 .login-form p{
     margin:0;
-
 }
 
 
@@ -3062,13 +2952,11 @@ input[type="radio"].visually-hidden {
 
 
 .login-form input[type="text"]{
-
     box-sizing: border-box;
     width: 220px;
     padding: 11px;
     padding-left: 14px;
     outline: none;
-
     font-family: "PT Sans",  "Open Sans", sans-serif;
     font-size: 13px;
     font-weight: normal;
@@ -3076,11 +2964,9 @@ input[type="radio"].visually-hidden {
     font-stretch: normal;
     line-height: 1.38;
     letter-spacing: normal;
-
     color: #a9a9a9;
     text-transform: inherit;
     border:  2px solid #dee3e4;
-
     background-color: #ffffff;
     border-radius: 2px;
 }
@@ -3089,7 +2975,6 @@ input[type="radio"].visually-hidden {
 
 .login-form input:hover{
     border-color: #b5b5b5;
-
 }
 
 
@@ -3098,7 +2983,6 @@ input[type="radio"].visually-hidden {
     border-color: #ee3643;
     background-color: white;
     box-shadow: none;
-
 }
 
 
@@ -3109,19 +2993,14 @@ p .for-textarea-label{
 
 
 .login-form textarea{
-
     display: block;
     width: 94%;
     height: 110px;
-
     padding: 11px;
     padding-left: 14px;
-
     margin-bottom: 30px;
     outline: none;
-
     resize: none;
-
     border-radius: 2px;
     border: 2px solid  #dee3e4;
     font-family: "PT Sans",  "Open Sans", sans-serif;
@@ -3167,8 +3046,6 @@ p .for-textarea-label{
 
 
 
-
-
             /*  МОДАЛЬНОЕ ОКНО "ДОБАВИТЬ В КОРЗИНУ"*/
 
 .modal-trash{
@@ -3190,9 +3067,8 @@ p .for-textarea-label{
     top: 300px;
     left: 50%;
     margin-left: -230px;
-
-
 }
+
 
 
 .modal-trash h3{
@@ -3207,24 +3083,21 @@ p .for-textarea-label{
     font-stretch: normal;
     line-height: 1;
     letter-spacing: normal;
-
 }
 
 
 .modal-trash h3:before{
   content: "";
-
   position: absolute;
   top: 50px ;
   left: 80px;
-
   width: 66px;
   height: 66px;
   background-image: url("../img/modal-check.svg");
   background-position: 0 0;
   background-repeat: repeat;
-
 }
+
 
 
 .modal-trash  .fon-wrapper{
@@ -3247,12 +3120,10 @@ p .for-textarea-label{
 .for-buttons-in-trash a{
     display: block;
     width: 220px;
-
     border: 1px solid transparent;
     text-align: center;
     padding-top: 12px;
     padding-bottom: 12px;
-
     font-family: "Cuprum", "Arial",  sans-serif;
     font-size: 14px;
     font-weight: normal;
@@ -3289,7 +3160,6 @@ p .for-textarea-label{
     margin-top: -280px;
     margin-left: -499px;
     border: none;
-
 }
 
 
@@ -3305,14 +3175,10 @@ p .for-textarea-label{
 
 .modal-close-for-map {
   position: absolute;
-
   top: 10px;
   right: 15px;
-
   width: 22px;
   height: 22px;
-
-
   font-size: 0;
   background-color: transparent;
   border:none;
@@ -3324,14 +3190,11 @@ p .for-textarea-label{
 .modal-close-for-map::before,
 .modal-close-for-map::after {
   content: "";
-
   position: absolute;
   top: 5px;
   left: 5px;
-
   width: 27px;
   height: 4px;
-
   background-color: #ee3643;
 }
 
